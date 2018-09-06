@@ -15,11 +15,11 @@ class Calc_test(unittest.TestCase):
         self.assertEqual(calc.mult(2, -2), -4)
 
     def test_divisao(self):
-        self.assertEqual(calc.div(2, 2), 1)
-        self.assertEqual(calc.div(2, -2), -1)
-        self.assertEqual(calc.div(1, 2), 0.5)
-        self.assertEqual(calc.div(-1, 2), -0.5)
-        self.assertRaises(calc.div(1, 0), ZeroDivisionError)
+        self.assertEqual(calc.divisao(2, 2), 1)
+        self.assertEqual(calc.divisao(2, -2), -1)
+        self.assertEqual(calc.divisao(1, 2), 0.5)
+        self.assertEqual(calc.divisao(-1, 2), -0.5)
+        self.assertRaises(calc.divisao(1, 0), ZeroDivisionError)
 
     def test_div(self):
         self.assertEqual(calc.div(3, 2), 1)
