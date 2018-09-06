@@ -1,0 +1,5 @@
+.idea/
+incolumepy/
+venv/
+*~
+*.py[cdo]
