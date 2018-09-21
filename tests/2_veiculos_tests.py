@@ -34,14 +34,24 @@ class Veiculo_tests(unittest.TestCase):
         self.assertFalse(hasattr(self.veic, 'cor'))
 
     def test_veiculo_interface_tipo(self):
+        self.assertIn('terrestre'.upper(), Veiculo.categoria)
+        self.assertIn('aéreo'.upper(), Veiculo.categoria)
+        self.assertIn('aquático'.upper(), Veiculo.categoria)
+        self.assertIn('espacial'.upper(), Veiculo.categoria)
         self.veic.tipo = 'Terrestre'
         self.veic.tipo = 'Aéreo'
         self.veic.tipo = 'AÉREO'
         self.veic.tipo = 'Aquático'
         self.veic.tipo = 'ESPACIAL'
+
         with self.assertRaises(AssertionError):
             self.veic.tipo = 'espaciale'
             self.veic.tipo = 'Aerio'
+
+        with self.assertRaisesRegex(AssertionError, "Categoria não disponível"):
+            self.veic.tipo = 'espaciale'
+            self.veic.tipo = 'Aerio'
+
 
     def test_veiculo_interface_ano(self):
 
