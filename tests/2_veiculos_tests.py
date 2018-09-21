@@ -52,7 +52,7 @@ class VeiculoTests(unittest.TestCase):
             self.veic.tipo = 'Aerio'
 
 
-def test_veiculo_interface_ano(self):
+    def test_veiculo_interface_ano(self):
 
         self.veic.ano = 1976
         self.assertTrue(isinstance(self.veic.ano, datetime.datetime))
