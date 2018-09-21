@@ -4,7 +4,7 @@ import datetime
 from incolumepy.veiculos.veiculos import Veiculo
 
 
-class Veiculo_tests(unittest.TestCase):
+class VeiculoTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         pass
@@ -18,7 +18,6 @@ class Veiculo_tests(unittest.TestCase):
 
     def tearDown(self):
         del self.veic
-
 
     def test_veiculo_interface(self):
         self.assertTrue(Veiculo.__metaclass__ == abc.ABCMeta)
@@ -53,7 +52,7 @@ class Veiculo_tests(unittest.TestCase):
             self.veic.tipo = 'Aerio'
 
 
-    def test_veiculo_interface_ano(self):
+def test_veiculo_interface_ano(self):
 
         self.veic.ano = 1976
         self.assertTrue(isinstance(self.veic.ano, datetime.datetime))
@@ -62,6 +61,9 @@ class Veiculo_tests(unittest.TestCase):
         self.veic.ano = '2018'
         self.assertTrue(isinstance(self.veic.ano, datetime.datetime))
         self.assertEqual(self.veic.getAno(), '2018')
+
+        with self.assertRaisesRegex(ValueError, "Informe o Ano com 4 algarismos"):
+            self.veic.ano = 'aaaa'
 
 
 if __name__ == '__main__':
