@@ -130,7 +130,7 @@ class EmployersTests(TestCase):
             self.emp3.born = (datetime.today() + dt.timedelta(weeks=53)).strftime('%d/%m/%Y')
 
         with self.assertRaisesRegex(ValueError, "Data de Nascimento inferior a permitida"):
-            self.emp3.born = (datetime.today() + dt.timedelta(days=1)).strftime('%d/%m/%Y')
+            self.emp3.born = (datetime.today() + dt.timedelta(days=352)).strftime('%d/%m/%Y')
 
 
 if __name__ == '__main__':
