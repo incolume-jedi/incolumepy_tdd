@@ -98,6 +98,7 @@ class EmployersTests(TestCase):
         self.assertEqual(self.emp3.salario, 1000)
 
     def test_aumento_salario_int(self):
+        """Aumento percentual de salário"""
         self.emp1.aumento_salario(5)
         self.emp2.aumento_salario(8)
         self.emp3.aumento_salario(10)
