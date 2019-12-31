@@ -16,15 +16,16 @@ class TransporteTest(TestCase):
         self.assertTrue(issubclass(self.cls, ABC))
         self.assertTrue(self.cls.__metaclass__ == ABCMeta)
 
-
     def test_instancia(self):
         with self.assertRaisesRegex(TypeError,
-                "Can't instantiate abstract class {} with abstract methods".format(self.cls.__name__)):
+                                    "Can't instantiate abstract class {} with abstract methods".format(
+                                        self.cls.__name__)):
             a = self.cls()
 
     def test_tipo_transporte(self):
         self.assertIn('carga'.upper(), self.cls._tipo_transporte)
         self.assertIn('passageiro'.upper(), self.cls._tipo_transporte)
+
 
 if __name__ == '__main__':
     main
