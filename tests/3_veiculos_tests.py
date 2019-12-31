@@ -51,7 +51,6 @@ class VeiculoTests(unittest.TestCase):
             self.veic.tipo = 'espaciale'
             self.veic.tipo = 'Aerio'
 
-
     def test_veiculo_interface_ano(self):
 
         self.veic.ano = 1976
