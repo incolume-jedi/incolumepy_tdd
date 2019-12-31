@@ -1,8 +1,8 @@
 import unittest
-from incolumepy.veiculos.veiculos import Aeronave
-from incolumepy.veiculos.veiculos import Veiculo
+from incolumepy.veiculos.aeronaves import Aeronave
 
-class Carro_test(unittest.TestCase):
+
+class TestAeronave(unittest.TestCase):
     def setUp(self):
         self.veic = Aeronave()
         self.cls = Aeronave
@@ -11,8 +11,8 @@ class Carro_test(unittest.TestCase):
         del self.veic
 
     def test_isInterface(self):
-        self.assertTrue(isinstance(self.veic, Veiculo))
-        self.assertTrue(issubclass(self.cls, Veiculo))
+        self.assertTrue(isinstance(self.veic, Aeronave))
+        self.assertTrue(issubclass(self.cls, Aeronave))
 
     def test_veiculo_interface_atributos(self):
         dir(self.veic)
@@ -20,6 +20,7 @@ class Carro_test(unittest.TestCase):
         self.assertTrue(hasattr(self.veic, 'fabricante'))
         self.assertTrue(hasattr(self.veic, 'velocidade'))
         self.assertFalse(hasattr(self.veic, 'cor'))
-        
+
+
 if __name__ == '__main__':
     unittest.main()
