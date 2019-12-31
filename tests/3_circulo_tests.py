@@ -4,7 +4,7 @@ from incolumepy.geometria.circulo import circulo_area
 
 class TestCirculoArea(TestCase):
     def test_area(self):
-        '''Testa areas quando raio >=0'''
+        """Testa areas quando raio >=0"""
         self.assertAlmostEqual(circulo_area(0), 0)
         self.assertAlmostEqual(circulo_area(1), pi)
         self.assertAlmostEqual(circulo_area(2.1), pi* 2.1**2)
