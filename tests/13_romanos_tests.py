@@ -59,6 +59,8 @@ class TestRomanos(unittest.TestCase):
     def test_romanos_jugate_more_number(self):
         self.assertEqual(self.num.III, 3)
         self.assertEqual(self.num.XLviii, 48)
+        self.assertEqual(self.num.MCCCLXXXVIII, 1388)
+        self.assertEqual(self.num.MCDXLIX, 1449)
         self.assertEqual(self.num.MDCCCLXXVIII, 1878)
         self.assertEqual(self.num.MDCDLXXVIII, 1978)
 
@@ -70,3 +72,7 @@ class TestRomanos(unittest.TestCase):
             self.num.JJK
             self.num.ij
             self.num.Kx
+
+
+if __name__ == '__main__':
+    unittest.main()
