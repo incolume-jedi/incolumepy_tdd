@@ -5,7 +5,7 @@ dica: solução ideal 3 linhas
     >>> from romanos import Romanos
 
     >>> r = Romanos()
-    >>> r.i
+    >>> r.I
     1
     >>> r.V
     5

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import unittest
-from incolumepy.utils import Romanos
+from incolumepy.romanos import Romanos
 
 
 class TestRomanos(unittest.TestCase):
