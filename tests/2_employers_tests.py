@@ -58,7 +58,7 @@ class EmployersTests(TestCase):
         self.assertEqual(self.emp3.lastname, 'Nascimento')
 
     def test_fullname(self):
-        self.emp1 = Employee('josé ferreira da silva', '10/10/2010', 960)
+        self.emp1 = Employee('josé ferreira da silva', '10/10/2004', 960)
         self.assertEqual(self.emp1.fullname, 'José Ferreira da Silva')
         self.assertEqual(self.emp2.fullname, 'Maria Francisca de Souza')
         self.assertEqual(self.emp3.fullname, 'Marcos Oliveira Santos')
@@ -118,8 +118,8 @@ class EmployersTests(TestCase):
         self.assertEqual('06 de setembro de 1978', self.emp2.born)
         self.assertEqual('01 de janeiro de 1985', self.emp3.born)
 
-        self.emp2.born = '5/5/2005'
-        self.assertEqual(self.emp2.born, '05 de maio de 2005')
+        self.emp2.born = '5/5/2004'
+        self.assertEqual(self.emp2.born, '05 de maio de 2004')
 
     def test_date_born_Raiser(self):
         with self.assertRaises(ValueError):
@@ -132,6 +132,7 @@ class EmployersTests(TestCase):
 
         with self.assertRaisesRegex(ValueError, "Data de Nascimento inferior a permitida"):
             self.emp3.born = (datetime.today() + dt.timedelta(days=352)).strftime('%d/%m/%Y')
+            self.emp3.born = (datetime.today() + dt.timedelta(days=5475)).strftime('%d/%m/%Y')
 
 
 if __name__ == '__main__':
