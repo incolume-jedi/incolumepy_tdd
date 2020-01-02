@@ -1,6 +1,5 @@
 import unittest
 from incolumepy.veiculos.carro import Carro
-from incolumepy.veiculos.veiculos import Veiculo
 
 
 class TestCarro(unittest.TestCase):

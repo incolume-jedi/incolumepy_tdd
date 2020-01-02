@@ -1,7 +1,5 @@
 import unittest
-import abc
-import datetime
-from incolumepy.veiculos.veiculos import Veiculo
+from incolumepy.veiculos.veiculos import Veiculo, datetime, abc
 
 
 class VeiculoTests(unittest.TestCase):
