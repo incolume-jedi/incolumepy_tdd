@@ -28,13 +28,12 @@ OK
 Se o resultado for similar ao apresentado, Meus parabéns!! Você concluiu o curso com sucesso!!
 
 ## Ambiente necessário
-* python >= 3.5
+* python 3.7 (>= 3.6)
 * virtualenv
 * pipenv
 
 ```bash
 pipenv install -d
-
 ```
 ## Qual o conteúdo em cada etapa?
 1. Criação de modulo;
