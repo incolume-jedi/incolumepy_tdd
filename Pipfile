@@ -8,6 +8,7 @@ nose = "*"
 bumpversion = "*"
 tox = "*"
 wheel = "*"
+mock = "*"
 
 [packages]
 
