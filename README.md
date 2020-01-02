@@ -10,7 +10,7 @@ O treinamento consite na metodologia
 TDD - Test Driven Development, ou em português
 Desenvolvimento Orientado por Testes.
 
-O testes deste treinamento foram implementados em
+Os testes deste treinamento foram implementados em
 __doctest__ e **unittest**.
 E os resutados dos testes indicarão se o objetivo foi
 atendido, ou não.
@@ -35,6 +35,13 @@ Se o resultado for similar ao apresentado, Meus parabéns!! Você concluiu o cur
 ```bash
 pipenv install -d
 ```
+
+Para melhor aproveitamento do ambiente de desenvolvimento
+sugiro a utilização do Pyenv e Pipenv. Detalhes em
+http://brito.blog.incolume.com.br/2019/11/python-ambientes-virtuais-com-pyenv.html
+
+Outra ferramenta útil será o git, detalhes em
+http://brito.blog.incolume.com.br/2013/03/guia-rapido-de-comandos-git-lado-usuario.html
 ## Qual o conteúdo em cada etapa?
 1. Criação de modulo;
 Tratamento de Exceções;
