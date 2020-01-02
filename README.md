@@ -7,8 +7,11 @@ Este treinamento se divide em etapas sequênciais,
 
 O treinamento consite na metodologia
 TDD - Test Driven Development, ou em português
-Desenvolvimento Orientado por Testes. Onde os
-resutados dos testes indirão se o objetivo foi
+Desenvolvimento Orientado por Testes.
+
+O testes deste treinamento foram implementados em
+__doctest__ e **unittest**.
+E os resutados dos testes indicarão se o objetivo foi
 atendido, ou não.
 
 Ao terminar o desenvolvimento dos testes, o
@@ -53,3 +56,4 @@ property/setter
 1. Fatoração de código agregando funcionalidades
 1. Fatoração de código com mudança de
 código sem perder funcionalidades
+1. Recursividade
