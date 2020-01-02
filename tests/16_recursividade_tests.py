@@ -23,9 +23,19 @@ class RecursividadeTest(unittest.TestCase):
             self.assertTrue(mock_fib.called)
             self.assertGreaterEqual(mock_fib.call_count, 2)
 
-            fibonacci(5)
+    def test_recursividade_1(self):
+        with mock.patch('incolumepy.sequences.fibonacci.fibonacci') as mock_fib:
+            fibonacci(3)
             self.assertTrue(mock_fib.called)
-            self.assertGreaterEqual(mock_fib.call_count, 4)
+            self.assertGreaterEqual(mock_fib.call_count, 2)
+
+    def test_recursividade_2(self):
+        with mock.patch('incolumepy.sequences.fibonacci.fibonacci') as mock_fib:
+            for i in range(1, 5, -1):
+                expected = i - 1
+                fibonacci(i)
+                self.assertTrue(mock_fib.called)
+                self.assertEqual(mock_fib.call_count, expected)
 
     def test_values(self):
         self.assertEqual(fibonacci(1), 1)
