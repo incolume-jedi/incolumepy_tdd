@@ -52,11 +52,11 @@ class VeiculoTests(unittest.TestCase):
     def test_veiculo_interface_ano(self):
 
         self.veic.ano = 1976
-        self.assertTrue(isinstance(self.veic.ano, datetime.datetime))
+        self.assertTrue(isinstance(self.veic.ano, datetime))
         self.assertEqual(self.veic.getAno(), '1976')
 
         self.veic.ano = '2018'
-        self.assertTrue(isinstance(self.veic.ano, datetime.datetime))
+        self.assertTrue(isinstance(self.veic.ano, datetime))
         self.assertEqual(self.veic.getAno(), '2018')
 
         with self.assertRaisesRegex(ValueError, "Informe o Ano com 4 algarismos"):
