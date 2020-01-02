@@ -7,7 +7,7 @@ Using ``factorial``
 This is an example text file in reStructuredText format (https://docs.python.org/2/library/doctest.html).
   First import ``factorial`` from the ``0_fatorial`` module:
 
-    >>> from factorial import factorial
+    >>> from incolumepy.sequences.factorial import factorial
 
 Now use it:
     >>> factorial(0)
