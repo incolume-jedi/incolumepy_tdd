@@ -9,6 +9,10 @@ bumpversion = "*"
 tox = "*"
 wheel = "*"
 mock = "*"
+bs4 = "*"
+html5lib = "*"
+ipdb = "*"
+ipython = "*"
 
 [packages]
 
