@@ -73,7 +73,8 @@ property/setter
 1. Fatoração de código com mudança de
 código sem perder funcionalidades
 1. Recursividade
-
+1. Fatoração para recursividade
+1. Properties com bloqueio de escrita; raspagem HTML com BeautifulSoup;
 ### Testes modulares
 Para testar cada etapa individualmente utilize o comando abaixo:
 ```bash
