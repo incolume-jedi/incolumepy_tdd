@@ -7,7 +7,7 @@ Baixe o webdriver para seu sistema operacional em https://github.com/mozilla/gec
 Descompacte-o em incolumepy/geckodrivers
 Altere suas permisões para somente leitura
 
-Siga as etapas abaixo para ativar micro servidor web:
+Em um terminal exclusivo siga as etapas abaixo para ativar micro servidor web:
 $ cd incolumepy/static_html/www.python.org
 $ python -m http.server
 
@@ -44,9 +44,6 @@ class NavegableSeleniumTest(unittest.TestCase):
         assert os.path.isfile(self.sitepy), "Ops, {}".format(self.sitepy)
 
     def test_path(self):
-        self.assertTrue(os.path.isdir, self.atualdir)
-        self.assertEqual('tests', self.atualdir.split('/')[-1])
-
         self.assertTrue(os.path.isdir, self.serverdir)
         self.assertEqual('www.python.org', self.serverdir.split('/')[-1])
 
