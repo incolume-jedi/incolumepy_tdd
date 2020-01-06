@@ -13,6 +13,8 @@ bs4 = "*"
 html5lib = "*"
 ipdb = "*"
 ipython = "*"
+selenium = "*"
+requests = "*"
 
 [packages]
 
