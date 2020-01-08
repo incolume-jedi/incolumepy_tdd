@@ -89,21 +89,26 @@ class HandleHTMLTest(unittest.TestCase):
             "Ops: Arquivo diverge do esperado. Limpe-o completamente!"
 
     def test_formating(self):
-        """Converter para HTML5, aplicar CSS legis_03.css ao l8666-original.html, inserir titulo
-         a página, aplicar classes CSS (epigrafe, ementa, presidente, ministro, dou) ao documento
-         e salvar o resultado em l8666.html"""
+        """Converter para HTML5, aplicar CSS legis_03.css ao l8666-original.html,
+         inserir cabeçalho no topo do body
+        <header>
+          <h1> Presidência da República</h1> <h2>Secretaria Geral</h2> <h3>Subchefia para Assuntos Jurídicos</h3>
+        </header>
+        Aplicar classes CSS (epigrafe, ementa, presidente, ministro (a cada ministro), dou) ao documento
+         e salvar o resultado em static_html/atos/l8666.html"""
 
         pathfile = os.path.join(*"../incolumepy/static_html/atos/l8666-original.html".split("/"))
         output = os.path.join(*"../incolumepy/static_html/atos/l8666.html".split("/"))
         self.assertEqual(formating.__annotations__, {'pathfile': str, 'return': str})
         result = formating(pathfile)
         self.assertIsInstance(result, bytes)
-        # self.assertEqual(168065, len(result))
+        self.assertEqual(168481, len(result))
         self.assertTrue(os.path.isfile(output))
         sha1 = hashlib.sha1()
         sha1.update(result)
-        # assert "79a42e4056b56d1a2e8528cb0274a0415361db4f" == sha1.hexdigest(), \
-        #     "Ops: Arquivo diverge do esperado. Limpe-o completamente!"
+        print(sha1.hexdigest())
+        assert "50c1e25f5ce415da496c26e99fa57f14d1f4d2c6" == sha1.hexdigest(), \
+            "Ops: Arquivo diverge do esperado. Formate-o completamente!"
 
 
 if __name__ == '__main__':
