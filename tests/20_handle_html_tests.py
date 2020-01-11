@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-1) Crie um metodo e Utilize o requests para acessar a
+Atenda o que é requerido no TDD e inície Criando um metodo e Utilize o requests para acessar a
 lei 8666/1993 em http://legis.senado.leg.br/norma/550542/publicacao/15718520,
 que retorne a requisição http;
 
-salve com o nome incolume/static_html/atos/l8666.html.
 
+arquivo final com o nome incolume/static_html/atos/l8666.html.
 """
 
 import unittest
@@ -15,6 +15,7 @@ import time
 import shutil
 import mock
 import hashlib
+import inspect
 from incolumepy.scraping.htmlformating\
     import formating, requests, req_lei8666, get_content, gravar, os, save_content, partial, identify_recover
 
@@ -56,12 +57,23 @@ class HandleHTMLTest(unittest.TestCase):
         self.assertIsNotNone(get_content(self.url))
 
     def test_get_content(self):
+        """
+        test_get_content:
+
+        """
         self.assertEqual(get_content(self.url), self.req.content)
 
     def test_save_content(self):
-        """Valida a implementação do metodo save_content e a gravação do conteudo no local correto"""
-        output = os.path.join(*"../incolumepy/static_html/atos/l8666-txtSF.html".split("/"))
-        # assert os.path.isfile(output), f"Ops: {output}"
+        """
+        test_save_content:
+        Valida a implementação do metodo save_content e a gravação do conteudo no local correto
+        """
+        try:
+            output = os.path.abspath(os.path.join(*"incolumepy/static_html/atos/l8666-txtSF.html".split("/")))
+            assert os.path.isfile(output), f"Ops: {output}"
+        except AssertionError:
+            output = os.path.abspath(os.path.join(*"../incolumepy/static_html/atos/l8666-txtSF.html".split("/")))
+
         self.assertIsInstance(save_content, partial)
         with mock.patch("builtins.open", create=False) as mock_open:
             save_content('html text')
@@ -73,10 +85,17 @@ class HandleHTMLTest(unittest.TestCase):
             self.assertTrue(mock_open.called)
 
     def test_text_identify_recover(self):
-        """Grave em outro arquivo somente o conteúdo principal um HTML puro de texto limpo"""
-        pathfile = os.path.join(*"../incolumepy/static_html/atos/l8666-txtSF.html".split("/"))
+        """test_text_identify_recover: Grave em outro arquivo somente o conteúdo principal um HTML puro de texto
+        limpo """
+        try:
+            pathfile = os.path.abspath(os.path.join(*"../incolumepy/static_html/atos/l8666-txtSF.html".split("/")))
+            assert os.path.isfile(pathfile), f"Ops: {pathfile}"
+            output = os.path.abspath(os.path.join(*"../incolumepy/static_html/atos/l8666-original.html".split("/")))
+        except AssertionError:
+            pathfile = os.path.abspath(os.path.join(*"incolumepy/static_html/atos/l8666-txtSF.html".split("/")))
+            output = os.path.abspath(os.path.join(*"incolumepy/static_html/atos/l8666-original.html".split("/")))
+
         save_content(get_content(self.url))
-        output = os.path.join(*"../incolumepy/static_html/atos/l8666-original.html".split("/"))
         self.assertEqual(identify_recover.__annotations__, {'pathfile': str, 'return': str})
         result = identify_recover(pathfile)
         self.assertIsInstance(result, bytes)
@@ -89,16 +108,21 @@ class HandleHTMLTest(unittest.TestCase):
             "Ops: Arquivo diverge do esperado. Limpe-o completamente!"
 
     def test_formating(self):
-        """Converter para HTML5, aplicar CSS legis_03.css ao l8666-original.html,
+        """Converter para HTML5, em ascii puro, aplicar CSS legis_03.css ao l8666-original.html,
          inserir cabeçalho no topo do body
         <header>
           <h1> Presidência da República</h1> <h2>Secretaria Geral</h2> <h3>Subchefia para Assuntos Jurídicos</h3>
         </header>
         Aplicar classes CSS (epigrafe, ementa, presidente, ministro (a cada ministro), dou) ao documento
          e salvar o resultado em static_html/atos/l8666.html"""
+        try:
+            pathfile = os.path.abspath(os.path.join(*"../incolumepy/static_html/atos/l8666-original.html".split("/")))
+            assert os.path.isfile(pathfile), f"Ops: {pathfile}"
+            output = os.path.abspath(os.path.join(*"../incolumepy/static_html/atos/l8666.html".split("/")))
+        except AssertionError:
+            pathfile = os.path.abspath(os.path.join(*"incolumepy/static_html/atos/l8666-original.html".split("/")))
+            output = os.path.abspath(os.path.join(*"incolumepy/static_html/atos/l8666.html".split("/")))
 
-        pathfile = os.path.join(*"../incolumepy/static_html/atos/l8666-original.html".split("/"))
-        output = os.path.join(*"../incolumepy/static_html/atos/l8666.html".split("/"))
         self.assertEqual(formating.__annotations__, {'pathfile': str, 'return': str})
         result = formating(pathfile)
         self.assertIsInstance(result, bytes)
