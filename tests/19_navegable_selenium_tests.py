@@ -48,13 +48,13 @@ class NavegableSeleniumTest(unittest.TestCase):
         self.assertEqual('www.python.org', self.serverdir.split('/')[-1])
 
     def test_ifdrivers(self):
+        localbase = os.path.relpath(os.path.join(os.path.dirname(__file__), '..', 'incolumepy', 'geckodrivers'))
         local = ''
         if platform.system().lower() in ('linux', 'macos'):
-            local = os.path.relpath(
-                os.path.join(os.path.dirname(__file__), '..', 'incolumepy', 'geckodrivers', 'geckodriver'))
+            local = os.path.join(localbase, 'geckodriver')
         elif 'windows' == platform.system().lower():
-            local = os.path.relpath(
-                os.path.join(os.path.dirname(__file__), '.', 'incolumepy', 'geckodrivers', 'geckodriver.exe'))
+            local = os.path.join(localbase, 'geckodriver.exe')
+
         assert os.path.isfile(local), "Driver indisponível: \"{}\"".format(local)
         self.assertTrue(os.access(local, os.R_OK))
         self.assertTrue(os.access(local, os.X_OK))
