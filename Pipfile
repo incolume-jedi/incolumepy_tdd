@@ -15,6 +15,7 @@ ipdb = "*"
 ipython = "*"
 selenium = "*"
 requests = "*"
+faker = "*"
 
 [packages]
 
