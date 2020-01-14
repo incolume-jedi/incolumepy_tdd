@@ -84,6 +84,7 @@ class MyTestCase(unittest.TestCase):
             self.assertEqual(isdate(self.FakeFactory.date_this_century().strftime("%Y-%m-%d")), True)
             self.assertEqual(isdate(self.FakeFactory.date_this_century().strftime("%Y.%m.%d")), True)
             self.assertEqual(isdate(self.FakeFactory.date_this_century().strftime("%d de %B de %Y")), True)
+            self.assertEqual(isdate(self.FakeFactory.date_this_century().strftime("%B %d, %Y").title()), True)
             self.assertEqual(isdate(tile(self.FakeFactory.date_this_century().strftime("%A, %d de %B de %Y."))), True)
 
     def test_email(self):
@@ -117,8 +118,13 @@ class MyTestCase(unittest.TestCase):
             self.assertEqual(isurl(self.FakeFactory.uri()), True)
         self.assertTrue(isurl('ftp://unb.br'))
         self.assertTrue(isurl('ftps://unb.br/disc/arq.pdf'))
+        self.assertTrue(isurl('http://localhost:8000'))
+        self.assertTrue(isurl('http://127.0.0.1:3141/'))
         self.assertTrue(isurl('https://incolume.com.br:443/universo/python'))
         self.assertFalse(isurl('http:/incolume.com.br/py/dev'))
+        self.assertFalse(isurl('casa'))
+        self.assertFalse(isurl('casa.azul'))
+        self.assertFalse(isurl('casa/'))
 
 
 if __name__ == '__main__':
