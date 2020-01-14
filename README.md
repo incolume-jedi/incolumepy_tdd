@@ -1,5 +1,27 @@
 # Treinamento em Python
+## Sobre o Curso
+### Nome
+Treinamento em Python
 
+### Instrutor
+Ricardo Brito do Nascimento (http://brito.blog.incolume.com.br)
+
+### Objetivo
+Apresentar e aprimorar as habilidades de desenvolvimento
+ e técnicas da linguagem Python.
+
+### Pré−Requisitos
+Vontade de aprender, desejo de pesquisar,
+noções básicas de informática e
+operação do sistema operacional por linha de comando.
+
+### Público Alvo
+Desenvolvedores, administradores de sistemas, programadores e interessados em geral.
+
+### Duração
+40 horas
+
+## Introdução
 Este treinamento se divide em etapas sequênciais,
  de conhecimento cumulativo para aperfeiçoar e
  aprimorar as habilidades de desenvolvimento e
@@ -77,7 +99,7 @@ código sem perder funcionalidades
 1. Properties com bloqueio de escrita; raspagem HTML com BeautifulSoup;
 1. Iteração com servidor python http.server; e utilização do selenium;
 1. Utilização request; tratamento de HTML via python;
-
+1. Validação de dados com expressões regulares;
 ### Testes modulares
 Para testar cada etapa individualmente utilize o comando abaixo:
 ```bash
