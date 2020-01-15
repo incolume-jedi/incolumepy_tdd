@@ -1,3 +1,8 @@
+"""
+Fatorar incolumepy.employers em 2 classes:
+Pessoa(fullname, born, email, address, fone, cidade, estado)
+Employer(Pessoa(), login, email, salario)
+"""
 import unittest
 from faker import Faker
 from tempfile import NamedTemporaryFile
