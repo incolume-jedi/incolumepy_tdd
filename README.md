@@ -100,6 +100,7 @@ código sem perder funcionalidades
 1. Iteração com servidor python http.server; e utilização do selenium;
 1. Utilização request; tratamento de HTML via python;
 1. Validação de dados com expressões regulares;
+1. Fatoração Employer
 1. Manibpulação com CSV e Fatoração de classe com herança;
 1. Calculos de Hashes
 ### Testes modulares
