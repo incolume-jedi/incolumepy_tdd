@@ -101,7 +101,7 @@ código sem perder funcionalidades
 1. Utilização request; tratamento de HTML via python;
 1. Validação de dados com expressões regulares;
 1. Manibpulação com CSV e Fatoração de classe com herança;
-1. Claculos de Hashes
+1. Calculos de Hashes
 ### Testes modulares
 Para testar cada etapa individualmente utilize o comando abaixo:
 ```bash
