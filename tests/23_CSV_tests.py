@@ -1,9 +1,10 @@
 """
 Fatorar incolumepy.employers em 2 classes:
-Pessoa(fullname, born, email, address, fone, cidade, estado)
+Pessoa(fullname, born, email, address, fone, cidade, address)
 Employer(Pessoa(), login, email, salario)
 """
 import unittest
+import re
 from faker import Faker
 from tempfile import NamedTemporaryFile
 from incolumepy.pessoa import Pessoa
@@ -25,10 +26,11 @@ class MyTestCase(unittest.TestCase):
             )
             user.domain = "exemplo.incolume.com.br"
             user.fone = cls.fake.phone_number()
-            user.address = cls.fake.address()
-            user.cidade = cls.fake.city()
-            user.estado = cls.fake.state()
-            headers = ["nome", "login", "email", "born", "salario", "telefone", "address", "cidade", "estado"]
+            values = [
+                bairro, address, cep, cidade, estado \
+                for bairro, address, x in cls.fake.address().split('\n') for cep, cidade, estado in re.split(' |/', x)]
+            user.bairro, user.address, user.cep, user.cidade, user.estado = values
+            headers = ["nome", "login", "email", "born", "salario", "telefone", "cep", "address", "bairro"]
             writer = csv.DictWriter(cls.fout, fieldnames=headers)
             d = {
                 k: v
@@ -37,7 +39,7 @@ class MyTestCase(unittest.TestCase):
                     headers,
                     [
                         user.fullname, user.login, user.email, user.born,
-                        user.salario, user.fone, user.address, user.cidade, user.estado
+                        user.salario, user.fone, user.cep, user.bairro, user.address
                     ]
                 )
             }
