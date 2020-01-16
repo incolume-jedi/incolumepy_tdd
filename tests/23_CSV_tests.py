@@ -26,11 +26,12 @@ class MyTestCase(unittest.TestCase):
             )
             user.domain = "exemplo.incolume.com.br"
             user.fone = cls.fake.phone_number()
-            values = [
-                bairro, address, cep, cidade, estado \
-                for bairro, address, x in cls.fake.address().split('\n') for cep, cidade, estado in re.split(' |/', x)]
-            user.bairro, user.address, user.cep, user.cidade, user.estado = values
-            headers = ["nome", "login", "email", "born", "salario", "telefone", "cep", "address", "bairro"]
+            user.address, user.bairro, value = re.split(r'\n', cls.fake.address())
+            user.estado = re.split(r' |/', value)[-1]
+            user.cep = re.split(r' |/', value)[0]
+            user.cidade = ''.join(re.split(r' |/', value)[1:-1])
+            headers = ["nome", "login", "email", "born", "salario",
+                       "telefone", "cep", "address", "bairro", "cidade", "estado"]
             writer = csv.DictWriter(cls.fout, fieldnames=headers)
             d = {
                 k: v
