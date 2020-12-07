@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "incolumepy_tdd"
+version = "2.1.0-dev11"
+description = "Python Utilities for trainning"
+authors = ["britodfbr <contato@incolume.com.br>"]
+homepage="https://gitlab.com/development-incolume/treinamentos/incolumepy_tdd"
+
+keywords = ['python', 'utils', 'incolumepy']                                                                                                                                                           
+repository = 'https://gitlab.com/development-incolume/incolumepy.utils'                                                                                                                                
+packages = [                                                                                                                                                                                           
+  {include = "incolumepy", from='src'},
+]                                                                                                                                                                                                      
+classifiers = [                                                                                                                                                                                        
+  'Development Status :: 5 - Production/Stable',                                                                                                                                                       
+  'Operating System :: OS Independent',                                                                                                                                                                
+  'Natural Language :: Portuguese (Brazilian)',                                                                                                                                                        
+  "Programming Language :: Python",                                                                                                                                                                    
+  'Topic :: Utilities',                                                                                                                                                                                
+]                                                                                                                                                                                                      
+include = [                                                                                                                                                                                            
+  'README.md',                                                                                                                                                                                         
+  "CHANGELOG.md",                                                                                                                                                                                      
+  'docs/CONTRIBUTORS.md',                                                                                                                                                                             
+]                                                                                                                                                                                                      
+exclude = [                                                                                                                                                                                            
+  "examples/",                                                                                                                                                                                         
+  "ez_setup",                                                                                                                                                                                          
+  "tests/",                                                                                                                                                                                            
+]      
+
+
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
