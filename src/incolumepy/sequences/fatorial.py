@@ -1,8 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+import doctest
 
 
 if __name__ == "__main__":
-    import doctest
-
-    doctest.testfile("1-fatorial.txt")
+    doctest.testfile("01-fatorial.txt")
