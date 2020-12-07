@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "incolumepy_tdd"
-version = "2.1.0-dev11"
+version = "2.1.0-alpha.12"
 description = "Python Utilities for trainning"
 authors = ["britodfbr <contato@incolume.com.br>"]
 homepage="https://gitlab.com/development-incolume/treinamentos/incolumepy_tdd"
