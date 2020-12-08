@@ -53,12 +53,16 @@ Se o resultado for similar ao apresentado, Meus parabéns!! Você concluiu o cur
 * python 3.7 (>= 3.6)
 * virtualenv
 
+ou
 * pipenv
 ```bash
+pipenv --python 3.7
 pipenv install -d
 ```
+ou
 * poetry
 ```bash
+poetry env use 3.7
 poetry install
 ```
 
