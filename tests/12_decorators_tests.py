@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 import unittest
 from time import sleep
-from incolumepy.utils.decorators import timeit
+from src.incolumepy.utils.decorators import timeit
 
 
 @timeit

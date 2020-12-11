@@ -1,5 +1,5 @@
 import unittest
-from incolumepy.veiculos.barco import Barco
+from src.incolumepy.veiculos.barco import Barco
 
 
 class TestBarco(unittest.TestCase):

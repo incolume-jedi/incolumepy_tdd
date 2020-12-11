@@ -3,7 +3,7 @@
 import unittest
 import mock
 from types import FunctionType
-from incolumepy.sequences.fatorial import fatorial
+from src.incolumepy.sequences.fatorial import fatorial
 
 
 class RecursividadeTest(unittest.TestCase):

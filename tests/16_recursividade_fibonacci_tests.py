@@ -3,7 +3,7 @@
 import unittest
 import mock
 from types import FunctionType
-from incolumepy.sequences.fibonacci import fibonacci
+from src.incolumepy.sequences.fibonacci import fibonacci
 
 
 class RecursividadeTest(unittest.TestCase):

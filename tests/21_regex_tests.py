@@ -3,16 +3,16 @@ import locale
 from faker import Factory
 from faker.providers import internet
 from faker.providers import date_time
-from incolumepy.utils.regex import re
-from incolumepy.utils.regex import is_ccredito_amex
-from incolumepy.utils.regex import is_ccredito_diners
-from incolumepy.utils.regex import is_ccredito_master
-from incolumepy.utils.regex import is_ccredito_visa
-from incolumepy.utils.regex import isdate
-from incolumepy.utils.regex import isemail
-from incolumepy.utils.regex import isfone
-from incolumepy.utils.regex import isip
-from incolumepy.utils.regex import isurl
+from src.incolumepy.utils.regex import re
+from src.incolumepy.utils.regex import is_ccredito_amex
+from src.incolumepy.utils.regex import is_ccredito_diners
+from src.incolumepy.utils.regex import is_ccredito_master
+from src.incolumepy.utils.regex import is_ccredito_visa
+from src.incolumepy.utils.regex import isdate
+from src.incolumepy.utils.regex import isemail
+from src.incolumepy.utils.regex import isfone
+from src.incolumepy.utils.regex import isip
+from src.incolumepy.utils.regex import isurl
 
 
 class MyTestCase(unittest.TestCase):
