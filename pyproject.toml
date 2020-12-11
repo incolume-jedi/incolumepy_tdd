@@ -1,32 +1,32 @@
 [tool.poetry]
-name = "incolumepy_tdd"
-version = "2.1.1-alpha.1"
+name = "tdd"
+version = "2.1.1"
 description = "Python Utilities for trainning"
 authors = ["britodfbr <contato@incolume.com.br>"]
 homepage="https://gitlab.com/development-incolume/treinamentos/incolumepy_tdd"
 
-keywords = ['python', 'utils', 'incolumepy']                                                                                                                                                           
-repository = 'https://gitlab.com/development-incolume/incolumepy.utils'                                                                                                                                
-packages = [                                                                                                                                                                                           
+keywords = ['python', 'utils', 'incolumepy']
+repository = 'https://gitlab.com/development-incolume/incolumepy.utils'
+packages = [
   {include = "incolumepy", from='src'},
-]                                                                                                                                                                                                      
-classifiers = [                                                                                                                                                                                        
-  'Development Status :: 5 - Production/Stable',                                                                                                                                                       
-  'Operating System :: OS Independent',                                                                                                                                                                
-  'Natural Language :: Portuguese (Brazilian)',                                                                                                                                                        
-  "Programming Language :: Python",                                                                                                                                                                    
-  'Topic :: Utilities',                                                                                                                                                                                
-]                                                                                                                                                                                                      
-include = [                                                                                                                                                                                            
-  'README.md',                                                                                                                                                                                         
-  "CHANGELOG.md",                                                                                                                                                                                      
-  'docs/CONTRIBUTORS.md',                                                                                                                                                                             
-]                                                                                                                                                                                                      
-exclude = [                                                                                                                                                                                            
-  "examples/",                                                                                                                                                                                         
-  "ez_setup",                                                                                                                                                                                          
-  "tests/",                                                                                                                                                                                            
-]      
+]
+classifiers = [
+  'Development Status :: 5 - Production/Stable',
+  'Operating System :: OS Independent',
+  'Natural Language :: Portuguese (Brazilian)',
+  "Programming Language :: Python",
+  'Topic :: Utilities',
+]
+include = [
+  'README.md',
+  "CHANGELOG.md",
+  'docs/CONTRIBUTORS.md',
+]
+exclude = [
+  "examples/",
+  "ez_setup",
+  "tests/",
+]
 
 
 
