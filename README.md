@@ -115,6 +115,9 @@ código sem perder funcionalidades
 1. Manibpulação com CSV e Fatoração de classe com herança;
 1. Calculos de Hashes
 1. Conversão de cores rgb para hexadecimal;
+1. Decodificador Morse
+1. Gerador de senhas
+1. Manipulação de arquivos
 
 ### Testes modulares
 Para testar cada etapa individualmente utilize o comando abaixo:
