@@ -1,6 +1,8 @@
 import unittest
 from src.incolumepy.veiculos.bicicleta import Bicicleta
 
+# TODO: Atividade  7: implementar Bicicleta para que passe nos testes
+
 
 class TestBicicleta(unittest.TestCase):
     def setUp(self):

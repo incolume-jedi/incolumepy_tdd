@@ -12,6 +12,8 @@ from src.incolumepy.pessoa import Pessoa
 from src.incolumepy.employers import Employee, normalize
 from src.incolumepy.utils.read_employers_csv import csv
 
+# TODO: Atividade  23: Proceder com as implementações necessárias para que passe nos testes
+
 
 class MyTestCase(unittest.TestCase):
     @classmethod

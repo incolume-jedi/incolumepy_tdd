@@ -5,6 +5,8 @@ import mock
 from types import FunctionType
 from src.incolumepy.sequences.fatorial import fatorial
 
+# TODO: Atividade  17: implementar fatorial para que passe nos testes
+
 
 class RecursividadeTest(unittest.TestCase):
     def setUp(self) -> None:

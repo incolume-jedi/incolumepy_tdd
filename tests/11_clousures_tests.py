@@ -3,6 +3,8 @@
 import unittest
 from src.incolumepy.utils.clousures import multiple, dobro
 
+# TODO: Atividade  11: implementar multiple* para que passe nos testes
+
 
 class TestClousure(unittest.TestCase):
     def setUp(self) -> None:

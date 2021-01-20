@@ -4,6 +4,8 @@ import unittest
 from time import sleep
 from src.incolumepy.utils.decorators import timeit
 
+# TODO: Atividade  12: implementar timeit para que passe nos testes
+
 
 @timeit
 def fake_method(value):

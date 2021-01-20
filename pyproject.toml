@@ -5,7 +5,7 @@ description = "Python Utilities for trainning"
 authors = ["britodfbr <contato@incolume.com.br>"]
 homepage="https://gitlab.com/development-incolume/treinamentos/incolumepy_tdd"
 
-keywords = ['python', 'utils', 'incolumepy']
+keywords = ['python', 'utils', 'incolumepy', 'treinamento']
 repository = 'https://gitlab.com/development-incolume/incolumepy.utils'
 packages = [
   {include = "incolumepy", from='src'},
@@ -27,8 +27,6 @@ exclude = [
   "ez_setup",
   "tests/",
 ]
-
-
 
 [tool.poetry.dependencies]
 python = "^3.7"

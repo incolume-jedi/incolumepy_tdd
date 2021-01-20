@@ -14,6 +14,8 @@ from src.incolumepy.utils.regex import isfone
 from src.incolumepy.utils.regex import isip
 from src.incolumepy.utils.regex import isurl
 
+# TODO: Atividade  21: Proceder com as implementações necessárias para que passe nos testes
+
 
 class MyTestCase(unittest.TestCase):
     @classmethod

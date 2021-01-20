@@ -5,6 +5,8 @@ import magic
 import mimetypes
 from src.incolumepy.tdd import arquivos
 
+# TODO: Atividade  28: Proceder com as implementações necessárias para que passe nos testes
+
 
 class MyTextFiles(unittest.TestCase):
     def setUp(self) -> None:

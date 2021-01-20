@@ -8,6 +8,8 @@ ser arredondados para o valor válido mais próximo.
 Observação: sua resposta deve sempre ter 5 caracteres, a abreviação com 3 não funcionará aqui.
 """
 
+# TODO: Atividade  25: Proceder com as implementações necessárias para que passe nos testes
+
 
 class MyTestCase(unittest.TestCase):
     def test_something(self):

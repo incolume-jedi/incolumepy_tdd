@@ -3,6 +3,8 @@
 import unittest
 from src.incolumepy.scraping.google import GoogleSearch, os, BeautifulSoup, NavigableString
 
+# TODO: Atividade  18: Proceder com as implementações necessárias para que passe nos testes
+
 
 class ScrapingHTMLTest(unittest.TestCase):
     def setUp(self) -> None:
