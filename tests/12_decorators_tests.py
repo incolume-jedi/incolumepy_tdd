@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 import unittest
 from time import sleep
-from src.incolumepy.utils.decorators import timeit
+from src.incolumepy.tdd.utils.decorators import timeit
 
 # TODO: Atividade  12: implementar timeit para que passe nos testes
 

@@ -1,5 +1,5 @@
 import unittest
-from src.incolumepy.rgb_to_hex_conversion import rgb2hex
+from src.incolumepy.tdd.rgb_to_hex_conversion import rgb2hex
 """
 Conclua-a para que a passagem de valores decimais RGB resulte no retorno de uma representação hexadecimal.
 Os valores decimais válidos para RGB são entre 1 e  255. Todos os valores que estiverem fora desse intervalo devem

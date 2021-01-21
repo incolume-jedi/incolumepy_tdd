@@ -1,5 +1,5 @@
 import unittest
-from src.incolumepy.veiculos.barco import Barco
+from src.incolumepy.tdd.veiculos.barco import Barco
 
 # TODO: Atividade  6: implementar Barco para que passe nos testes
 

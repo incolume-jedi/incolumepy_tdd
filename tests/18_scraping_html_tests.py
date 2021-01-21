@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import unittest
-from src.incolumepy.scraping.google import GoogleSearch, os, BeautifulSoup, NavigableString
+from src.incolumepy.tdd.scraping.google import GoogleSearch, os, BeautifulSoup, NavigableString
 
 # TODO: Atividade  18: Proceder com as implementações necessárias para que passe nos testes
 

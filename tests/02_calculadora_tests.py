@@ -1,5 +1,5 @@
 import unittest
-from src.incolumepy import calc
+from src.incolumepy.tdd import calc
 # TODO: Atividade  2: implementar calculadora (calc) para que passe nos testes
 
 

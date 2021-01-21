@@ -1,5 +1,5 @@
 from unittest import TestCase, main
-from src.incolumepy.geometria.circulo import circulo_area, pi
+from src.incolumepy.tdd.geometria.circulo import circulo_area, pi
 
 # TODO: Atividade  10: implementar circulo_area para que passe nos testes
 

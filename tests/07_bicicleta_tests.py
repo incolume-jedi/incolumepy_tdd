@@ -1,5 +1,5 @@
 import unittest
-from src.incolumepy.veiculos.bicicleta import Bicicleta
+from src.incolumepy.tdd.veiculos.bicicleta import Bicicleta
 
 # TODO: Atividade  7: implementar Bicicleta para que passe nos testes
 

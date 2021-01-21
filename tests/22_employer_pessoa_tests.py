@@ -6,8 +6,8 @@ Employer(Pessoa(), login, email, salario)
 import unittest
 import locale
 from faker import Faker
-from src.incolumepy.pessoa import Pessoa
-from src.incolumepy.employers import Employee
+from src.incolumepy.tdd.pessoa import Pessoa
+from src.incolumepy.tdd.employers import Employee
 from datetime import datetime
 
 # TODO: Atividade  22: Proceder com as implementações necessárias para que passe nos testes

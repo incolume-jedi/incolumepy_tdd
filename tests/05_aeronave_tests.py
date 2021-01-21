@@ -1,5 +1,5 @@
 import unittest
-from src.incolumepy.veiculos.aeronaves import Aeronave
+from src.incolumepy.tdd.veiculos.aeronaves import Aeronave
 
 # TODO: Atividade  5: implementar Aeronave para que passe nos testes
 

@@ -1,5 +1,5 @@
 import unittest
-from src.incolumepy.veiculos.carro import Carro
+from src.incolumepy.tdd.veiculos.carro import Carro
 
 # TODO: Atividade  8: implementar Carro para que passe nos testes
 

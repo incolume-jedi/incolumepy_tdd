@@ -8,9 +8,9 @@ import re
 from faker import Faker
 from tempfile import NamedTemporaryFile
 from datetime import datetime
-from src.incolumepy.pessoa import Pessoa
-from src.incolumepy.employers import Employee, normalize
-from src.incolumepy.utils.read_employers_csv import csv
+from src.incolumepy.tdd.pessoa import Pessoa
+from src.incolumepy.tdd.employers import Employee, normalize
+from src.incolumepy.tdd.utils.read_employers_csv import csv
 
 # TODO: Atividade  23: Proceder com as implementações necessárias para que passe nos testes
 

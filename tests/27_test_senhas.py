@@ -1,6 +1,6 @@
 import unittest
 import re
-from src.incolumepy.utils.senhas import senhas
+from src.incolumepy.tdd.utils.senhas import senhas
 
 # TODO: Atividade  27: Proceder com as implementações necessárias para que passe nos testes
 

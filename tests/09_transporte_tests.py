@@ -1,5 +1,5 @@
 from unittest import TestCase, main
-from src.incolumepy.transporte import Transporte, ABCMeta, ABC
+from src.incolumepy.tdd.transporte import Transporte, ABCMeta, ABC
 
 # TODO: Atividade 9: implementar Transporte para que passe nos testes
 

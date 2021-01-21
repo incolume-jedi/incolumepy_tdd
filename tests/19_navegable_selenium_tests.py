@@ -14,7 +14,7 @@ $ python -m http.server
 """
 import unittest
 import urllib3
-from src.incolumepy.scraping.python_org import PythonOrg, webdriver, os, platform
+from src.incolumepy.tdd.scraping.python_org import PythonOrg, webdriver, os, platform
 
 # TODO: Atividade  19: Proceder com as implementações necessárias para que passe nos testes
 

@@ -1,7 +1,7 @@
 from unittest import TestCase, main
 import datetime as dt
 from datetime import datetime
-from src.incolumepy.employers import Employee
+from src.incolumepy.tdd.employers import Employee
 
 # TODO: Atividade  3: implementar Employee para que passe nos testes
 
