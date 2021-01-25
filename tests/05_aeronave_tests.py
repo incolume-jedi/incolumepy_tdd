@@ -1,7 +1,12 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+# TODO: Atividade  5: implementar Aeronave para que passe nos testes
+
+"""
+__author__ = '@britodfbr'
 import unittest
 from src.incolumepy.tdd.veiculos.aeronaves import Aeronave
-
-# TODO: Atividade  5: implementar Aeronave para que passe nos testes
 
 
 class TestAeronave(unittest.TestCase):

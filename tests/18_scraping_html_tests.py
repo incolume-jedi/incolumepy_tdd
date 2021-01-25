@@ -1,15 +1,20 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-import unittest
-from src.incolumepy.tdd.scraping.google import GoogleSearch, os, BeautifulSoup, NavigableString
-
+"""
 # TODO: Atividade  18: Proceder com as implementações necessárias para que passe nos testes
+
+"""
+__author__ = '@britodfbr'
+import unittest
+import os
+from pathlib import Path
+from incolumepy.tdd.scraping.google import GoogleSearch, BeautifulSoup, NavigableString
 
 
 class ScrapingHTMLTest(unittest.TestCase):
     def setUp(self) -> None:
         self.path = os.path.join(
-            os.path.dirname(__file__), '..', 'incolumepy', 'static_html', 'google.com', 'index.html'
+            Path(__file__).parent.parent.joinpath('src', 'incolumepy', 'tdd', 'static_html', 'google.com', 'index.html')
         )
         self.google_search = GoogleSearch(self.path)
 

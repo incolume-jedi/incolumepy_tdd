@@ -1,7 +1,12 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+# TODO: Atividade  7: implementar Bicicleta para que passe nos testes
+
+"""
+__author__ = '@britodfbr'
 import unittest
 from src.incolumepy.tdd.veiculos.bicicleta import Bicicleta
-
-# TODO: Atividade  7: implementar Bicicleta para que passe nos testes
 
 
 class TestBicicleta(unittest.TestCase):

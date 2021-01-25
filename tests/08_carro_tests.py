@@ -1,7 +1,12 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+# TODO: Atividade  8: implementar Carro para que passe nos testes
+
+"""
+__author__ = '@britodfbr'
 import unittest
 from src.incolumepy.tdd.veiculos.carro import Carro
-
-# TODO: Atividade  8: implementar Carro para que passe nos testes
 
 
 class TestCarro(unittest.TestCase):
