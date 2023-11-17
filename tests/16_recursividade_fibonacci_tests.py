@@ -3,7 +3,9 @@
 import unittest
 import mock
 from types import FunctionType
-from src.incolumepy.sequences.fibonacci import fibonacci
+from src.incolumepy.tdd.sequences.fibonacci import fibonacci
+
+# TODO: Atividade  16: implementar fibonacci para que passe nos testes
 
 
 class RecursividadeTest(unittest.TestCase):

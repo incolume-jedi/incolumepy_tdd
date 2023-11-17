@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import unittest
-from src.incolumepy.utils.clousures import multiple, dobro
+from src.incolumepy.tdd.utils.clousures import multiple, dobro
+
+# TODO: Atividade  11: implementar multiple* para que passe nos testes
 
 
 class TestClousure(unittest.TestCase):

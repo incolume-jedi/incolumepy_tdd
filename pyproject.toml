@@ -1,11 +1,11 @@
 [tool.poetry]
 name = "tdd"
-version = "2.5.0-rc.1"
+version = "2.5.0rc2"
 description = "Python Utilities for trainning"
 authors = ["britodfbr <contato@incolume.com.br>"]
 homepage="https://gitlab.com/development-incolume/treinamentos/incolumepy_tdd"
 
-keywords = ['python', 'utils', 'incolumepy']
+keywords = ['python', 'utils', 'incolumepy', 'treinamento']
 repository = 'https://gitlab.com/development-incolume/incolumepy.utils'
 packages = [
   {include = "incolumepy", from='src'},
@@ -28,8 +28,6 @@ exclude = [
   "tests/",
 ]
 
-
-
 [tool.poetry.dependencies]
 python = "^3.7"
 
@@ -40,9 +38,12 @@ mock = "3.0.5"
 bs4 = "0.0.1"
 html5lib = "1.0.1"
 ipdb = "0.12.3"
+python-magic = "^0.4.18"
 requests = "2.22.0"
 Faker = "^5.0.0"
 selenium-wire = "^2.1.2"
+pandas = "^1.1.5"
+openpyxl = "^3.0.5"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

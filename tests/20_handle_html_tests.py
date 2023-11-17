@@ -16,9 +16,11 @@ import shutil
 import mock
 import hashlib
 import inspect
-from src.incolumepy.scraping.htmlformating import (
+from src.incolumepy.tdd.scraping.htmlformating import (
     formating, requests, req_lei8666, get_content, gravar, os, save_content, partial, identify_recover
 )
+
+# TODO: Atividade  20: Proceder com as implementações necessárias para que passe nos testes
 
 
 class HandleHTMLTest(unittest.TestCase):

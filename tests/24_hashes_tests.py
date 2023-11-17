@@ -1,7 +1,9 @@
 import unittest
 import os
-from src.incolumepy.utils.handlers_hashes import hash_md5_0
-from src.incolumepy.utils.handlers_hashes import hash_sha1_0
+from src.incolumepy.tdd.utils.handlers_hashes import hash_md5_0
+from src.incolumepy.tdd.utils.handlers_hashes import hash_sha1_0
+
+# TODO: Atividade  24: Proceder com as implementações necessárias para que passe nos testes
 
 
 class MyTestCase(unittest.TestCase):

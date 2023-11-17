@@ -3,16 +3,18 @@ import locale
 from faker import Factory
 from faker.providers import internet
 from faker.providers import date_time
-from src.incolumepy.utils.regex import re
-from src.incolumepy.utils.regex import is_ccredito_amex
-from src.incolumepy.utils.regex import is_ccredito_diners
-from src.incolumepy.utils.regex import is_ccredito_master
-from src.incolumepy.utils.regex import is_ccredito_visa
-from src.incolumepy.utils.regex import isdate
-from src.incolumepy.utils.regex import isemail
-from src.incolumepy.utils.regex import isfone
-from src.incolumepy.utils.regex import isip
-from src.incolumepy.utils.regex import isurl
+from src.incolumepy.tdd.utils.regex import re
+from src.incolumepy.tdd.utils.regex import is_ccredito_amex
+from src.incolumepy.tdd.utils.regex import is_ccredito_diners
+from src.incolumepy.tdd.utils.regex import is_ccredito_master
+from src.incolumepy.tdd.utils.regex import is_ccredito_visa
+from src.incolumepy.tdd.utils.regex import isdate
+from src.incolumepy.tdd.utils.regex import isemail
+from src.incolumepy.tdd.utils.regex import isfone
+from src.incolumepy.tdd.utils.regex import isip
+from src.incolumepy.tdd.utils.regex import isurl
+
+# TODO: Atividade  21: Proceder com as implementações necessárias para que passe nos testes
 
 
 class MyTestCase(unittest.TestCase):
