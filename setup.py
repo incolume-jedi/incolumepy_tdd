@@ -3,7 +3,7 @@
 from setuptools import setup
 
 setup(name='incolumepy_tdd',
-      version='2.3.0',
+      version='2.4.0',
       description='Python Utilities for trainning',
       author='Ricardo Brito do Nascimento',
       author_email='contato@incolume.com.br',
