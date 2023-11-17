@@ -73,6 +73,10 @@ property/setter
 1. Fatoração de código com mudança de
 código sem perder funcionalidades
 1. Recursividade
+1. Fatoração para recursividade
+1. Properties com bloqueio de escrita; raspagem HTML com BeautifulSoup;
+1. Iteração com servidor python http.server; e utilização do selenium;
+1. Utilização request; tratamento de HTML via python;
 
 ### Testes modulares
 Para testar cada etapa individualmente utilize o comando abaixo:
