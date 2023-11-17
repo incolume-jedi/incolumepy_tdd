@@ -1,0 +1,545 @@
+/*
+legis_3_1567782275
+disponivel em:
+http://www.planalto.gov.br/ccivil_03/css/legis_3.css
+https://www.planalto.gov.br/ccivil_03/css/legis_3.css
+*/
+*{
+  /* Tamanho e família de fontes; força estilo normal no corpo de texto*/
+  /*font: normal 10pt Arial, Helvetica, sans-serif;*/
+  font-family: Arial, Helvetica, sans-serif;
+  /*qua set  4 21:37:10 -03 2019*/
+  /* Nova sequencia de fontes manual redação 2018/*
+  /*font-family: Calibri, Carlito, Arial, sans-serif; */
+  font-size: 10pt;
+}
+
+object{
+    width: 100%;
+    height: 50em;
+  }
+
+body{
+  margin: 1.5em;
+  margin-bottom: 40em;
+}
+a:link, a:visited, a:hover{
+  color: #000080;
+  font-family: arial;
+}
+.esconder{
+  display: None;
+}
+.bold{
+    font-weight: 900;
+}
+b.adi,
+dfn,
+del.adi,
+i.adi,
+s.adi,
+strike.adi,
+span.adi,
+u.adi {
+    text-decoration: line-through;
+    font-weight: normal;
+}
+del.adi, strike.adi {
+    display: block;
+}
+
+/* Caixa de Alerta */
+/*=================*/
+blockquote.alert{
+    border: 2px solid red;
+    margin-top: 3em;
+    padding: 2em;
+    text-align: center;
+}
+
+blockquote.alert i{
+    color: rgb(232,209,0);
+    font-size: 4em;
+}
+
+blockquote.alert p{
+    font-size: 2em;
+    text-align: center;
+}
+
+blockquote.alert p a{
+    font-size: 1em;
+    text-align: center;
+}
+
+/*   Nav retratil  */
+/*=================*/
+#something,
+nav ul li, inputr,
+nav ul input:checked ~li label.abrir {
+  display:none;
+}
+
+nav ul li{
+  text-decoration: none !important;
+}
+
+nav ul input:checked ~li,
+nav ul li.fixo, li.abrir {
+    display: block;
+}
+
+nav ul li label {
+  color: #000080;
+  font-weight: 900;
+  margin-left: 0;
+  cursor: pointer;
+}
+nav ul li label span{
+  display: None;
+  visibility: hidden;
+}
+nav ul li label.abrir {
+    align:right;
+    cursor: copy;
+}
+nav ul {
+    display: flex;
+    flex-direction: column;
+}
+nav ul li.last {
+    order: 2;
+}
+nav ul li .fa-search{
+  color: red;
+  margin-left: -.5em;
+}
+nav ul li .textoimpressao img{
+  height: 2em;
+}
+
+/*=================*/
+.fas, .fab{
+  font-size: 1.3em;
+}
+.fa-level-down-alt, .fa-level-up-alt{
+  font-size: 1em;
+}
+/*======================================================================================*/
+p.redacaodada,
+#textoimpressao p,
+#textoimpressao li,
+#textoimpressao h4,
+#textoimpressao h5,
+#textoimpressao h6,
+#textoimpressao .ementa,
+#textoimpressao:target .redacaodada{
+    text-decoration: line-through;
+    /*color: #777;*/
+}
+#textoimpressao:target li,
+#textoimpressao:target h4,
+#textoimpressao:target h5,
+#textoimpressao:target h6,
+#textoimpressao:target .ementa,
+#textoimpressao:target p,
+#textoimpressao p.epigrafe{
+    /*text-decoration: overline;*/
+    text-decoration: none;
+}
+#void .ementa{
+    margin-bottom: 1em;
+}
+
+nav{
+  /*text-transform: capitalize;*/
+}
+
+nav li:first-letter{
+  text-transform: capitalize;
+}
+
+nav ul {
+ list-style-type: none;
+ /*margin-top: .5em;*/
+ /*margin-bottom: 1.5em;*/
+ margin: 0 0 2em 0;
+ /*padding: 0 0 0 0;*/
+ /*text-indent: 2em;*/
+}
+nav li{
+ list-style-type: none;
+  margin-left: 0;
+  margin-bottom:.4em;
+}
+/*======================================================================================*/
+#view .redacaodada,
+#view .hide-action,
+#view:target .show-action,
+#textoimpressao:target .esconder,
+#textoimpressao .textoimpressao{
+  display: block;
+}
+#void del,
+#void strike,
+#view del,
+#view strike {
+  /*color:#aaa;*/
+}
+#void nav,
+#view .show-action,
+#view .textoimpressao,
+#view:target strike,
+#view:target del,
+#view:target .redacaodada,
+#view:target .hide-action,
+#textoimpressao .show-action,
+#textoimpressao .hide-action,
+/*#textoimpressao:target strike,*/
+#textoimpressao:target .textoimpressao{
+    display: none;
+}
+/*
+conforme a HASH atual:
+Oculta os elementos com a classe .hide-action
+*/
+h1{font-size:16pt;}
+h2{font-size:14pt;}
+h3{font-size:12pt;}
+
+h1, h2, h3, h4, h5 {text-align:center; margin:0;}
+h4, h6 {
+    padding-top: .4em;
+    padding-bottom: .1em;
+}
+h5{
+    font-weight: normal;
+    padding-top: -.2em;
+    padding-bottom: .1em;
+}
+h4.letra_espaco,
+h5.letra_espaco{
+    letter-spacing: .15em;
+    font-weight: 600;
+}
+h4.caixa_alta,
+h5.caixa_alta,
+h6.caixa_alta,
+p.caixa_alta,
+span.caixa_alta {
+    text-transform: uppercase;
+}
+h4 {/*Sem Negrito*/ font-weight: normal; /*Tamanho da fonte*/ font-size: 10pt; }
+h5 {/*Tamanho da fonte*/ font-size:10pt; }
+h6 {text-align:left; font-weight: bold; font-size: 10pt; margin-bottom:.8em; text-indent: 2em;}
+
+p{
+    /* Tamanho e família de fontes */
+    /*font: 20px Arial, Helvetica, sans-serif;*/
+    font-size: 10pt;
+    padding:0;
+    text-indent: 2em;
+    text-align:justify;
+}
+p.epigrafe {
+  /*font-size: 3vmin;*/
+  color: #000080;
+  margin:1em 0 0 0;
+  padding:0;
+  font-weight: bold; /*Negrito*/
+  text-align:center;
+  text-indent: 0;
+  text-transform: uppercase;
+}
+p.epigrafe a{
+  color: #000080;
+  font-weight: bold; /*Negrito*/
+  text-decoration: underline; /*Sem sublinhado*/
+}
+p.ementa{
+  /*font-size: 3vmin;*/
+  float: right;
+  width: 50%;
+  display: block;
+  color: #800000;
+  margin-top: 2em;
+  margin-bottom:0;
+  /*padding: 3em;*/
+  /*padding-top:3em;*/ /* Espaçamento do texto em baixo */
+  padding-bottom:.3em; /* Espaçamento do texto em baixo */
+  padding-left:50%; /* Espaçamento do texto em baixo */
+  padding-right:0em; /* Espaçamento do texto em baixo */
+  text-align:justify;
+  text-indent: 0;
+  }
+
+.dou {color: red;}
+.dou center{text-align: center; color: red;}
+.dou a{color: red;}
+/* p.dou {font-weight: bold; color:#F00;} */
+p.presidente, p.ministro, p.dou{
+  /*
+  text-align:right;
+  */
+  padding:0;
+  text-indent: 0;
+}
+p.data{}
+p.presidente {font-decoration: none;margin-bottom:0;padding-bottom: 0; text-transform: uppercase;}
+p.ministro{display: block;font-style:italic;margin:0;}
+blockquote.textoalterado{
+    padding-right: 0;
+    padding-left: 2em;
+    margin-right: 1em;
+    text-align: justify;
+    /*font-style: italic;*/
+    /*color: red;*/
+}
+/*== Formatação Tabelas  ==*/
+/*=========================*/
+table.tabelarevogada, table.tabelarevogada caption{
+    text-decoration: line-through;
+}
+#view table.tabelarevogada,
+#view table.tabelarevogada caption{
+    text-decoration: line-through;
+}
+#textoimpressao table,
+#textoimpressao table caption,
+#textoimpressao table.tabelarevogada,
+#textoimpressao:target table.tabelarevogada,
+#textoimpressao table.tabelarevogada caption,
+#textoimpressao:target table.tabelarevogada caption{
+    text-decoration: line-through;
+}
+
+#view:target table.tabelarevogada,
+#view:target table.tabelarevogada caption{
+    display: None
+}
+
+#textoimpressao:target table,
+#textoimpressao:target table caption{
+    text-decoration: none;
+}
+table{
+    width: 85%;
+    border-collapse: collapse;
+    margin-top: 1.8em;
+    margin-left: auto;
+    margin-right: auto;
+}
+table, th, td {
+    border: 1px solid black;
+    padding-left: 1em;
+}
+table caption {
+    text-align: center;
+    caption-side: bottom;
+}
+
+caption.top_titulo, caption.top_titulo h4{
+  caption-side: top;
+  text-align: center;
+  color:#800000;
+  font-size:1.3em;
+  font-weight:900;
+
+}
+table thead tr th h4{
+  color: #800000;
+  font-weight:900;
+}
+thead, th {
+    background-color: #d0d0d0;
+    border-bottom: 1px double black !important;
+    height: 2.2em;
+    line-height: 2.2em;
+    text-align: left;
+}
+td, tr {
+    height: 1.4em;
+    line-height: 1.4em;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+@media print{
+  *{
+    /* Tamanho e família de fontes; força estilo normal no corpo de texto*/
+    /*font: normal 10pt Arial, Helvetica, sans-serif;*/
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    color #000;
+    text-decoration: none;
+  }
+  header{
+    padding-top: 0em;
+    display: block;
+    margin:0;
+    padding-bottom: 0;
+    text-align:center;
+  }
+  header::before{
+    content: "";
+    background-image:url("http://www.planalto.gov.br/ccivil_03/img/brasao.png");
+    background-size: 80px 80px;
+    background-position:center;
+    background-repeat:no-repeat;
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+    display: inline-block;
+    /*size of your image*/
+    height: 80px;
+    width:80px;
+    /*if you want to change the position you can use margins or:*/
+    /*position:relative;*/
+    /*preto e branco*/
+    /*filter: grayscale(100%)*/
+  }
+
+
+  /*apresentar o link na impressao*/
+  /*a:after {content: " (" attr(href) ")";}*/
+  /*a:after {content: " [ link ]";}*/
+  a:link, a:visited, a:active {
+    color: #000080;
+    font-weight: normal;
+    text-decoration: underline;
+    /*sublinhado duplo*/
+    /*text-decoration-style: double;*/
+    /*sublinhado onda*/
+    /*text-decoration-style:wavy;*/
+    /*sublinhado linha*/
+    /*text-decoration-style:solid;*/
+    text-decoration-color:#000;
+    }
+
+  header h1, h1 {font-size:16pt; font-weight:normal;}
+  header h2, h2 {font-size:14pt; font-weight:normal;}
+  header h3, h3 {font-size:12pt; font-weight:normal;}
+  h6{text-align:left; font-weight: bold; font-size: 10pt; margin-bottom:.8em; text-indent: 0;}
+
+  p.epigrafe{
+    margin-top: 2em;
+  }
+  p.epigrafe a{
+    color: #000;
+    text-decoration:none;
+    text-weight: bold;
+  }
+  p.dou{color:#000; text-align:center;}
+  p.ementa{
+    padding-top: 1.5pt;
+    padding-bottom:1.5pt;
+    color:#000;
+    text-decoration: none;
+  }
+
+  #view .redacaodada,
+  #view .show-action,
+  #view .hide-action,
+  #view:target .redacaodada,
+  #void .redacaodada,
+  #textoimpressao .textoimpressao,
+  #view strike,
+  #view del,
+  #view:target strike,
+  #view:target del,
+  #view:target .hide-action {
+    display: none;
+  }
+
+  #textoimpressao h4,
+  #textoimpressao h5,
+  #textoimpressao h6,
+  #textoimpressao .ementa,
+  #textoimpressao p{
+    text-decoration: none;
+  }
+  #textoimpressao del,
+  #textoimpressao strike,
+  #textoimpressao .redacaodada{
+    text-decoration: line-through;
+  }
+}
+
+@media screen and (max-width: 1099px){
+  header{
+    width:100%; /* Largura total - Se você omitir ocupará toda a linha */
+    height: auto;
+    color: #808000; /* Cor da fonte */
+    padding-top: 0em;
+    display: block;
+    margin:0;
+    /* Espaçamento do texto a esquerda */
+    /*padding-left:1em;*/
+    text-align:center;
+    }
+  header::before{
+    content: "";
+    /*background-image:url(https://image.freepik.com/vetores-gratis/tux-personagem-com-papel-em-branco-para-o-seu-texto_52478.jpg);*/
+    background-image:url("http://www.planalto.gov.br/ccivil_03/img/brasao.png");
+    background-size: 100% 100%;
+    display: inline-block;
+    /*size of your image*/
+    height: 82px;
+    width:82px;
+    /*if you want to change the position you can use margins or:*/
+    /*position:relative;*/
+  }
+  p.epigrafe{
+    padding-top: 0em;
+  }
+  /*
+  h1{font-size:16pt;}
+  h2{font-size:14pt;}
+  h3{font-size:12pt;}
+  h4, h5{font-size:10pt;}
+  h6{text-align:left; font-weight: bold; font-size: 10pt; margin-bottom:.8em;}
+  */
+}
+
+@media screen and (min-width: 1100px){
+  /**/
+  header{
+  /* Largura total - Se você omitir ocupará toda a linha */
+  /*width:100%;*/
+  height: 110px;
+  color: #808000; /* Cor da fonte */
+  background: #fff url("http://www.planalto.gov.br/ccivil_03/img/brasao.png") 10em 1.5em no-repeat;
+  background-size: 82px 82px;
+  padding-top: 0em;
+  display: block;
+  margin:0;
+  /* Espaçamento do texto a esquerda */
+  /*padding-left:1em;*/
+  text-align:center;
+  }
+header h1 {
+  /*display: none;*/
+  /* Tamanho e família de fontes */
+  /*font: bold 44px Arial, Helvetica, sans-serif;*/
+  padding-top:1em; /* Espaçamento do texto no topo */
+  padding-bottom:0em; /* Espaçamento do texto em baixo */
+  vertical-align: middle;
+  display: block;
+  }
+header h2, header h3 {
+  /*display: none;*/
+  /* Espaçamento do texto no topo */
+  padding-top:0em;
+  /* Tamanho e família de fontes */
+  /*font: bold 28px Arial, Helvetica, sans-serif;*/
+  vertical-align: middle;
+  display: block;
+  }
+  /*
+  h1{font-size:16pt;}
+  h2{font-size:14pt;}
+  h3{font-size:12pt;}
+  h4, h5{font-size:10pt;}
+  h6{text-align:left; font-weight: bold; font-size: 10pt; margin-bottom:.8em;}
+  */
+}
