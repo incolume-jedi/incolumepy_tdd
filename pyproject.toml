@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "tdd"
+name = "incolume.py.tdd"
 version = "2.6.0"
 description = "Python Utilities for trainning"
 authors = ["britodfbr <contato@incolume.com.br>"]
