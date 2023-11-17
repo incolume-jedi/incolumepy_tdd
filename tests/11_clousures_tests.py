@@ -1,9 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+# TODO: Atividade  11: implementar multiple* para que passe nos testes
+
+"""
+__author__ = '@britodfbr'
 import unittest
 from src.incolumepy.tdd.utils.clousures import multiple, dobro
-
-# TODO: Atividade  11: implementar multiple* para que passe nos testes
 
 
 class TestClousure(unittest.TestCase):

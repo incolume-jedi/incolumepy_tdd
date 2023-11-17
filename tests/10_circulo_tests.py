@@ -1,7 +1,12 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+# TODO: Atividade  10: implementar circulo_area para que passe nos testes
+
+"""
+__author__ = '@britodfbr'
 from unittest import TestCase, main
 from src.incolumepy.tdd.geometria.circulo import circulo_area, pi
-
-# TODO: Atividade  10: implementar circulo_area para que passe nos testes
 
 
 class TestCirculoArea(TestCase):

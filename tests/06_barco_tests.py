@@ -1,7 +1,12 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+# TODO: Atividade  6: implementar Barco para que passe nos testes
+
+"""
+__author__ = '@britodfbr'
 import unittest
 from src.incolumepy.tdd.veiculos.barco import Barco
-
-# TODO: Atividade  6: implementar Barco para que passe nos testes
 
 
 class TestBarco(unittest.TestCase):

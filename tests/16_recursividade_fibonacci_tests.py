@@ -1,16 +1,22 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+# TODO: Atividade  16: implementar fibonacci para que passe nos testes
+
+"""
+__author__ = '@britodfbr'
 import unittest
 import mock
 from types import FunctionType
-from src.incolumepy.tdd.sequences.fibonacci import fibonacci
-
-# TODO: Atividade  16: implementar fibonacci para que passe nos testes
+from incolumepy.tdd.sequences.fibonacci import fibonacci
 
 
 class RecursividadeTest(unittest.TestCase):
     def setUp(self) -> None:
         pass
+
+    def test_package(self):
+        self.assertIsNotNone(__package__)
 
     def test_function(self):
         self.assertIsInstance(fibonacci, FunctionType)
@@ -20,19 +26,19 @@ class RecursividadeTest(unittest.TestCase):
         self.assertEqual(fibonacci.__annotations__, {'pos': int, 'return': int})
 
     def test_recursividade(self):
-        with mock.patch('incolumepy.sequences.fibonacci.fibonacci') as mock_fib:
+        with mock.patch('incolumepy.tdd.sequences.fibonacci.fibonacci') as mock_fib:
             fibonacci(3)
             self.assertTrue(mock_fib.called)
             self.assertGreaterEqual(mock_fib.call_count, 2)
 
     def test_recursividade_1(self):
-        with mock.patch('incolumepy.sequences.fibonacci.fibonacci') as mock_fib:
+        with mock.patch('incolumepy.tdd.sequences.fibonacci.fibonacci') as mock_fib:
             fibonacci(3)
             self.assertTrue(mock_fib.called)
             self.assertGreaterEqual(mock_fib.call_count, 2)
 
     def test_recursividade_2(self):
-        with mock.patch('incolumepy.sequences.fibonacci.fibonacci') as mock_fib:
+        with mock.patch('incolumepy.tdd.sequences.fibonacci.fibonacci') as mock_fib:
             for i in range(1, 5, -1):
                 expected = i - 1
                 fibonacci(i)

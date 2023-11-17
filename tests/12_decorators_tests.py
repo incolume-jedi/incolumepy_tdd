@@ -1,10 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+# TODO: Atividade  12: implementar timeit para que passe nos testes
+
+"""
+__author__ = '@britodfbr'
 import unittest
 from time import sleep
 from src.incolumepy.tdd.utils.decorators import timeit
-
-# TODO: Atividade  12: implementar timeit para que passe nos testes
 
 
 @timeit

@@ -1,8 +1,13 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+# TODO: Atividade  27: Proceder com as implementações necessárias para que passe nos testes
+
+"""
+__author__ = '@britodfbr'
 import unittest
 import re
 from src.incolumepy.tdd.utils.senhas import senhas
-
-# TODO: Atividade  27: Proceder com as implementações necessárias para que passe nos testes
 
 
 class MyTestCase(unittest.TestCase):

@@ -1,9 +1,14 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+# TODO: Atividade  3: implementar Employee para que passe nos testes
+
+"""
+__author__ = '@britodfbr'
 from unittest import TestCase, main
 import datetime as dt
 from datetime import datetime
 from src.incolumepy.tdd.employers import Employee
-
-# TODO: Atividade  3: implementar Employee para que passe nos testes
 
 
 class EmployersTests(TestCase):
