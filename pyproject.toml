@@ -5,7 +5,7 @@ description = "Python Utilities for trainning"
 authors = ["britodfbr <contato@incolume.com.br>"]
 homepage="https://gitlab.com/development-incolume/treinamentos/incolumepy_tdd"
 
-keywords = ['python', 'utils', 'incolumepy', 'treinamento']
+keywords = ['python', 'jedy', 'incolume', 'incolumepy', 'treinamento']
 repository = 'https://gitlab.com/development-incolume/incolumepy.utils'
 packages = [
   {include = "incolumepy", from='src'},
@@ -50,6 +50,9 @@ Faker = "^5.0.0"
 selenium-wire = "^2.1.2"
 pandas = "^1.1.5"
 openpyxl = "^3.0.5"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.3"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
