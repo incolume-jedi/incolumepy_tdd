@@ -14,7 +14,7 @@ $ python -m http.server
 """
 import unittest
 import urllib3
-from incolumepy.scraping.python_org import PythonOrg, webdriver, os, platform
+from src.incolumepy.scraping.python_org import PythonOrg, webdriver, os, platform
 
 
 class NavegableSeleniumTest(unittest.TestCase):

@@ -1,5 +1,5 @@
 import unittest
-from incolumepy.veiculos.aeronaves import Aeronave
+from src.incolumepy.veiculos.aeronaves import Aeronave
 
 
 class TestAeronave(unittest.TestCase):

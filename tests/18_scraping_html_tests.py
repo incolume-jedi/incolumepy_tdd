@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import unittest
-from incolumepy.scraping.google import GoogleSearch, os, BeautifulSoup, NavigableString
+from src.incolumepy.scraping.google import GoogleSearch, os, BeautifulSoup, NavigableString
 
 
 class ScrapingHTMLTest(unittest.TestCase):

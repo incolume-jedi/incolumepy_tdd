@@ -1,7 +1,7 @@
 import unittest
 import os
-from incolumepy.utils.handlers_hashes import hash_md5_0
-from incolumepy.utils.handlers_hashes import hash_sha1_0
+from src.incolumepy.utils.handlers_hashes import hash_md5_0
+from src.incolumepy.utils.handlers_hashes import hash_sha1_0
 
 
 class MyTestCase(unittest.TestCase):

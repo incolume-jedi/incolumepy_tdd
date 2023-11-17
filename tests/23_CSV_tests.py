@@ -7,10 +7,10 @@ import unittest
 import re
 from faker import Faker
 from tempfile import NamedTemporaryFile
-from incolumepy.pessoa import Pessoa
-from incolumepy.employers import Employee, normalize
 from datetime import datetime
-from incolumepy.utils.read_employers_csv import csv
+from src.incolumepy.pessoa import Pessoa
+from src.incolumepy.employers import Employee, normalize
+from src.incolumepy.utils.read_employers_csv import csv
 
 
 class MyTestCase(unittest.TestCase):

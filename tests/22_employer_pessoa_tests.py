@@ -6,8 +6,8 @@ Employer(Pessoa(), login, email, salario)
 import unittest
 import locale
 from faker import Faker
-from incolumepy.pessoa import Pessoa
-from incolumepy.employers import Employee
+from src.incolumepy.pessoa import Pessoa
+from src.incolumepy.employers import Employee
 from datetime import datetime
 
 

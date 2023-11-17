@@ -1,5 +1,5 @@
 import unittest
-from incolumepy import calc
+from src.incolumepy import calc
 
 
 class CalcTest(unittest.TestCase):

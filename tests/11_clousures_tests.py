@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import unittest
-from incolumepy.utils.clousures import multiple, dobro
+from src.incolumepy.utils.clousures import multiple, dobro
 
 
 class TestClousure(unittest.TestCase):

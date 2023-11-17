@@ -1,7 +1,7 @@
 from unittest import TestCase, main
 import datetime as dt
 from datetime import datetime
-from incolumepy.employers import Employee
+from src.incolumepy.employers import Employee
 
 
 class EmployersTests(TestCase):

@@ -1,5 +1,5 @@
 import unittest
-from incolumepy.veiculos.bicicleta import Bicicleta
+from src.incolumepy.veiculos.bicicleta import Bicicleta
 
 
 class TestBicicleta(unittest.TestCase):

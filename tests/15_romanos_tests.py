@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import unittest
-from incolumepy.romanos import Romanos
+from src.incolumepy.romanos import Romanos
 from types import FunctionType
 
 

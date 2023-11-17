@@ -1,5 +1,5 @@
 from unittest import TestCase, main
-from incolumepy.geometria.circulo import circulo_area, pi
+from src.incolumepy.geometria.circulo import circulo_area, pi
 
 
 class TestCirculoArea(TestCase):
