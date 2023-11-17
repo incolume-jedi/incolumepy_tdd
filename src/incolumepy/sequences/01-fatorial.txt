@@ -1,13 +1,13 @@
-The ``0_fatorial`` module
+The ``01_fatorial`` module
 ======================
 
 Using ``fatorial``
 -------------------
 
 This is an example text file in reStructuredText format (https://docs.python.org/2/library/doctest.html).
-  First import ``fatorial`` from the ``0_fatorial`` module:
+  First import ``fatorial`` from the ``01_fatorial`` module:
 
-    >>> from incolumepy.sequences.fatorial import fatorial
+    >>> from src.incolumepy.sequences.fatorial import fatorial
 
 Now use it:
     >>> fatorial(0)

@@ -40,7 +40,7 @@ atendido, ou não.
 Ao terminar o desenvolvimento dos testes, o
 resultado deverá ser similar ao apresentado abaixo:
 ```bash
-$ nosetests
+$ nosetests tests/*
 ...........................................................
 ----------------------------------------------------------------------
 Ran 59 tests in 8.072s
@@ -52,15 +52,26 @@ Se o resultado for similar ao apresentado, Meus parabéns!! Você concluiu o cur
 ## Ambiente necessário
 * python 3.7 (>= 3.6)
 * virtualenv
-* pipenv
 
+ou
+* pipenv
 ```bash
+pipenv --python 3.7
 pipenv install -d
+```
+ou
+* poetry
+```bash
+poetry env use 3.7
+poetry install
 ```
 
 Para melhor aproveitamento do ambiente de desenvolvimento
-sugiro a utilização do Pyenv e Pipenv. Detalhes em
-http://brito.blog.incolume.com.br/2019/11/python-ambientes-virtuais-com-pyenv.html
+sugiro a utilização do Pyenv e Pipenv. Detalhes em:
+
+Usuários Linux: http://brito.blog.incolume.com.br/2019/11/python-ambientes-virtuais-com-pyenv.html
+
+Usuários Windows: https://brito.blog.incolume.com.br/2020/11/python-ambientes-virtuais-com-pyenv-win.html
 
 Outra ferramenta útil será o git, detalhes em
 http://brito.blog.incolume.com.br/2013/03/guia-rapido-de-comandos-git-lado-usuario.html
@@ -103,10 +114,12 @@ código sem perder funcionalidades
 1. Fatoração Employer
 1. Manibpulação com CSV e Fatoração de classe com herança;
 1. Calculos de Hashes
+1. Conversão de cores rgb para hexadecimal;
+
 ### Testes modulares
 Para testar cada etapa individualmente utilize o comando abaixo:
 ```bash
-nosetests tests/3_employers_tests.py
+nosetests tests/03_employers_tests.py
 ...........
 ----------------------------------------------------------------------
 Ran 11 tests in 0.006s
