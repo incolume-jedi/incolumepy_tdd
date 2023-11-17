@@ -5,3 +5,6 @@ incolumepy/
 venv/
 *~
 *.py[cdo]
+.coverage
+*.sw[op]
+.tox/
