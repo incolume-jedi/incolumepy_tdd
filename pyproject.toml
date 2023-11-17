@@ -57,3 +57,22 @@ pytest = "^7.4.3"
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+log_format = '%(asctime)s; %(levelname)-8s; %(name)s; %(module)s; %(funcName)s; %(message)s'
+log_date_format ='%FT%T%N%z'
+#addopts = "--doctest-modules --cov=coding_dojo_jedi -sx --cov-report term-missing --cov-report html:coverage_report/html --cov-report xml:coverage_report/cov.xml"
+testpaths = [
+  "tests",
+  "src/incolumepy/tdd",
+]
+python_files = [
+  "test_*.py",
+  "*_tests.py"
+]
+
+markers = [
+  "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+  "webtest: marks tests as webtest (deselect with '-m \"not webtest\"')",
+  "fast: marks tests as fast (deselect with '-m \"not fast\"')",
+]
