@@ -1,17 +1,18 @@
 import unittest
-from incolumepy.veiculos.veiculos import Bicicleta
-from incolumepy.veiculos.veiculos import Veiculo
+from incolumepy.veiculos.barco import Barco
 
-class Carro_test(unittest.TestCase):
+
+class TestBarco(unittest.TestCase):
     def setUp(self):
-        self.veic = Bicicleta()
+        self.veic = Barco()
+        self.cls = Barco
 
     def tearDown(self):
         del self.veic
 
     def test_isInterface(self):
-        self.assertTrue(isinstance(self.veic, Veiculo))
-        self.assertTrue(issubclass(Bicicleta, Veiculo))
+        self.assertTrue(isinstance(self.veic, Barco))
+        self.assertTrue(issubclass(self.cls, Barco))
 
     def test_veiculo_interface_atributos(self):
         dir(self.veic)
@@ -19,6 +20,7 @@ class Carro_test(unittest.TestCase):
         self.assertTrue(hasattr(self.veic, 'fabricante'))
         self.assertTrue(hasattr(self.veic, 'velocidade'))
         self.assertFalse(hasattr(self.veic, 'cor'))
-        
+
+
 if __name__ == '__main__':
     unittest.main()
