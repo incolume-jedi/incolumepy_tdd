@@ -1,0 +1,21 @@
+Exercício com doctest
+Habilidade com classes python
+
+dica: solução ideal 3 linhas
+    >>> from romanos import Romanos
+
+    >>> r = Romanos()
+    >>> r.I
+    1
+    >>> r.V
+    5
+    >>> r.X
+    10
+    >>> r.L
+    50
+    >>> r.C
+    100
+    >>> r.D
+    500
+    >>> r.M
+    1000

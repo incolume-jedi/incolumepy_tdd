@@ -1,7 +1,5 @@
 from unittest import TestCase, main
-from abc import ABC, ABCMeta
-import datetime
-from incolumepy.transporte import Transporte
+from incolumepy.transporte import Transporte, ABCMeta, ABC
 
 
 class TransporteTest(TestCase):
