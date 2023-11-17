@@ -50,24 +50,13 @@ OK
 Se o resultado for similar ao apresentado, Meus parabéns!! Você concluiu o curso com sucesso!!
 
 ## Ambiente necessário
-* python 3.7 (>= 3.6)
+* python 3.7+ (3.7, 3.8, 3.9 ou superior)
 * virtualenv
+* git client
 
-ou
-* pipenv
-```bash
-pipenv --python 3.7
-pipenv install -d
-```
-ou
-* poetry
-```bash
-poetry env use 3.7
-poetry install
-```
 
 Para melhor aproveitamento do ambiente de desenvolvimento
-sugiro a utilização do Pyenv e Pipenv. Detalhes em:
+sugiro a utilização do Pyenv e Pipenv/poetry. Detalhes em:
 
 Usuários Linux: http://brito.blog.incolume.com.br/2019/11/python-ambientes-virtuais-com-pyenv.html
 
@@ -75,6 +64,31 @@ Usuários Windows: https://brito.blog.incolume.com.br/2020/11/python-ambientes-v
 
 Outra ferramenta útil será o git, detalhes em
 http://brito.blog.incolume.com.br/2013/03/guia-rapido-de-comandos-git-lado-usuario.html
+
+## Como começar?
+### Baixe o projeto para diretório local
+```bash
+git clone --depth 1 https://gitlab.com/development-incolume/treinamentos/incolumepy_tdd.git -b 2.2.1; ou
+git clone --depth 1 git@gitlab.com:development-incolume/treinamentos/incolumepy_tdd.git -b 2.2.1
+```
+Observação: em -b será a tag mais rescente ou a indicada pelo professor.
+### Crie o ambiente virtual para o projeto
+
+* pipenv
+```bash
+cd incolumepy_tdd
+pipenv --python 3.7
+pipenv install -d
+```
+ou
+* poetry
+```bash
+cd incolumepy_tdd
+poetry env use 3.7
+poetry install
+```
+
+
 ## Qual o conteúdo em cada etapa?
 1. Criação de modulo;
 Tratamento de Exceções;
@@ -118,9 +132,11 @@ código sem perder funcionalidades
 1. Decodificador Morse
 1. Gerador de senhas
 1. Manipulação de arquivos
+1. Permissões no Sistemas de Arquivos Nativo (Linux, Unix, MacOS, Windows, e outros)
+1. Menu em terminal
 
 ### Testes modulares
-Para testar cada etapa individualmente utilize o comando abaixo:
+Para testar cada etapa individualmente utilize o comando abaixo, para cada arquivo de teste unitário:
 ```bash
 nosetests tests/03_employers_tests.py
 ...........

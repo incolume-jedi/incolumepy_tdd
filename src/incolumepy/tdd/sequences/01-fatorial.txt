@@ -7,7 +7,7 @@ Using ``fatorial``
 This is an example text file in reStructuredText format (https://docs.python.org/2/library/doctest.html).
   First import ``fatorial`` from the ``01_fatorial`` module:
 
-    >>> from src.incolumepy.sequences.fatorial import fatorial
+    >>> from incolumepy.tdd.sequences.fatorial import fatorial
 
 Now use it:
     >>> fatorial(0)
@@ -42,7 +42,7 @@ Now use it:
     265252859812191058636308480000000
 
     >>> int(fatorial(30.0))
-    265252859812191032188804700045312
+    265252859812191058636308480000000
 
     It must also not be ridiculously large:
     >>> fatorial(1e100)
