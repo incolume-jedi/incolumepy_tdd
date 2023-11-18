@@ -11,7 +11,7 @@ import pathlib
 import magic
 import mimetypes
 import pandas as pd
-from src.incolumepy.tdd import arquivos
+from incolumepy.tdd import arquivos
 
 
 class MyTextFiles(unittest.TestCase):

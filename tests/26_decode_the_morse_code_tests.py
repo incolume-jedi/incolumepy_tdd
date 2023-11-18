@@ -7,7 +7,7 @@ Decodificar Código Morse
 """
 __author__ = '@britodfbr'
 import unittest
-from src.incolumepy.tdd.utils.decode.morse import decodeMorse
+from incolumepy.tdd.utils.decode.morse import decodeMorse
 
 
 class MyTestCase(unittest.TestCase):

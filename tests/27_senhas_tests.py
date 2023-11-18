@@ -7,7 +7,7 @@
 __author__ = '@britodfbr'
 import unittest
 import re
-from src.incolumepy.tdd.utils.senhas import senhas
+from incolumepy.tdd.utils.senhas import senhas
 
 
 class MyTestCase(unittest.TestCase):

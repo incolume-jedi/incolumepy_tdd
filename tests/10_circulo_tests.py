@@ -6,7 +6,7 @@
 """
 __author__ = '@britodfbr'
 from unittest import TestCase, main
-from src.incolumepy.tdd.geometria.circulo import circulo_area, pi
+from incolumepy.tdd.geometria.circulo import circulo_area, pi
 
 
 class TestCirculoArea(TestCase):

@@ -21,8 +21,8 @@ from pathlib import Path
 from faker import Faker
 from tempfile import NamedTemporaryFile
 from datetime import datetime
-from src.incolumepy.tdd import employers
-from src.incolumepy.tdd.utils.read_employers_csv import EmployeerCorp, load_employers, dump_employers_xlsx
+from incolumepy.tdd import employers
+from incolumepy.tdd.utils.read_employers_csv import EmployeerCorp, load_employers, dump_employers_xlsx
 
 
 class MyTestCase(unittest.TestCase):
