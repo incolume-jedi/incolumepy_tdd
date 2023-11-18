@@ -1,8 +1,15 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-__author__ = '@britodfbr'
-import toml
+"""Principal Module."""
+
+from toml import load
 from pathlib import Path
 
-__root__ = Path(__file__).parent.parent.parent.parent
-__version__ = toml.load(__root__ / "pyproject.toml")['tool']['poetry']['version']
+__author__ = '@britodfbr'
+
+configfile = Path(__file__).parents[2].joinpath('pyproject.toml')
+versionfile = Path(__file__).parent.joinpath('version.txt')
+
+versionfile.write_text(
+    f"{load(configfile)['tool']['poetry']['version']}\n",
+)
+
+__version__ = versionfile.read_text().split()
