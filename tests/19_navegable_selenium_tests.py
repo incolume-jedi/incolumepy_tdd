@@ -55,7 +55,7 @@ class NavegableSeleniumTest(unittest.TestCase):
         self.assertEqual('www.python.org', self.serverdir.split('/')[-1])
 
     def test_ifdrivers(self):
-        localbase = Path(__file__).parent.parent.joinpath('src', 'incolumepy', 'tdd', 'geckodrivers')
+        localbase = Path(__file__).parent.parent.joinpath('incolumepy', 'tdd', 'geckodrivers')
         local = ''
         if platform.system().lower() in ('linux', 'macos'):
             local = localbase / 'geckodriver'

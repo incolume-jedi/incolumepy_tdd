@@ -8,8 +8,8 @@ __author__ = '@britodfbr'
 import unittest
 import os
 from pathlib import Path
-from src.incolumepy.tdd.utils.handlers_hashes import hash_md5_0
-from src.incolumepy.tdd.utils.handlers_hashes import hash_sha1_0
+from incolumepy.tdd.utils.handlers_hashes import hash_md5_0
+from incolumepy.tdd.utils.handlers_hashes import hash_sha1_0
 
 
 class MyTestCase(unittest.TestCase):
