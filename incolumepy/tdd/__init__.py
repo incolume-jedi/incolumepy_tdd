@@ -1,4 +1,5 @@
 """Principal Module."""
+from tempfile import NamedTemporaryFile
 
 from toml import load
 from pathlib import Path
@@ -13,3 +14,8 @@ versionfile.write_text(
 )
 
 __version__ = versionfile.read_text().split()
+
+
+def genfile(prefix: str = '', suffix: str = '') -> Path:
+    """Return empty file."""
+    return Path(NamedTemporaryFile(prefix=prefix, suffix=suffix).name)
