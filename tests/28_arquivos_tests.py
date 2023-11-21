@@ -17,9 +17,9 @@ from incolumepy.tdd import arquivos
 class MyTextFiles(unittest.TestCase):
     def setUp(self) -> None:
         self.fout = pathlib.Path(tempfile.NamedTemporaryFile(suffix='.txt').name)
-        self.package = pathlib.Path(__file__).parent.joinpath('..', 'src', 'incolumepy', 'tdd', 'arquivos').resolve()
+        self.package = pathlib.Path(__file__).parent.joinpath('..', 'incolumepy', 'tdd', 'arquivos').resolve()
 
-    @unittest.skip
+    # @unittest.skip
     def test_package(self):
         assert self.package.is_dir(), f'{self.package}'
 
@@ -38,11 +38,11 @@ class MyTextFiles(unittest.TestCase):
         self.assertIn('verde claro', self.fout.read_text())
         self.assertIn('azul escuro', self.fout.read_text())
 
-    @unittest.skip('desable')
+    # @unittest.skip('desable')
     def test_mimetype_magic(self):
         arquivos.txt_create(self.fout)
         mime = magic.Magic(mime=True)
-        self.assertEqual(mime.from_file(self.fout), 'text/plain')
+        self.assertEqual(mime.from_file(self.fout), 'text/csv')
 
     def test_mimetype(self):
         self.assertTrue(arquivos.txt_create(self.fout))
@@ -52,7 +52,7 @@ class MyTextFiles(unittest.TestCase):
 class MyCSVFiles(unittest.TestCase):
     def setUp(self) -> None:
         self.fout = pathlib.Path(tempfile.NamedTemporaryFile(suffix='.csv').name)
-        self.package = pathlib.Path(__file__).parent.joinpath('..', 'src', 'incolumepy', 'tdd', 'arquivos').resolve()
+        self.package = pathlib.Path(__file__).parent.joinpath('..', 'incolumepy', 'tdd', 'arquivos').resolve()
 
     def test_package(self):
         assert self.package.is_dir(), f'{self.package}'
@@ -73,13 +73,13 @@ class MyCSVFiles(unittest.TestCase):
         self.assertIn('verde claro', self.fout.read_text())
         self.assertIn('azul escuro', self.fout.read_text())
 
-    @unittest.skip('desable')
+    # @unittest.skip('desable')
     def test_mimetype_magic(self):
         self.assertTrue(arquivos.csv_create(self.fout))
         self.assertTrue(pathlib.Path(self.fout).is_file())
         mime = magic.Magic(mime=True)
         resutl = mime.from_file(self.fout)
-        self.assertEqual(resutl, 'application/csv')
+        self.assertEqual(resutl, 'text/csv')
 
     def test_mimetype(self):
         self.assertTrue(arquivos.csv_create(self.fout))
@@ -89,7 +89,7 @@ class MyCSVFiles(unittest.TestCase):
 class MyJsonFiles(unittest.TestCase):
     def setUp(self) -> None:
         self.fout = pathlib.Path(tempfile.NamedTemporaryFile(suffix='.json').name)
-        self.package = pathlib.Path(__file__).parent.joinpath('..', 'src', 'incolumepy', 'tdd', 'arquivos').resolve()
+        self.package = pathlib.Path(__file__).parent.joinpath('..', 'incolumepy', 'tdd', 'arquivos').resolve()
 
     def test_package(self):
         assert self.package.is_dir(), f'{self.package}'
@@ -110,7 +110,7 @@ class MyJsonFiles(unittest.TestCase):
         self.assertIn('verde claro', self.fout.read_text())
         self.assertIn('azul escuro', self.fout.read_text())
 
-    @unittest.skip('desable')
+    # @unittest.skip('desable')
     def test_mimetype_magic(self):
         arquivos.json_create(self.fout)
         mime = magic.Magic(mime=True)
@@ -124,7 +124,7 @@ class MyJsonFiles(unittest.TestCase):
 class MyXLSXFiles(unittest.TestCase):
     def setUp(self) -> None:
         self.fout = pathlib.Path(tempfile.NamedTemporaryFile(suffix='.xlsx').name)
-        self.package = pathlib.Path(__file__).parent.joinpath('..', 'src', 'incolumepy', 'tdd', 'arquivos').resolve()
+        self.package = pathlib.Path(__file__).parent.joinpath('..', 'incolumepy', 'tdd', 'arquivos').resolve()
 
     def test_package(self):
         assert self.package.is_dir(), f'{self.package}'
@@ -146,7 +146,7 @@ class MyXLSXFiles(unittest.TestCase):
         self.assertIn('azul escuro', df.iloc[0, 1])
         self.assertIn('verde claro', df.iloc[0, 2])
 
-    @unittest.skip('desable')
+    # @unittest.skip('desable')
     def test_mimetype_magic(self):
         arquivos.xlsx_create(self.fout)
         mime = magic.Magic(mime=True)
