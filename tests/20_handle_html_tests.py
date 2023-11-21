@@ -3,12 +3,18 @@
 """
 # TODO: Atividade  20: Proceder com as implementações necessárias para que passe nos testes
 
-Utilize o pacote requests para acessar a lei 8666/1993 em http://legis.senado.leg.br/norma/550542/publicacao/15718520,
-salve o texto original com o nome "incolumepy/tdd/static_html/atos/l8666-txtSF.html";
+Utilize o pacote requests para acessar a lei 8666/1993 no webcache do projeto
+referente a 2019, disponível em
+http://localhost:8000/legis.senado.leg.br/norma/527942/publicacao/15718520.html
+salve o texto original com o nome
+"incolumepy/tdd/scraping/artefacts/atos/l8666-txtSF.html";
 mantenha o texto original sem alterações!
-Transforme em HTML5, aplique o CSS disponível em "incolumepy/tdd/static_html/css/legis_3.css",
-formate o cabeçalho (head, h1, h2, h3), aplique as classes presidente, ministro, data e dou.
-arquivo final com todas as alterações deverá estar em "incolume/tdd/static_html/atos/L8666.html".
+Transforme em HTML5, aplique o CSS disponível em
+"incolumepy/static_html/css/legis_3.css",
+formate o cabeçalho (head, h1, h2, h3), aplique as
+classes presidente, ministro, data e dou.
+arquivo final com todas as alterações deverá estar em
+"incolume/tdd/scraping/artefacts/atos/L8666.html".
 """
 __author__ = '@britodfbr'
 import unittest
@@ -23,7 +29,8 @@ import os
 from pathlib import Path
 from tests import has_internet
 from incolumepy.tdd.scraping.htmlformating import (
-    formating, requests, req_lei8666, get_content, gravar, save_content, partial, identify_recover, outputdir, output
+    formating, requests, req_lei8666, get_content, gravar, save_content,
+    partial, identify_recover, outputdir, output,
 )
 
 
@@ -49,19 +56,27 @@ def mocked_requests_get(*args, **kwargs):
 class HandleHTMLTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
-        cls.url = "http://legis.senado.leg.br/norma/550542/publicacao/15718520"
+        cls.url = "http://localhost:8000/legis.senado.leg.br/norma/527942/publicacao/15718520.html"
         cls.req = req_lei8666(cls.url) if has_internet() else None
         cls.tmp = tempfile.gettempdir()
 
     def setUp(self) -> None:
-        self.filebase = Path(__file__).parent.parent.joinpath('incolumepy', 'tdd', 'scraping', 'atos')
-        # self.filename = lambda: \
-        #     os.path.join(self.tmp, os.path.basename(__file__).split('.')[0], f"{int(time.time())}.txt")
-        self.filename = lambda: Path(self.tmp).joinpath(Path(__file__).stem, f'{time.time():.0f}.txt')
+        self.filebase = Path(__file__).parents[1].joinpath(
+            'incolumepy', 'tdd', 'scraping', 'artefacts', 'atos')
+        self.filename = lambda: Path(self.tmp).joinpath(
+            Path(__file__).stem, f'{time.time():.0f}.txt')
 
     def tearDown(self) -> None:
+        """Desmontagem do método."""
         shutil.rmtree(os.path.dirname(self.filename()), ignore_errors=True)
         [x.unlink() for x in self.filebase.glob('*.html')]
+
+    @classmethod
+    def tearDownClass(cls) -> None:
+        """Desmontagem da classe."""
+        del cls.url
+        del cls.req
+        del cls.tmp
 
     def test_packages_variables(self):
         self.assertIsInstance(output, (str, Path))
@@ -99,7 +114,7 @@ class HandleHTMLTest(unittest.TestCase):
     def test_content_offline(self):
         with mock.patch('incolumepy.tdd.scraping.htmlformating.requests.get') as m:
             mock_req_get = namedtuple('Mock', 'content status_code')
-            mock_req_get.content = self.filebase.joinpath('l8666-txtSF.txt')
+            mock_req_get.content = self.filebase.joinpath('l8666-txtSF.html')
             m.return_value = mock_req_get
             self.assertIsNotNone(get_content(self.url))
 
@@ -115,11 +130,15 @@ class HandleHTMLTest(unittest.TestCase):
         """
         test_get_content:
         """
-        with mock.patch('incolumepy.tdd.scraping.htmlformating.requests.get') as m:
+        with mock.patch(
+                'incolumepy.tdd.scraping.htmlformating.requests.get') as m:
             mock_req_get = namedtuple('Mock', 'content status_code')
-            mock_req_get.content = self.filebase.joinpath('l8666-txtSF.txt')
+            mock_req_get.status_code = 200
+            mock_req_get.content = self.filebase.joinpath(
+                'l8666-txtSF.html').read_bytes()
             m.return_value = mock_req_get
-            self.assertEqual(get_content(self.url), self.req.content)
+            content = save_content(get_content(self.url))
+            self.assertEqual(content, self.req.content)
 
     @unittest.skipUnless(has_internet(), reason='Requer Internet')
     def test_save(self):
