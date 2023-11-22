@@ -5,6 +5,8 @@
 
 Proceder com as implementações necessárias para que passe nos testes
 
+OBS: Para proceder com este exercício o ambiente deve ser configurado como descrito em
+00_environment_tests.py; o http.server deve permanecer ativo para realizar este exercício.
 """
 __author__ = '@britodfbr'
 import unittest

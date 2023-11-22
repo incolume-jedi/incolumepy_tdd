@@ -3,18 +3,10 @@
 """
 # TODO: Atividade  19: Proceder com as implementações necessárias para que passe nos testes
 
-Instruções:
+OBS: Para proceder com este exercício o ambiente deve ser configurado como descrito em
+00_environment_tests.py
 
-Baixe a versão mais recente do webdriver para seu sistema operacional em https://github.com/mozilla/geckodriver/tags
-
-Descompacte-o em incolume/py/tdd/geckodrivers
-Altere suas permisões para somente leitura
-
-Em um terminal exclusivo, siga as etapas abaixo para ativar micro servidor web:
-$ cd incolume/py/tdd/static_html/
-$ python -m http.server
-
-Mantenha este terminal ativo para realizar os testes necessários.
+o http.server deve permanecer ativo para realizar este exercício.
 """
 import unittest
 import urllib3
