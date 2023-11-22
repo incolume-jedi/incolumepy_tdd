@@ -16,7 +16,7 @@ class MyTestCase(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         base = Path(__file__).parent.parent
-        cls.file1 = base.joinpath('src', 'incolumepy', 'tdd', 'static_html', 'css', 'legis_3.css')
+        cls.file1 = base.joinpath('incolumepy', 'static_html', 'css', 'legis_3.css')
         assert os.path.isfile(cls.file1), F"Ops: {cls.file1}"
 
     def test_hash_0(self):

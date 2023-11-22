@@ -24,7 +24,7 @@ class TransporteTest(TestCase):
     def test_instancia(self):
         with self.assertRaisesRegex(
             TypeError,
-            fr".*Can't instantiate abstract class {self.cls.__name__} with abstract methods.*",
+            fr".*Can't instantiate abstract class {self.cls.__name__} with abstract method.*",
         ):
             a = self.cls()
 

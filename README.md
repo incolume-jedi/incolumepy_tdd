@@ -7,8 +7,9 @@ Treinamento em Python
 Ricardo Brito do Nascimento (http://brito.blog.incolume.com.br)
 
 ### Objetivo
-Apresentar e aprimorar as habilidades de desenvolvimento
- e técnicas da linguagem Python.
+- Apresentar,
+- aprimorar as habilidades de desenvolvimento; e
+- aprimorar técnicas da linguagem Python.
 
 ### Pré−Requisitos
 Vontade de aprender, desejo de pesquisar,
@@ -19,7 +20,7 @@ operação do sistema operacional por linha de comando.
 Desenvolvedores, administradores de sistemas, programadores e interessados em geral.
 
 ### Duração
-40 horas
+120 horas
 
 ## Introdução
 Este treinamento se divide em etapas sequênciais,
@@ -33,8 +34,8 @@ TDD - Test Driven Development, ou em português
 Desenvolvimento Orientado por Testes.
 
 Os testes deste treinamento foram implementados em
-__doctest__ e **unittest**.
-E os resutados dos testes indicarão se o objetivo foi
+__doctest__, **unittest** e os mais recentes em **pytest**.
+Os resutados dos testes indicarão se o objetivo foi
 atendido, ou não.
 
 Ao terminar o desenvolvimento dos testes, o
@@ -50,9 +51,18 @@ OK
 Se o resultado for similar ao apresentado, Meus parabéns!! Você concluiu o curso com sucesso!!
 
 ## Ambiente necessário
-* python 3.7+ (3.7, 3.8, 3.9 ou superior)
-* virtualenv
-* git client
+| incolumepy_tdd version | status        | python version      | requisitos                         |
+|------------------------|---------------|---------------------|------------------------------------|
+| 2.7.0                  |               | 3.7, 3.8, 3.9, 3.10 | cliente git, poetry, tox          |
+| 2.6.1                  | obsoleto      | 3.7, 3.8, 3.9       | cliente git, poetry, tox           |
+| 2.5.0                  | descontinuado | 3.7, 3.8, 3.9       | cliente git, pipenv, poetry, tox   |
+| 2.4.0                  | descontinuado | 3.6, 3.7, 3.8       | cliente git, pipenv, tox           |
+| 2.3.0                  | descontinuado | 3.6, 3.7, 3.8       | cliente git, pipenv, tox           |
+| 2.2.0                  | descontinuado | 3.6, 3.7, 3.8       | cliente git, pipenv, tox           |
+| 2.1.0                  | descontinuado | 3.6                 | cliente git, pipenv                |
+| 2.0.0                  | descontinuado | 3.6                 | cliente git, virtualenv, nosetests |
+| 1.0.0                  | descontinuado | 3.6                 | cliente git, virtualenv            |
+| 0.1.0                  | descontinuado | 3.6                 | cliente git, virtualenv            |
 
 
 Para melhor aproveitamento do ambiente de desenvolvimento
