@@ -80,6 +80,86 @@ markers = [
   "fast: marks tests as fast (deselect with '-m \"not fast\"')",
 ]
 
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+minversion = 3.1.0
+isolated_build = True
+envlist =
+    clean
+    bandit
+    #black
+    blue
+    isort
+    pydocstyle
+    flake8
+    mypy
+    pylint
+    py{36,37,38,39,310,311,312,313a1}
+
+;[tox:.package]
+;basepython = python3
+
+[testenv]
+allowlist_externals = poetry
+whitelist_externals = poetry
+skip_install = true
+commands =
+    poetry env use {envpython}
+    poetry install -vv --no-root
+    poetry run pytest {posargs} tests/ -m \"not(slow or webtest)\"
+
+[testenv:clean]
+deps = coverage
+commands =
+  poetry run coverage erase
+
+[testenv:linters]
+commands =
+  #{[testenv:black]commands}
+  {[testenv:blue]commands}
+  {[testenv:isort]commands}
+  {[testenv:flake8]commands}
+  {[testenv:pydocstyle]commands}
+  {[testenv:mypy]commands}
+  {[testenv:pylint]commands}
+
+[testenv:stats]
+commands = poetry run pytest -vv
+
+[testenv:flake8]
+deps = flake8
+commands = poetry run task lint_flake8
+
+[testenv:mypy]
+deps =
+    mypy
+    types-toml
+commands = poetry run task lint_mypy
+
+[testenv:pydocstyle]
+commands = poetry run task lint_pydocstyle
+
+[testenv:isort]
+commands = poetry run task lint_isort
+
+[testenv:pylint]
+commands = poetry run task lint_pylint
+
+[testenv:black]
+commands = poetry run task lint_black
+
+[testenv:blue]
+commands = poetry run task lint_blue
+
+[testenv:bandit]
+commands = poetry run task bandit
+
+[testenv:safety]
+commands = poetry run task safety
+"""
+
 [tool.taskipy.variables]
 path = "incolume/ tests/"
 CHANGELOGFILE = "docs/about/CHANGELOG.md"
