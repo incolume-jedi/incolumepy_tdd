@@ -11,7 +11,7 @@ __author__ = '@britodfbr'
 import unittest
 import locale
 from faker import Faker
-from src.incolumepy.tdd.employers import Employee, Pessoa
+from incolumepy.tdd.employers import Employee, Pessoa
 from datetime import datetime
 
 

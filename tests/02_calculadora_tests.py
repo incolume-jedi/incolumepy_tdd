@@ -6,7 +6,7 @@
 """
 __author__ = '@britodfbr'
 import unittest
-from src.incolumepy.tdd import calc
+from incolumepy.tdd import calc
 
 
 class CalcTest(unittest.TestCase):

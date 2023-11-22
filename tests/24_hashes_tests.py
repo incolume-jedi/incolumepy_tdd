@@ -8,15 +8,15 @@ __author__ = '@britodfbr'
 import unittest
 import os
 from pathlib import Path
-from src.incolumepy.tdd.utils.handlers_hashes import hash_md5_0
-from src.incolumepy.tdd.utils.handlers_hashes import hash_sha1_0
+from incolumepy.tdd.utils.handlers_hashes import hash_md5_0
+from incolumepy.tdd.utils.handlers_hashes import hash_sha1_0
 
 
 class MyTestCase(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         base = Path(__file__).parent.parent
-        cls.file1 = base.joinpath('src', 'incolumepy', 'tdd', 'static_html', 'css', 'legis_3.css')
+        cls.file1 = base.joinpath('incolumepy', 'static_html', 'css', 'legis_3.css')
         assert os.path.isfile(cls.file1), F"Ops: {cls.file1}"
 
     def test_hash_0(self):

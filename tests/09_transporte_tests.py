@@ -6,7 +6,7 @@
 """
 __author__ = '@britodfbr'
 from unittest import TestCase, main
-from src.incolumepy.tdd.transporte import Transporte, ABCMeta, ABC
+from incolumepy.tdd.transporte import Transporte, ABCMeta, ABC
 
 
 class TransporteTest(TestCase):
@@ -22,9 +22,10 @@ class TransporteTest(TestCase):
         self.assertTrue(self.cls.__metaclass__ == ABCMeta)
 
     def test_instancia(self):
-        with self.assertRaisesRegex(TypeError,
-                                    "Can't instantiate abstract class {} with abstract methods".format(
-                                        self.cls.__name__)):
+        with self.assertRaisesRegex(
+            TypeError,
+            fr".*Can't instantiate abstract class {self.cls.__name__} with abstract method.*",
+        ):
             a = self.cls()
 
     def test_tipo_transporte(self):

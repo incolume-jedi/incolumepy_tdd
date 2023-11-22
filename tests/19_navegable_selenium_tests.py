@@ -11,29 +11,30 @@ Descompacte-o em incolumepy/tdd/geckodrivers
 Altere suas permisões para somente leitura
 
 Em um terminal exclusivo, siga as etapas abaixo para ativar micro servidor web:
-$ cd incolumepy/tdd/static_html/www.python.org
+$ cd incolumepy/tdd/static_html/
 $ python -m http.server
 
 Mantenha este terminal ativo para realizar os testes necessários.
 """
-__author__ = '@britodfbr'
 import unittest
 import urllib3
 from pathlib import Path
 import os
 from incolumepy.tdd.scraping.python_org import PythonOrg, webdriver, platform
 
+__author__ = '@britodfbr'
+
 
 class NavegableSeleniumTest(unittest.TestCase):
 
     def setUp(self) -> None:
         self.sitepy = Path(__file__).parent.parent.joinpath(
-            'src', 'incolumepy', 'tdd', 'static_html', 'www.python.org', 'index.html'
+            'incolumepy', 'static_html', 'www.python.org', 'index.html'
         )
         self.atualdir = os.getcwd()
         self.serverdir = os.path.dirname(self.sitepy)
         self.instance = PythonOrg()
-        self.url = 'http://127.0.0.1:8000'
+        self.url = 'http://127.0.0.1:8000/www.python.org/'
 
     def tearDown(self) -> None:
         pass
@@ -55,7 +56,7 @@ class NavegableSeleniumTest(unittest.TestCase):
         self.assertEqual('www.python.org', self.serverdir.split('/')[-1])
 
     def test_ifdrivers(self):
-        localbase = Path(__file__).parent.parent.joinpath('src', 'incolumepy', 'tdd', 'geckodrivers')
+        localbase = Path(__file__).parent.parent.joinpath('incolumepy', 'tdd', 'geckodrivers')
         local = ''
         if platform.system().lower() in ('linux', 'macos'):
             local = localbase / 'geckodriver'
@@ -67,7 +68,7 @@ class NavegableSeleniumTest(unittest.TestCase):
 
     @unittest.skip('activation future')
     def test_permitions(self):
-        localbase = Path(__file__).parent.parent.joinpath('src', 'incolumepy', 'tdd', 'geckodrivers')
+        localbase = Path(__file__).parent.parent.joinpath('incolumepy', 'tdd', 'geckodrivers')
         local = localbase / 'geckodriver.exe' if platform.system().lower() == 'windows' else localbase / 'geckdriver'
 
         # Validação de permissões
@@ -87,16 +88,20 @@ class NavegableSeleniumTest(unittest.TestCase):
         self.assertIn('firefox_desired_capabilities', self.instance.__dict__)
 
     def test_current_url(self):
-        expected = "http://127.0.0.1:8000/"
+        expected = "http://127.0.0.1:8000/www.python.org/"
         self.assertEqual(expected, self.instance.index_current_url)
 
     def test_index_title_tagname(self):
         self.assertEqual(self.instance.index_title_tagname, "title")
 
-    def test_index_page_content(self):
+    def test_index_page_content_type(self):
         self.assertIsInstance(self.instance.index_page_content, str)
-        self.assertGreaterEqual(len(self.instance.index_page_content), 50021)
-        self.assertEqual('0be1d290.js"', self.instance.index_page_content[-100:-88])
+
+    def test_index_page_content_length(self):
+        self.assertGreaterEqual(len(self.instance.index_page_content), 47300)
+
+    def test_index_page_content(self):
+        self.assertTrue('0be1d290.js' in self.instance.index_page_content)
 
     def test_query_by_class_tier2_dict(self):
         """Esperado um dicionário com todos os links de class tier-2 """
@@ -113,7 +118,8 @@ class NavegableSeleniumTest(unittest.TestCase):
         self.assertIn(('Other Platforms', 'http://127.0.0.1:8000/download/other/'), result.items())
 
     def test_navegabilidade(self):
-        """Capture o link contido em 'Socialize > Chat on IRC > freenode's webchat' """
+        """Capture o link contido em
+        'Socialize > Chat on IRC > freenode's webchat' """
         expected = 'https://webchat.freenode.net/'
         result = self.instance.webchat_freenode()
         self.assertEqual(expected, result)

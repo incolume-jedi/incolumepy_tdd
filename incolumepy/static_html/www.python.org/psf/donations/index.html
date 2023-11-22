@@ -1,0 +1,3828 @@
+
+
+<!doctype html>
+<!--[if lt IE 7]>   <html class="no-js ie6 lt-ie7 lt-ie8 lt-ie9">   <![endif]-->
+<!--[if IE 7]>      <html class="no-js ie7 lt-ie8 lt-ie9">          <![endif]-->
+<!--[if IE 8]>      <html class="no-js ie8 lt-ie9">                 <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en" dir="ltr">  <!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="prefetch" href="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js">
+
+    <meta name="application-name" content="Python.org">
+    <meta name="msapplication-tooltip" content="The official home of the Python Programming Language">
+    <meta name="apple-mobile-web-app-title" content="Python.org">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="cleartype" content="on">
+    <meta http-equiv="imagetoolbar" content="false">
+
+    <script src="/static/js/libs/modernizr.js"></script>
+
+    <link href="/static/stylesheets/style.67f4b30f7483.css" rel="stylesheet" type="text/css" title="default" />
+    <link href="/static/stylesheets/mq.3ae8e02ece5b.css" rel="stylesheet" type="text/css" media="not print, braille, embossed, speech, tty" />
+    
+
+    <!--[if (lte IE 8)&(!IEMobile)]>
+    <link href="/static/stylesheets/no-mq.fcf414dc68a3.css" rel="stylesheet" type="text/css" media="screen" />
+    
+    
+    <![endif]-->
+
+    
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/static/apple-touch-icon-144x144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/static/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/static/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/static/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon-precomposed.png">
+
+    
+    <meta name="msapplication-TileImage" content="/static/metro-icon-144x144-precomposed.png"><!-- white shape -->
+    <meta name="msapplication-TileColor" content="#3673a5"><!-- python blue -->
+    <meta name="msapplication-navbutton-color" content="#3673a5">
+
+    <title>Support the PSF with a Cash Donation or by becoming a Supporting Member! | Python Software Foundation</title>
+
+    <meta name="description" content="The official home of the Python Programming Language">
+    <meta name="keywords" content="Python programming language object oriented web free open source software license documentation download community">
+
+    
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Python.org">
+    <meta property="og:title" content="Support the PSF with a Cash Donation or by becoming a Supporting Member!">
+    <meta property="og:description" content="The official home of the Python Programming Language">
+    
+    <meta property="og:image" content="https://www.python.org/static/opengraph-icon-200x200.png">
+    <meta property="og:image:secure_url" content="https://www.python.org/static/opengraph-icon-200x200.png">
+    
+    <meta property="og:url" content="https://www.python.org/psf/donations/">
+
+    <link rel="author" href="/static/humans.txt">
+
+    <link rel="alternate" type="application/rss+xml" title="Python Enhancement Proposals"
+          href="https://www.python.org/dev/peps/peps.rss/">
+    <link rel="alternate" type="application/rss+xml" title="Python Job Opportunities"
+          href="https://www.python.org/jobs/feed/rss/">
+    <link rel="alternate" type="application/rss+xml" title="Python Software Foundation News"
+          href="https://feeds.feedburner.com/PythonSoftwareFoundationNews">
+    <link rel="alternate" type="application/rss+xml" title="Python Insider"
+          href="https://feeds.feedburner.com/PythonInsider">
+
+    
+
+    
+    <script type="application/ld+json">
+     {
+       "@context": "https://schema.org",
+       "@type": "WebSite",
+       "url": "https://www.python.org/",
+       "potentialAction": {
+         "@type": "SearchAction",
+         "target": "https://www.python.org/search/?q={search_term_string}",
+         "query-input": "required name=search_term_string"
+       }
+     }
+    </script>
+
+    
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-39055973-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+    
+</head>
+
+<body class="psf pages default-page">
+
+    <div id="touchnav-wrapper">
+
+        <div id="nojs" class="do-not-print">
+            <p><strong>Notice:</strong> While Javascript is not essential for this website, your interaction with the content will be limited. Please turn Javascript on for the full experience. </p>
+        </div>
+
+        <!--[if lte IE 8]>
+        <div id="oldie-warning" class="do-not-print">
+            <p>
+                <strong>Notice:</strong> Your browser is <em>ancient</em>. Please
+                <a href="http://browsehappy.com/">upgrade to a different browser</a> to experience a better web.
+            </p>
+        </div>
+        <![endif]-->
+
+        <!-- Sister Site Links -->
+        <div id="top" class="top-bar do-not-print">
+
+            <nav class="meta-navigation container" role="navigation">
+
+                
+                <div class="skip-link screen-reader-text">
+                    <a href="#content" title="Skip to content">Skip to content</a>
+                </div>
+
+                
+                <a id="close-python-network" class="jump-link" href="#python-network" aria-hidden="true">
+                    <span aria-hidden="true" class="icon-arrow-down"><span>&#9660;</span></span> Close
+                </a>
+
+                
+
+<ul class="menu" role="tree">
+    
+    <li class="python-meta ">
+        <a href="/" title="The Python Programming Language" >Python</a>
+    </li>
+    
+    <li class="psf-meta current_branch selected">
+        <a href="/psf-landing/" title="The Python Software Foundation" class="current_branch selected">PSF</a>
+    </li>
+    
+    <li class="docs-meta ">
+        <a href="https://docs.python.org" title="Python Documentation" >Docs</a>
+    </li>
+    
+    <li class="pypi-meta ">
+        <a href="https://pypi.python.org/" title="Python Package Index" >PyPI</a>
+    </li>
+    
+    <li class="jobs-meta ">
+        <a href="/jobs/" title="Python Job Board" >Jobs</a>
+    </li>
+    
+    <li class="shop-meta ">
+        <a href="/community/" title="Python Community" >Community</a>
+    </li>
+    
+</ul>
+
+
+                <a id="python-network" class="jump-link" href="#top" aria-hidden="true">
+                    <span aria-hidden="true" class="icon-arrow-up"><span>&#9650;</span></span> The Python Network
+                </a>
+
+            </nav>
+
+        </div>
+
+        <!-- Header elements -->
+        <header class="main-header" role="banner">
+            <div class="container">
+
+                <h1 class="site-headline">
+                    <a href="/psf-landing/"><img class="psf-logo" src="/static/img/psf-logo.png" alt="Python Software Foundation"></a>
+                </h1>
+
+                <div class="options-bar-container do-not-print">
+                    <a href="/psf/donations/" class="donate-button">Donate</a>
+                    <div class="options-bar">
+                        
+                        <a id="site-map-link" class="jump-to-menu" href="#site-map"><span class="menu-icon">&equiv;</span> Menu</a><form class="search-the-site" action="/search/" method="get">
+                            <fieldset title="Search Python.org">
+
+                                <span aria-hidden="true" class="icon-search"></span>
+
+                                <label class="screen-reader-text" for="id-search-field">Search This Site</label>
+                                <input id="id-search-field" name="q" type="search" role="textbox" class="search-field" placeholder="Search" value="" tabindex="1">
+
+                                <button type="submit" name="submit" id="submit" class="search-button" title="Submit this Search" tabindex="3">
+                                    GO
+                                </button>
+
+                                
+                                <!--[if IE]><input type="text" style="display: none;" disabled="disabled" size="1" tabindex="4"><![endif]-->
+
+                            </fieldset>
+                        </form><span class="breaker"></span><div class="adjust-font-size" aria-hidden="true">
+                            <ul class="navigation menu" aria-label="Adjust Text Size on Page">
+                                <li class="tier-1 last" aria-haspopup="true">
+                                    <a href="#" class="action-trigger"><strong><small>A</small> A</strong></a>
+                                    <ul class="subnav menu">
+                                        <li class="tier-2 element-1" role="treeitem"><a class="text-shrink" title="Make Text Smaller" href="javascript:;">Smaller</a></li>
+                                        <li class="tier-2 element-2" role="treeitem"><a class="text-grow" title="Make Text Larger" href="javascript:;">Larger</a></li>
+                                        <li class="tier-2 element-3" role="treeitem"><a class="text-reset" title="Reset any font size changes I have made" href="javascript:;">Reset</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div><div class="winkwink-nudgenudge">
+                            <ul class="navigation menu" aria-label="Social Media Navigation">
+                                <li class="tier-1 last" aria-haspopup="true">
+                                    <a href="#" class="action-trigger">Socialize</a>
+                                    <ul class="subnav menu">
+                                        <li class="tier-2 element-1" role="treeitem"><a href="https://www.facebook.com/pythonlang?fref=ts"><span aria-hidden="true" class="icon-facebook"></span>Facebook</a></li>
+                                        <li class="tier-2 element-2" role="treeitem"><a href="https://twitter.com/ThePSF"><span aria-hidden="true" class="icon-twitter"></span>Twitter</a></li>
+                                        <li class="tier-2 element-3" role="treeitem"><a href="/community/irc/"><span aria-hidden="true" class="icon-freenode"></span>Chat on IRC</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <span data-html-include="/authenticated"></span>
+                    </div><!-- end options-bar -->
+                </div>
+
+                <nav id="mainnav" class="psf-navigation main-navigation do-not-print" role="navigation">
+                    
+
+
+<ul class="navigation menu" role="menubar" aria-label="Main Navigation">
+  
+    
+    
+    <li id="about" class="tier-1 element-1  " aria-haspopup="true">
+        <a href="/psf/about/" title="" class="">About</a>
+        
+            
+
+<ul class="subnav menu" role="menu" aria-hidden="true">
+    
+        <li class="tier-2 element-1" role="treeitem"><a href="/psf/mission/" title="">Mission statement</a></li>
+    
+        <li class="tier-2 element-2" role="treeitem"><a href="/psf/records/" title="">Public records</a></li>
+    
+        <li class="tier-2 element-3" role="treeitem"><a href="/psf/committees/" title="">PSF Workgroups</a></li>
+    
+        <li class="tier-2 element-4" role="treeitem"><a href="/psf/annual-report/2019/" title="">Annual Impact Report</a></li>
+    
+        <li class="tier-2 element-5" role="treeitem"><a href="/nominations/elections/" title="">Elections</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    
+    
+    <li id="sponsorship" class="tier-1 element-2  " aria-haspopup="true">
+        <a href="/psf/sponsorship/" title="" class="">Sponsorship</a>
+        
+            
+
+<ul class="subnav menu" role="menu" aria-hidden="true">
+    
+        <li class="tier-2 element-1" role="treeitem"><a href="/psf/sponsorship/sponsors/" title="">PSF Sponsors</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    
+    
+    <li id="membership" class="tier-1 element-3  " aria-haspopup="true">
+        <a href="/psf/membership/" title="" class="">Membership</a>
+        
+            
+
+<ul class="subnav menu" role="menu" aria-hidden="true">
+    
+        <li class="tier-2 element-1" role="treeitem"><a href="/psf/membership/" title="">Membership FAQ</a></li>
+    
+        <li class="tier-2 element-2" role="treeitem"><a href="/psf/members/" title="">Membership roster</a></li>
+    
+        <li class="tier-2 element-3" role="treeitem"><a href="/psf/league/" title="">League</a></li>
+    
+        <li class="tier-2 element-4" role="treeitem"><a href="/users/membership/" title="">Sign up as member</a></li>
+    
+        <li class="tier-2 element-5" role="treeitem"><a href="/community/awards/" title="">Community Awards</a></li>
+    
+        <li class="tier-2 element-6" role="treeitem"><a href="http://pyfound.blogspot.de/2015/02/enroll-as-psf-voting-member.html" title="">Self-certify as voting member</a></li>
+    
+        <li class="tier-2 element-7" role="treeitem"><a href="/psf/conduct/" title="">Python Community Code of Conduct</a></li>
+    
+        <li class="tier-2 element-8" role="treeitem"><a href="/psf/newsletter/" title="">Newsletter</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    
+    
+    <li id="donations" class="tier-1 element-4  " aria-haspopup="true">
+        <a href="/psf/donations/" title="" class=" selected">Donations </a>
+        
+            
+
+<ul class="subnav menu" role="menu" aria-hidden="true">
+    
+        <li class="tier-2 element-1" role="treeitem"><a href="/psf/donations/" title="">Donations</a></li>
+    
+        <li class="tier-2 element-2" role="treeitem"><a href="/psf/volunteer/" title="">Volunteer</a></li>
+    
+        <li class="tier-2 element-3" role="treeitem"><a href="/psf/contrib/" title="">Contribution forms</a></li>
+    
+        <li class="tier-2 element-4" role="treeitem"><a href="/psf/fraud/" title="">Suspicious checks</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    
+    
+    <li id="grants" class="tier-1 element-5  " aria-haspopup="true">
+        <a href="/psf/grants/" title="" class="">Grants</a>
+        
+            
+
+<ul class="subnav menu" role="menu" aria-hidden="true">
+    
+        <li class="tier-2 element-1" role="treeitem"><a href="/psf/grants/" title="">Grants program</a></li>
+    
+        <li class="tier-2 element-2" role="treeitem"><a href="/psf/grants/faq/" title="">Grants Program FAQ</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    
+    
+    <li id="legal" class="tier-1 element-6  " aria-haspopup="true">
+        <a href="/about/legal/" title="" class="">Legal</a>
+        
+            
+
+<ul class="subnav menu" role="menu" aria-hidden="true">
+    
+        <li class="tier-2 element-1" role="treeitem"><a href="/psf/bylaws/" title="">Bylaws</a></li>
+    
+        <li class="tier-2 element-2" role="treeitem"><a href="/psf/trademarks/" title="">Trademark policy</a></li>
+    
+        <li class="tier-2 element-3" role="treeitem"><a href="/psf/weblog-policy/" title="">Weblog policy</a></li>
+    
+        <li class="tier-2 element-4" role="treeitem"><a href="/psf/license" title="">License</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    
+    
+    <li id="media" class="tier-1 element-7  " aria-haspopup="true">
+        <a href="https://www.python.org/psf/press-release/" title="" class="">Media</a>
+        
+            
+
+<ul class="subnav menu" role="menu" aria-hidden="true">
+    
+        <li class="tier-2 element-1" role="treeitem"><a href="/psf/press-release/" title="">Press releases</a></li>
+    
+        <li class="tier-2 element-2" role="treeitem"><a href="/community/logos/" title="">Logo</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    
+    
+    <li id="psf-blog" class="tier-1 element-8  last" aria-haspopup="true">
+        <a href="http://pyfound.blogspot.com/" title="" class="">PSF Blog</a>
+        
+    </li>
+    
+    
+  
+</ul>
+
+
+                </nav>
+
+                <div class="header-banner "> <!-- for optional "do-not-print" class -->
+                    
+                    
+                </div>
+
+                
+                
+
+             </div><!-- end .container -->
+        </header>
+
+        <div id="content" class="content-wrapper">
+            <!-- Main Content Column -->
+            <div class="container">
+
+                <section class="main-content with-left-sidebar" role="main">
+
+                    
+    
+
+    
+
+    
+
+<ul class="breadcrumbs menu">
+	
+		
+			<li>
+				<a href="/psf-landing/" title="The Python Software Foundation">PSF</a><span class="prompt">&gt;&gt;&gt;</span>
+			</li>
+		
+	
+		
+			<li>
+				<a href="/psf/donations/" >Donations </a><span class="prompt">&gt;&gt;&gt;</span>
+			</li>
+		
+	
+		
+			
+				<li>Donations</li>
+			
+		
+	
+</ul>
+
+
+
+                    
+
+                    
+    
+
+    <article class="text">
+        
+
+        <header class="article-header">
+            <h1 class="page-title">Support the PSF with a Cash Donation or by becoming a Supporting Member!</h1>
+        </header>
+
+        <div align="center">
+   <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+   <input type="hidden" name="business" value="psf-donations@python.org">
+   <input type="hidden" name="cmd" value="_donations">
+   <input type="hidden" name="item_name" value="Python Software Foundation">
+   <input type="hidden" name="item_number" value="04-359-4598">
+   <input type="hidden" name="currency_code" value="USD">
+   <input type="image" name="submit" border="0" src="https://www.paypal.com/en_US/i/btn/btn_donate_LG.gif" alt="PayPal - The safer, easier way to pay online">
+   <img alt="" border="0" width="1" height="1" src="https://www.paypal.com/en_US/i/scr/pixel.gif" >
+   </form>
+</div>
+
+<div id="amznCharityBanner" align="center"><script type="text/javascript">(function() {var iFrame = document.createElement('iframe'); iFrame.style.display = 'none'; iFrame.style.border = "none"; iFrame.width = 310; iFrame.height = 256; iFrame.setAttribute && iFrame.setAttribute('scrolling', 'no'); iFrame.setAttribute('frameborder', '0'); setTimeout(function() {var contents = (iFrame.contentWindow) ? iFrame.contentWindow : (iFrame.contentDocument.document) ? iFrame.contentDocument.document : iFrame.contentDocument; contents.document.open(); contents.document.write(decodeURIComponent("%3Cdiv%20id%3D%22amznCharityBannerInner%22%3E%3Ca%20href%3D%22https%3A%2F%2Fsmile.amazon.com%2Fch%2F04-3594598%22%20target%3D%22_blank%22%3E%3Cdiv%20class%3D%22text%22%20height%3D%22%22%3E%3Cdiv%20class%3D%22support-wrapper%22%3E%3Cdiv%20class%3D%22support%22%20style%3D%22font-size%3A%2025px%3B%20line-height%3A%2028px%3B%20margin-top%3A%201px%3B%20margin-bottom%3A%201px%3B%22%3ESupport%20%3Cspan%20id%3D%22charity-name%22%20style%3D%22display%3A%20inline-block%3B%22%3EPython%20Software%20Foundation.%3C%2Fspan%3E%3C%2Fdiv%3E%3C%2Fdiv%3E%3Cp%20class%3D%22when-shop%22%3EWhen%20you%20shop%20at%20%3Cb%3Esmile.amazon.com%2C%3C%2Fb%3E%3C%2Fp%3E%3Cp%20class%3D%22donates%22%3EAmazon%20donates.%3C%2Fp%3E%3C%2Fdiv%3E%3C%2Fa%3E%3C%2Fdiv%3E%3Cstyle%3E%23amznCharityBannerInner%7Bbackground-image%3Aurl(https%3A%2F%2Fimages-na.ssl-images-amazon.com%2Fimages%2FG%2F01%2Fx-locale%2Fpaladin%2Fcharitycentral%2Fbanner-background-image._CB309675353_.png)%3Bwidth%3A300px%3Bheight%3A250px%3Bposition%3Arelative%7D%23amznCharityBannerInner%20a%7Bdisplay%3Ablock%3Bwidth%3A100%25%3Bheight%3A100%25%3Bposition%3Arelative%3Bcolor%3A%23000%3Btext-decoration%3Anone%7D.text%7Bposition%3Aabsolute%3Btop%3A20px%3Bleft%3A15px%3Bright%3A15px%3Bbottom%3A100px%7D.support-wrapper%7Boverflow%3Ahidden%3Bmax-height%3A86px%7D.support%7Bfont-family%3AArial%2Csans%3Bfont-weight%3A700%3Bline-height%3A28px%3Bfont-size%3A25px%3Bcolor%3A%23333%3Btext-align%3Acenter%3Bmargin%3A0%3Bpadding%3A0%3Bbackground%3A0%200%7D.when-shop%7Bfont-family%3AArial%2Csans%3Bfont-size%3A15px%3Bfont-weight%3A400%3Bline-height%3A25px%3Bcolor%3A%23333%3Btext-align%3Acenter%3Bmargin%3A0%3Bpadding%3A0%3Bbackground%3A0%200%7D.donates%7Bfont-family%3AArial%2Csans%3Bfont-size%3A15px%3Bfont-weight%3A400%3Bline-height%3A21px%3Bcolor%3A%23333%3Btext-align%3Acenter%3Bmargin%3A0%3Bpadding%3A0%3Bbackground%3A0%200%7D%3C%2Fstyle%3E")); contents.document.close(); iFrame.style.display = 'block';}); document.getElementById('amznCharityBanner').appendChild(iFrame); })(); </script></div>
+
+<div class="section" id="what-does-the-python-software-foundation-do">
+    	<h1>
+									What does the Python Software Foundation do?</h1>
+    <p>The <a class="reference external" href="/psf/">Python Software Foundation</a>:</p>
+    <ul class="simple">
+        <li>Holds and defends the copyright and other intellectual property rights for the Python programming language.</li>
+        <li>Holds and defends the copyright and trademark for the <a class="reference external" href="http://www.jython.org">Jython implementation</a> of Python.</li>
+        <li>Awards grants and provides resources for furthering the development and adoption of Python.</li>
+        <li>Organizes and hosts the annual <a class="reference external" href="http://us.pycon.org">PyCon</a> conference. 2019 brought together 3,393 attendees from 55 countries, a new record for PyCon! Our sponsors’ support enabled us to award $137,200 USD to 143 attendees. 
+</li>
+        <li>Pays for hardware and other costs for hosting the python.org servers.</li>
+        <li>Supports other conferences, meetings, and community activities.</li>
+        <li>Recognizes individuals who have contributed to the Python community with <a class="reference external" href="/community/awards/psf-awards/">Community Awards</a>.</li>
+        <li>Funds a Python Ambassador program to travel locally to perform Python outreach. This is currently in trial mode in South America and is going very well. If the trend continues, we will expand this program to additional locales. 
+    </ul>
+    <p>To learn about recent PSF activities, visit <a class="reference external" href="http://pyfound.blogspot.com/">the Python Software Foundation&#39;s weblog</a>.</p>
+</div>
+<div class="section" id="how-can-i-donate">
+    	<h1>
+
+Donors</h2>
+        <p>The PSF sends a big thank you to all of the donors who supported our Q2 2019 drive, which raised a total of $75,000!  The top 11 donors were:</p>
+
+    <li>Naomi Ceder</li>
+    <li>JacquelineKazil</li>
+    <li>Dustin Ingram</li>
+    <li>Chris Wilcox</li>
+    <li>Lief Koepsel</li>
+    <li>Dane Hillard</li>
+    <li>Phillip Torrone</li>
+    <li>Jace Browning</li>
+    <li>Sankara Sampath</li>
+    <li>Steven Burnap</li>
+    <li>Albert Sweigart</li></p>
+
+     <p>The PSF would also like to recognize the following donors for major gifts during 2019 that make the PSF’s support of worldwide grants and other programs possible:</p>
+
+     <li>PayPal Giving Fund</li>
+     <li>PyLondinium</li>
+     <li>Benevity Community Impact Fund</li>
+     <li>Vanguard Charitable Services</li>
+     <li>Adafruit</li>
+     <li>PayPal</li>
+     <li>YourCause, LLC</li>
+     <li>Bright Funds Foundation</li>
+     <li>Fidelity Charitable Gift Fund</li>
+     <li>Read the Docs, Inc.</li>
+     <li>ProxyMesh LLC</li>
+
+<div class="section" id="How can I donate?">
+    	<h1>
+
+									How can I donate?</h1>
+    <p>We welcome contributions of $25, $50, $100, $250, or any amount, from both small businesses and individuals. Donate once,
+ monthly, or annually to support all of our great initiatives.</p>
+    <ul>
+        <li>
+            <p class="first">
+                	<strong>Donate by credit card or PayPal</strong>
+            </p>
+            <p>Please use the button above to donate. You don&#39;t need a PayPal account to use the donation button.</p>
+            <p>Note: For amounts greater than US$1,300.00, paying by wire transfer or check will get more of your donation to the PSF.</p>
+        </li>
+            <p class="first">
+        <li>
+            <p class="first">
+                	<strong>Mail a personal check, money order, or bank check</strong>
+            </p>
+            <p>Address checks to <a class="reference external" href="/psf/about#how-do-i-reach-the-psf">the PSF headquarters</a>.</p>
+            <p>If you would like a receipt emailed to you, please include your email address along with your check.</p>
+            <p>Checks in US currency are preferred. We can accept other currencies for donations valued US$20 or more, but fees on conversions are significant.</p>
+        </li>
+        <li>
+            <p class="first">
+                	<strong>Electronic wire transfers</strong>
+            </p>
+            <p>Please see <a class="reference external" href="/psf/wirexfer">Wire Transfer Info</a> for details.</p>
+            <p>The transaction fees are substantial, so please only use transfers for donations valued at US$50 or more.</p>
+        </li>
+        <li>
+           <p class="first">
+                       <strong>Other Ways to Give</strong>
+            </p>
+            <p>The <a class="reference external" href="https://smile.amazon.com/ch/04-3594598">Amazon Smile</a> program donates 0.5% of the price of your eligible Amazon Smile purchases to the PSF. A simple and automatic way for you to support python.org every time you shop, at no cost to you.
+        </li>
+            </p>
+    </ul>
+    <p>For US taxpayers, contributions to the PSF are tax-deductible. The PSF has been recognized as a public charity under section 501(c)(3) of the Internal Revenue Code. (See <a class="reference external" href="/m/files/irs_determination.pdf">the exemption letter</a> for
+        details.) You should consult your tax adviser for rules as they apply to your situation.</p>
+    <p>Donations to the PSF are currently not tax-deductible in most other countries; most countries require an organisation to be incorporated in that country (or in the EU, for EU member states), and the PSF does currently not have the resources to do
+        so.
+    </p>
+    <p>If you have a question about donations, please write to the PSF at <a class="reference external" href="mailto:psf-donations@python.org">(psf-donations@python.org)</a>.</p>
+    <div class="section" id="donors">
+        	<h2>
+										Donors</h2>
+        <p>The PSF would like to thank the following donors for their contributions. Donors are listed in descending order using an algorithm that takes into account both the amount of donation and the age of the donation, based on all donations received within the past three years.</p>
+        <!-- DO NOT DELETE: start honor roll -->
+
+<ol>
+<li> <b>PayPal Giving Fund</b> </li>
+<li> <b>Humble Bundle</b> </li>
+<li> <b>Facebook</b> </li>
+<li> <b>Handshake Development</b> </li>
+<li> <b>Google Cloud Platform</b> </li>
+<li> <b>Anonymous</b> </li>
+<li> <b>PyLondinium</b> </li>
+<li> <b>craigslist Charitable Fund</b> </li>
+<li> <b>Benevity Causes</b> </li>
+<li> <b>Bloomberg LP</b> <br><br></li>
+<li> <b>Thea Flowers</b> </li>
+<li> <b>Alethea Katherine Flowers</b> </li>
+<li> <b>Vanguard Charitable</b> </li>
+<li> Mark H </li>
+<li> Katie Linero </li>
+<li> Read the Docs, Inc </li>
+<li> Sam Kimbrel </li>
+<li> Ruben Orduz </li>
+<li> Jasper Rosenberg </li>
+<li> Dustin Ingram <br><br></li>
+<li> Christopher Wilcox </li>
+<li> Jordon Phillips </li>
+<li> OtoJig GmbH </li>
+<li> Alan Du </li>
+<li> Michael Kowalchik </li>
+<li> Daniel J McKelvey </li>
+<li> Frank Valcarcel </li>
+<li> CarGurus, Inc. </li>
+<li> Delany Watkins </li>
+<li> Alliance Data <br><br></li>
+<li> Benevity Community Impact Fund </li>
+<li> Underwood Institute </li>
+<li> ECP </li>
+<li> UK Online Giving Foundation </li>
+<li> <b>Sergey Brin Family Foundation</b> </li>
+<li> Peter Portante </li>
+<li> Emma Brudner </li>
+<li> Naomi Ceder </li>
+<li> Quantopian </li>
+<li> Kyle Knapp <br><br></li>
+<li> Jordan Guymon </li>
+<li> John Carlyle </li>
+<li> James Saryerwinnie </li>
+<li> Donald Stufft </li>
+<li> Grishma Jena </li>
+<li> Deepak K Gupta </li>
+<li> Jessica De Maria </li>
+<li> Bloomberg LP employees </li>
+<li> Jason Myers </li>
+<li> Pedro Junqueira <br><br></li>
+<li> Ashley Streb </li>
+<li> Jamie Cho </li>
+<li> Bright Funds Foundation </li>
+<li> Roy Larson </li>
+<li> Michaela Shtilman-Minkin </li>
+<li> Jeff Ramnani </li>
+<li> Tom Brander </li>
+<li> O'Reilly Japan, Inc. </li>
+<li> Christopher Swenson </li>
+<li> Bors LTD <br><br></li>
+<li> Paul Watts </li>
+<li> Jacqueline Kazil </li>
+<li> Tyler Bindon </li>
+<li> Kelly Elmstrom </li>
+<li> Matthew Bullock </li>
+<li> Ernest W Durbin III </li>
+<li> Carl Harris </li>
+<li> Jon Banafato </li>
+<li> JupyterCon </li>
+<li> <b>פיינל</b> <br><br></li>
+<li> Michael Hebert </li>
+<li> Rachel Chazanovitz </li>
+<li> Tomasz Finc </li>
+<li> Fidelity Charitable </li>
+<li> William Israel </li>
+<li> indico data solutions INC </li>
+<li> Amazon Smile </li>
+<li> Mike McCaffrey </li>
+<li> Gregory P. Smith </li>
+<li> Aaron Dershem <br><br></li>
+<li> Lorena Mesa </li>
+<li> Jennie MacDougall </li>
+<li> phillip torrone </li>
+<li> Intevation GmbH </li>
+<li> Bryan Davis </li>
+<li> Albert Sweigart </li>
+<li> Kevin Marty </li>
+<li> Steven Burnap </li>
+<li> ProxyMesh LLC </li>
+<li> Dorota Jarecka <br><br></li>
+<li> Anna Jaruga </li>
+<li> Hugo Bowne-Anderson </li>
+<li> Katherine McLaughlin </li>
+<li> Allen Downey </li>
+<li> Andrew VanCamp </li>
+<li> Troy Campbell </li>
+<li> Shawn Hensley </li>
+<li> Ryan Petrello </li>
+<li> Lief Koepsel </li>
+<li> Benjamin Wohlwend <br><br></li>
+<li> Andrew Pinkham </li>
+<li> Fred Brasch </li>
+<li> Jarret Raim </li>
+<li> Dane Hillard Photography </li>
+<li> Daniel Fortunov </li>
+<li> Christine Costello </li>
+<li> Anna Schneider </li>
+<li> Katina Mooneyham </li>
+<li> Patrick Harrison </li>
+<li> The Tobin and Lu Family Fund <br><br></li>
+<li> Jace Browning </li>
+<li> Eric Floehr </li>
+<li> Chris Miller </li>
+<li> Ben Berry </li>
+<li> Dennis Bunskoek </li>
+<li> Amirali Sanatinia </li>
+<li> Enthought, Inc. </li>
+<li> Jessica Braxton </li>
+<li> Sankara Sampath </li>
+<li> Liubov Yurgenson <br><br></li>
+<li> Bill Schnieders </li>
+<li> Gerard Blais </li>
+<li> James Alexander </li>
+<li> Andrew Herrington </li>
+<li> Harry Percival </li>
+<li> Sanchit Anand </li>
+<li> Howard Mooneyham </li>
+<li> Thomas Kluyver </li>
+<li> Joseph Armbruster </li>
+<li> frontmark GmbH <br><br></li>
+<li> Adam Forsyth </li>
+<li> Amir Rachum </li>
+<li> Casey Faist </li>
+<li> Lindsey Brockman </li>
+<li> Ronald Hayden </li>
+<li> Pengfei Zhang </li>
+<li> Eric Hui </li>
+<li> John-Scott Atlakson </li>
+<li> Samuel Agnew </li>
+<li> Jacob Burch <br><br></li>
+<li> Lance Alligood </li>
+<li> Ian Hellen </li>
+<li> Carol Willing </li>
+<li> Michael Fleisher </li>
+<li> Felix Wyss </li>
+<li> Caitlin Outterson </li>
+<li> Karan Goel </li>
+<li> Thomas Ballinger </li>
+<li> Chalmer Lowe </li>
+<li> Intellovations <br><br></li>
+<li> Daniel Woodraska </li>
+<li> Kamishima Toshihiro </li>
+<li> Brittany Vogel </li>
+<li> Cathy Wyss </li>
+<li> Nicola Ramagnano </li>
+<li> Anthony Lupinetti </li>
+<li> William Glennon </li>
+<li> David Sturgis </li>
+<li> David Potter </li>
+<li> William Weitzel <br><br></li>
+<li> Ray Berg </li>
+<li> Nicholas Serra </li>
+<li> David Forgac </li>
+<li> Paul Bryan </li>
+<li> Jorge Herskovic </li>
+<li> Keith Bussell </li>
+<li> Mark Moretto </li>
+<li> Andrew Chen </li>
+<li> Tim Peters </li>
+<li> Thomas Mortimer-Jones <br><br></li>
+<li> Brad Crittenden </li>
+<li> Frankie Graffagnino </li>
+<li> Jeremy Reichman </li>
+<li> Pythontek </li>
+<li> Jeff Knupp </li>
+<li> Emily Leathers </li>
+<li> Don Jayamanne </li>
+<li> Anna Winkler </li>
+<li> Benjamin Glass </li>
+<li> Scott Irwin <br><br></li>
+<li> Russell Duhon </li>
+<li> Melvin Lim </li>
+<li> Julian Crosson-Hill </li>
+<li> Wendy Palmer and Richard Ruh </li>
+<li> Jonathan Banafato </li>
+<li> Charan Rajan </li>
+<li> Michael Chin </li>
+<li> Mitchell Chapman </li>
+<li> Luciano Ramalho </li>
+<li> paulo ALVES <br><br></li>
+<li> Nikola Kantar </li>
+<li> Cristian Salamea </li>
+<li> LUIS PALLARES ANIORTE </li>
+<li> David Strozzi </li>
+<li> Raymond Cote </li>
+<li> Adam Borbidge </li>
+<li> William Minarik </li>
+<li> Jacob Kaplan-Moss </li>
+<li> TSUJI SHINGO </li>
+<li> Bernard De Serres <br><br></li>
+<li> Intel Volunteer Grant Program </li>
+<li> Patrick Hagerty </li>
+<li> Fan Jia </li>
+<li> Kenzie Academy </li>
+<li> Elana Hashman </li>
+<li> In Mun </li>
+<li> Jung Oh </li>
+<li> Justin Harringa </li>
+<li> Christophe Jean </li>
+<li> James Lacy <br><br></li>
+<li> David Jones </li>
+<li> KITAHARA TAKAHIRO </li>
+<li> Jackie Kazil </li>
+<li> Truthful Technology LLC </li>
+<li> Joseph Wilhelm </li>
+<li> Jeffrey Fischer </li>
+<li> Andy Piper </li>
+<li> Paul Kehrer </li>
+<li> Urvish Vanzara </li>
+<li> William E. Stelzel <br><br></li>
+<li> Vicky Lee </li>
+<li> Betsy Waliszewski </li>
+<li> Eli Wilson </li>
+<li> Ursula C F Junque </li>
+<li> Robbert Zijp </li>
+<li> Andre Burgaud </li>
+<li> Ying Wang </li>
+<li> Owen Nelson </li>
+<li> Torsten Marek </li>
+<li> Gustavo Soares Fernandes Coelho <br><br></li>
+<li> Petr Moses </li>
+<li> Greg Goddard </li>
+<li> Matthew Svensson </li>
+<li> Jakub Musko </li>
+<li> Scott Carpenter </li>
+<li> Pulkit Sinha </li>
+<li> ANTONI ALOY </li>
+<li> Christopher Moradi </li>
+<li> Mickael Falck </li>
+<li> Sang-wook Koh <br><br></li>
+<li> Christian Patterson </li>
+<li> Imaginary Landscape </li>
+<li> Robert Freedman </li>
+<li> RAREkits </li>
+<li> Papakonstantinou K </li>
+<li> Matthieu Amiguet </li>
+<li> Markus Seywerd </li>
+<li> Margaret Willison </li>
+<li> Michael McCaffrey </li>
+<li> Clifford Pelletier <br><br></li>
+<li> David Bibb </li>
+<li> Miguel Sarabia del Castillo </li>
+<li> David K Sutton </li>
+<li> Andrew Kuchling </li>
+<li> Mahmoud Hashemi </li>
+<li> Christopher Dent </li>
+<li> Samuel Klock </li>
+<li> Avi Oza </li>
+<li> Martin Gfeller </li>
+<li> Jesse Shapiro <br><br></li>
+<li> dbader software co. </li>
+<li> nidhin pattaniyil </li>
+<li> litio network </li>
+<li> Paulus Schoutsen </li>
+<li> James Turk </li>
+<li> John York </li>
+<li> Brett Slatkin </li>
+<li> Junlan Liu </li>
+<li> Samuel Carey </li>
+<li> Christopher Simpkins <br><br></li>
+<li> Ewa Jodlowska </li>
+<li> Glenn Jones </li>
+<li> Dan Crosta </li>
+<li> Steven Ranney </li>
+<li> Michael Twomey </li>
+<li> christopher coffey </li>
+<li> Sanghee Kim </li>
+<li> Handojo Goenadi </li>
+<li> Fidel Leon </li>
+<li> Chip Warden <br><br></li>
+<li> Katie McLaughlin </li>
+<li> Ryan McCoy </li>
+<li> JEAN-CLAUDE ARBAUT </li>
+<li> Scott and Susan Jackson </li>
+<li> Tara Johnson </li>
+<li> Christina Stephan </li>
+<li> Kamil Sindi </li>
+<li> JORDI GONZALEZ BURGADA </li>
+<li> Malcolm Angus-Flach </li>
+<li> Christopher Markiewicz <br><br></li>
+<li> Jorge Gimeno </li>
+<li> Emanuil Tolev </li>
+<li> Peter Kropf </li>
+<li> Dang Griffith </li>
+<li> Amit Saha </li>
+<li> John Wagenleitner </li>
+<li> Justin McCammon </li>
+<li> Lance Kurisaki </li>
+<li> Kristen McIntyre </li>
+<li> Anthony Lombardo <br><br></li>
+<li> Sebastian Lorentz </li>
+<li> Clifford Kotnik </li>
+<li> Wendi Dreesen </li>
+<li> Sergey Konakov </li>
+<li> Douglas Ryan </li>
+<li> Chris Rose </li>
+<li> Joshua Simmons </li>
+<li> BRUCE F JAFFE </li>
+<li> Davide Frazzetto </li>
+<li> Jonathan Hartley <br><br></li>
+<li> Analysis North </li>
+<li> ProxyMesh, Inc. </li>
+<li> Raymond Côté </li>
+<li> Patrick Kilduff </li>
+<li> Stack Exchange </li>
+<li> xu jing </li>
+<li> Mak Heising </li>
+<li> TowerUp.com </li>
+<li> Everyday Hero </li>
+<li> Herbert Schilling <br><br></li>
+<li> Yusuke Tsutsumi </li>
+<li> Jacopo Corbetta </li>
+<li> Jeffrey Self </li>
+<li> thais viana </li>
+<li> Tobias Sterbak </li>
+<li> Joseph Schwarzbach </li>
+<li> Andy DeRiemacker </li>
+<li> Chancy Kennedy </li>
+<li> Eric Klusman </li>
+<li> Robin Friedrich <br><br></li>
+<li> Kieran Darcy </li>
+<li> Anurag Saxena </li>
+<li> Karen Schmidt </li>
+<li> Bruno Alla </li>
+<li> Vikram Aggarwal </li>
+<li> Michael Seidel </li>
+<li> Bruno Vermeulen </li>
+<li> John Sivak </li>
+<li> Albert Nubiola </li>
+<li> R STEETSKAMP <br><br></li>
+<li> Yin Aaron </li>
+<li> Ygor Lemos </li>
+<li> Formlabs Operations </li>
+<li> Gregory Lee </li>
+<li> Shauna GM </li>
+<li> Tom Augspurger </li>
+<li> James Crist </li>
+<li> Steve Bandel </li>
+<li> Tang Yuan-Liang </li>
+<li> John Culberson <br><br></li>
+<li> Allen Wang </li>
+<li> Dan Cusher </li>
+<li> Matthew Konvalin </li>
+<li> Qijin Zhou </li>
+<li> Julia White and Jason Friedman </li>
+<li> Carl Oscar Aaro </li>
+<li> Josef Zimmermann </li>
+<li> Laurie White </li>
+<li> Ivan Nikolaev </li>
+<li> Peter Fein <br><br></li>
+<li> Doug Hellmann </li>
+<li> Matthew Bowden </li>
+<li> Yamila Moreno </li>
+<li> Ryan Watson </li>
+<li> Brian Grohe </li>
+<li> Michael Miller </li>
+<li> Larry W Tooley II </li>
+<li> Florian Schulze </li>
+<li> Arne Sommerfelt </li>
+<li> Thomas van Turnhout <br><br></li>
+<li> 株式会社Xoxzo </li>
+<li> A. Jesse Jiryu Davis </li>
+<li> Celia Cintas </li>
+<li> Jacob Peddicord </li>
+<li> 内田 公太 </li>
+<li> Cherie Williams </li>
+<li> Adam Foster </li>
+<li> James Donaldson </li>
+<li> James Ahlstrom </li>
+<li> Christoph Gohlke <br><br></li>
+<li> Michael Gilbert </li>
+<li> Dileep Bhat </li>
+<li> Ellery Payne </li>
+<li> Joel Watts </li>
+<li> Derek Keeler </li>
+<li> Reginald Dugard </li>
+<li> Chloe Tucker </li>
+<li> Webb Software, LLC </li>
+<li> Stefán Sigmundsson </li>
+<li> Johnny Cochrane <br><br></li>
+<li> Alex Sobral de Freitas </li>
+<li> Salem Environmental LLC </li>
+<li> Paulo alvarado </li>
+<li> Datadog Inc. </li>
+<li> Thomas HUNGER </li>
+<li> Radek Smejkal </li>
+<li> Jesper Dramsch </li>
+<li> Mohammad Burhan Khalid </li>
+<li> Shiboune Thill </li>
+<li> Gilberto Pastorello <br><br></li>
+<li> CyberGrants </li>
+<li> Xin Cynthia </li>
+<li> Nicholas Tietz </li>
+<li> Joseph Reed </li>
+<li> Dan Sanderson </li>
+<li> Paul McLanahan </li>
+<li> lucas godoy </li>
+<li> Plaid Inc. </li>
+<li> Eric Chou </li>
+<li> O'Reilly Media <br><br></li>
+<li> Christian Albrecht </li>
+<li> Kawabuchi Shota </li>
+<li> Anthony Plunkett </li>
+<li> Aaron Olson </li>
+<li> Robert Woodraska </li>
+<li> Justin Hoover </li>
+<li> Roland Metivier </li>
+<li> Zeta Associates </li>
+<li> Stefan Hagen </li>
+<li> Joshua Engroff <br><br></li>
+<li> Aaron Shaneyfelt </li>
+<li> Ivana Kellyerova </li>
+<li> Daniel Silvers </li>
+<li> Patrick Gearhart </li>
+<li> Corsin Gmür </li>
+<li> Gorgias Inc. </li>
+<li> So Hau Heng Haggen </li>
+<li> VALLET Bastien </li>
+<li> David Knoll </li>
+<li> Tianmu Zhang <br><br></li>
+<li> Antonio Puertas Gallardo </li>
+<li> David Gwilt </li>
+<li> Nathanial E Urwin </li>
+<li> Jillian Rouleau </li>
+<li> Bright Hat Solutions LLC </li>
+<li> Christopher B Georgen </li>
+<li> Vishu Guntupalli </li>
+<li> Chantal Laplante </li>
+<li> Zachery Bir </li>
+<li> Phillip Oldham <br><br></li>
+<li> Jonas Bagge </li>
+<li> Jason Rowley </li>
+<li> scott campbell </li>
+<li> Alvaro Moises Valdebenito Bustamante </li>
+<li> Jonathan Bennett </li>
+<li> Thierry Moebel </li>
+<li> Sameet Mahisekar </li>
+<li> Stephen Hoover </li>
+<li> Craig Anderson </li>
+<li> Edvardas Baltūsis <br><br></li>
+<li> Manatsawin Hanmongkolchai </li>
+<li> Ekaterina Levitskaya </li>
+<li> William Mayor </li>
+<li> Gary Selzer </li>
+<li> Aaron Straus </li>
+<li> Jon Danao </li>
+<li> Eric Appelt </li>
+<li> United Way of the Bay Area </li>
+<li> Kevin Shackleton </li>
+<li> Jennifer Basalone <br><br></li>
+<li> Tim Lesher </li>
+<li> Kevin Cox </li>
+<li> Jozef Iljuk </li>
+<li> Paul Barker </li>
+<li> EuroPython 2017 Sponsored Massage </li>
+<li> John Hill </li>
+<li> Clay Campaigne </li>
+<li> STEPHANE WIRTEL </li>
+<li> jingoloba.com </li>
+<li> Carl Trachte <br><br></li>
+<li> Britt Gresham </li>
+<li> John Mangino </li>
+<li> Kurt Wiersma </li>
+<li> John Morrissey </li>
+<li> Applied Biomath, LLC </li>
+<li> Andrew Janke </li>
+<li> Froilan Irizarry </li>
+<li> Kevin Stilwell </li>
+<li> Sarah Guido </li>
+<li> Sebastian Woehrl <br><br></li>
+<li> Alex Gallub </li>
+<li> Sandip Bhattacharya </li>
+<li> David Radcliffe </li>
+<li> Julie Yoo </li>
+<li> Deborah Harris </li>
+<li> Benjamin Allen </li>
+<li> Robin Wilson's Website </li>
+<li> William Woodall </li>
+<li> Kay Schlühr </li>
+<li> Daniel Taylor <br><br></li>
+<li> David Boroditsky </li>
+<li> Sebastián Ramírez Magrí </li>
+<li> Tobias Kunze </li>
+<li> Pedro Rodrigues </li>
+<li> Théophile Studer </li>
+<li> John Reese </li>
+<li> Neil Fernandes </li>
+<li> michael pechner </li>
+<li> Salesforce.org </li>
+<li> Joseph Cravo <br><br></li>
+<li> FreeWear.org </li>
+<li> MacLean Ian </li>
+<li> Phebe Polk </li>
+<li> Arnaud Legout </li>
+<li> The Lagunitas Brewing Co. </li>
+<li> Jerrie Martherus </li>
+<li> Gregg Thomason </li>
+<li> Rami Chowdhury </li>
+<li> Nick Schmalenberger </li>
+<li> Daniel Müller <br><br></li>
+<li> Reuven Lerner </li>
+<li> Scott Halkyard </li>
+<li> Kevin McCormick </li>
+<li> Network for Good </li>
+<li> Scott Johnston </li>
+<li> David Gehrig </li>
+<li> Peter Farrell </li>
+<li> Ben Warren </li>
+<li> JOSE VARGAS MONTERO </li>
+<li> Stuart Kennedy <br><br></li>
+<li> Daniel Furman </li>
+<li> Kate Stohr </li>
+<li> Gert Burger </li>
+<li> femmegeek </li>
+<li> el cimarron wh llc </li>
+<li> David Ashby </li>
+<li> Daniel Wallace </li>
+<li> Goto Hjelle </li>
+<li> Charles Hailbronner </li>
+<li> Jeff Borisch <br><br></li>
+<li> Yarko Tymciurak </li>
+<li> Saptak Sengupta </li>
+<li> Sal DiStefano </li>
+<li> Paul Hallett software </li>
+<li> Eric Kansa </li>
+<li> Enrique Gonzalez </li>
+<li> Dustin Mendoza </li>
+<li> Ned Deily </li>
+<li> Fahima Djabelkhir </li>
+<li> Julien MOURA <br><br></li>
+<li> Artiya Thinkumpang </li>
+<li> Olivier Grisel </li>
+<li> Lucas CIMON </li>
+<li> Leandro Meili </li>
+<li> Justin Flory </li>
+<li> Nicholas Sarbicki </li>
+<li> Mohammad Taleb </li>
+<li> Charles Engelke </li>
+<li> Petar Mlinaric </li>
+<li> TREVOR PINDLING <br><br></li>
+<li> Jose Padilla </li>
+<li> Joel Grus </li>
+<li> James Shields </li>
+<li> Benjamin Starling </li>
+<li> Simon Willison </li>
+<li> Richard Hanson </li>
+<li> Katherine Simmons </li>
+<li> Nathaniel Compton </li>
+<li> Level 12 </li>
+<li> Markus Daul <br><br></li>
+<li> Alexander Hagerman </li>
+<li> Michael Pirnat </li>
+<li> Piper Thunstrom </li>
+<li> Blaise Laflamme </li>
+<li> Kelvin Vivash </li>
+<li> Patrick Donahue </li>
+<li> Glen Brazil </li>
+<li> Timothy Prindle </li>
+<li> Kelsey Saintclair </li>
+<li> Pat Figliozzi <br><br></li>
+<li> Micaela Alaniz </li>
+<li> Becky Sweger </li>
+<li> RAMAKRISHNA CH S N V </li>
+<li> Okko Willeboordse </li>
+<li> Nicolás Pérez Giorgi </li>
+<li> Mark Mandel </li>
+<li> Guilherme Talarico </li>
+<li> Sean Byrne </li>
+<li> Raul Maldonado </li>
+<li> Christopher Patti <br><br></li>
+<li> Nolan Brubaker </li>
+<li> Myles Butner </li>
+<li> Jena Heath </li>
+<li> Csaba Magyar </li>
+<li> Hillari Mohler </li>
+<li> Thomas Ackland </li>
+<li> Stephen Figgins </li>
+<li> RAUL MALDONADO </li>
+<li> Peter Wang </li>
+<li> Barbara Shaurette <br><br></li>
+<li> Henriette Vullers </li>
+<li> LORENZO MORIONDO </li>
+<li> Bert Jan Willem Regeer </li>
+<li> Alex Chamberlain </li>
+<li> scott fullman </li>
+<li> Omar Quimbaya </li>
+<li> Emmanuel Leblond </li>
+<li> Charline Chester </li>
+<li> Michel beaussart </li>
+<li> Joel Parke <br><br></li>
+<li> James Larsen </li>
+<li> Richard Landau </li>
+<li> Emily Spahn </li>
+<li> murali kalapala </li>
+<li> Seth Juarez </li>
+<li> Aru Sahni </li>
+<li> Josiah McGlothin </li>
+<li> Douglas Napoleone </li>
+<li> William Horton </li>
+<li> Manny Francisco <br><br></li>
+<li> Pey Lian Lin </li>
+<li> Edward Haymore </li>
+<li> Ehsan Iran Nejad </li>
+<li> Krishnan Swamy </li>
+<li> Mamadou Diallo </li>
+<li> Adrian Sabovici </li>
+<li> Bernard DeSerres </li>
+<li> Tim Harris </li>
+<li> Nicholas Tucker </li>
+<li> Amanda Casari <br><br></li>
+<li> 段 雪峰 </li>
+<li> yonghoo sheen </li>
+<li> Brian Rutledge </li>
+<li> Alexander Levy </li>
+<li> Mark Nicholson </li>
+<li> Finn Andre Skogen Olsen </li>
+<li> Craig Ciccone </li>
+<li> Daniel Klein </li>
+<li> Rafael Caricio </li>
+<li> Christopher Lunsford <br><br></li>
+<li> Sher Muhonen </li>
+<li> Christopher Miller </li>
+<li> gregdenson.com </li>
+<li> Lucas Coffey </li>
+<li> Ochiai Yuto </li>
+<li> Andy Fundinger </li>
+<li> daishi harada </li>
+<li> Daniel Yeaw </li>
+<li> Ravi Satya Durga Prasad Yenugula </li>
+<li> business business business <br><br></li>
+<li> Peter Eckhoff </li>
+<li> Parbhat Puri </li>
+<li> Mark Turner </li>
+<li> Hugo Lopes Tavares </li>
+<li> Benjamin Dyer </li>
+<li> sumeet yawalkar </li>
+<li> Cassidy Gallegos </li>
+<li> Peter Landoll </li>
+<li> Pamela McA'Nulty </li>
+<li> Eugene O'Friel <br><br></li>
+<li> Kelly Peterson </li>
+<li> OLA JIRLOW </li>
+<li> Matt Trostel </li>
+<li> Christopher Sterk </li>
+<li> G Cody Bunch </li>
+<li> BRADLEY SCHWAB </li>
+<li> Yip Yen Lam </li>
+<li> Lee Vaughan </li>
+<li> David Morris </li>
+<li> Willy Jordan <br><br></li>
+<li> Michael Sarahan </li>
+<li> J Matthew Peters </li>
+<li> Fernando Martinez </li>
+<li> Brad Miro </li>
+<li> Justin Holmes </li>
+<li> Thomas Guettler </li>
+<li> Bernard Lawson </li>
+<li> Rob Martin </li>
+<li> Tyler Bigler </li>
+<li> Peter Pinch <br><br></li>
+<li> Alex Riviere </li>
+<li> Aaron Scarisbrick </li>
+<li> Shaoyan Huang </li>
+<li> Nehar Arora </li>
+<li> Mark Chollett </li>
+<li> Daniel Chen </li>
+<li> Divakar Viswanath </li>
+<li> erika bucio </li>
+<li> Vanessa Bergstedt </li>
+<li> Subhodip Biswas <br><br></li>
+<li> Robert Reynolds </li>
+<li> Philip James </li>
+<li> Michael Davis </li>
+<li> Gonzalo Correa </li>
+<li> Erik Bethke </li>
+<li> Christen Blake </li>
+<li> Arianne Dee </li>
+<li> Alexander Bliskovksy </li>
+<li> Charles Dibsdale </li>
+<li> Timothy Hoagland <br><br></li>
+<li> Jerome Allen </li>
+<li> Graziano Giuliani </li>
+<li> Steven Loria </li>
+<li> Shimizukawa Takayuki </li>
+<li> Faris Chebib </li>
+<li> John Adjei </li>
+<li> Yi-Huan Chan </li>
+<li> Gabriel Smadi </li>
+<li> Michael Trosen </li>
+<li> Richard Maybach <br><br></li>
+<li> Mark Mangoba </li>
+<li> OpenRock Innovations Ltd. </li>
+<li> Patrick Shuff </li>
+<li> Innolitics, LLC </li>
+<li> Shami Marangwanda </li>
+<li> Walter Vrey </li>
+<li> Daniel Axmacher </li>
+<li> Steven Shapiro </li>
+<li> José Antonio Santiago Marrero </li>
+<li> Martin van Paassen <br><br></li>
+<li> Cara Schmitz </li>
+<li> Russ Crowther </li>
+<li> Kevin Conway </li>
+<li> Patrick-Oliver Groß </li>
+<li> Nicholas Tollervey </li>
+<li> Abhay Saxena </li>
+<li> Vettrivel Viswanathan </li>
+<li> Magx Durbin </li>
+<li> Laura Wickett </li>
+<li> Brad Israel <br><br></li>
+<li> Matthew Lauria </li>
+<li> Jeff Bradberry </li>
+<li> Harry Hebblewhite </li>
+<li> Expert Network at Packt </li>
+<li> Rodolfo De Nadai </li>
+<li> Kurt Matarese </li>
+<li> Fernando Rosendo </li>
+<li> Blair Nicolle </li>
+<li> Emil Christensen </li>
+<li> Ahmed Syed <br><br></li>
+<li> Thomas Jenkins </li>
+<li> Russell Keith-Magee </li>
+<li> Bruce Collins </li>
+<li> Marc Laughton </li>
+<li> Carol Peterson Ganz </li>
+<li> Younggun Kim </li>
+<li> Mariatta Wijaya </li>
+<li> Eryn Wells </li>
+<li> Ronny Meißner </li>
+<li> Brad Fritz <br><br></li>
+<li> Antony Jerome </li>
+<li> Jethro Nederhof </li>
+<li> Capital One </li>
+<li> Roger Coram </li>
+<li> Frederick VanCleve </li>
+<li> YONEYAMA HIDEAKI </li>
+<li> Luis Freire </li>
+<li> Gabriel Fas Marín </li>
+<li> Tyrel Souza </li>
+<li> joaquin berenguer <br><br></li>
+<li> Álvaro Justen </li>
+<li> Esa Peuha </li>
+<li> Daniel Chudnov </li>
+<li> David Larsen </li>
+<li> Robert Scrimo </li>
+<li> Travis Risner </li>
+<li> Ben Kiel </li>
+<li> Baron Chandler </li>
+<li> Max Bezahler </li>
+<li> Alexander Sage <br><br></li>
+<li> Sonia IronCloud </li>
+<li> Malcolm Haar </li>
+<li> Eugene ODonnell </li>
+<li> Bjorn Stabell </li>
+<li> Guillermo Monge Del Olmo </li>
+<li> Robert Law </li>
+<li> Christopher Wilkinson </li>
+<li> Jonathon Duckworth </li>
+<li> Yang Yang </li>
+<li> Odair G Martins <br><br></li>
+<li> Aparajit Raghaven and Satyashree Srikanth </li>
+<li> Benjamin Freeman </li>
+<li> Maxim Levet </li>
+<li> salesforce.org </li>
+<li> Al Sweigart </li>
+<li> April Wright </li>
+<li> Max Bélanger </li>
+<li> Dmitry Petrov </li>
+<li> T HUNGER </li>
+<li> David Cuthbert <br><br></li>
+<li> Bright Hat Solutions, LLC </li>
+<li> Colin Kern </li>
+<li> Coffee Meets Bagel </li>
+<li> Ilya Kamenshchikov </li>
+<li> Nick Johnston </li>
+<li> Diane Delallée </li>
+<li> Fred Thiele </li>
+<li> Charles Parker </li>
+<li> Jeffrey Peacock Jr </li>
+<li> Joongi Kim <br><br></li>
+<li> BluWall </li>
+<li> Guruprasad Somasundaram </li>
+<li> Graham Gilmour </li>
+<li> Филиппов Савва </li>
+<li> Anthony Pilger </li>
+<li> Eric Sachs </li>
+<li> Pablo Lobariñas Crisera </li>
+<li> Aly Sivji </li>
+<li> Alexander Müller </li>
+<li> Atilio Quintero Vásquez <br><br></li>
+<li> Helen S Wan </li>
+<li> David Pratt </li>
+<li> Ivan Ven Osdel </li>
+<li> Michael Warner </li>
+<li> andre FEUERSTEIN </li>
+<li> Timo Würsch </li>
+<li> Daniel O'Meara </li>
+<li> Antti-Pekka Tuovinen </li>
+<li> Nicholas Grove </li>
+<li> Scott Lasley <br><br></li>
+<li> Jarrod Hamilton </li>
+<li> Gregory Akers </li>
+<li> Nathan F. Watson </li>
+<li> Peter Dinges </li>
+<li> Alexandre Harano </li>
+<li> Eric Smith </li>
+<li> Srivatsan Ramanujam </li>
+<li> Oppenheimer Match for Jason Friedman </li>
+<li> Christian Groleau </li>
+<li> Peter Ullrich <br><br></li>
+<li> Ernest Durbin </li>
+<li> Zac Hatfield-Dodds </li>
+<li> Andreas Braun </li>
+<li> Jonas Namida Aneskans </li>
+<li> Kris Amundson </li>
+<li> Brian Dailey </li>
+<li> Alex Trueman </li>
+<li> Nitesh Patel </li>
+<li> Martin Goudreau </li>
+<li> James Doutt <br><br></li>
+<li> Martin De Luca </li>
+<li> Christopher Stevens </li>
+<li> Zheng Jin </li>
+<li> John McGrail </li>
+<li> Christian Wappler </li>
+<li> David Duxstad </li>
+<li> Jonathan Villemaire-Krajden </li>
+<li> Olivier Philippon </li>
+<li> Mario Dix </li>
+<li> Vladimir Benda <br><br></li>
+<li> Mickaël Schoentgen </li>
+<li> Jan Javorek </li>
+<li> Carlo Ciarrocchi </li>
+<li> Douglas R Hellmann </li>
+<li> Nora Kennedy </li>
+<li> neil chazin </li>
+<li> Paul Block </li>
+<li> Ian-Matthew Hornburg </li>
+<li> Diane Trout </li>
+<li> Hugh Pyle <br><br></li>
+<li> Michael Baker </li>
+<li> Philip Adler </li>
+<li> Geir Iversen </li>
+<li> Erick Navarro </li>
+<li> Swaroop Chitlur Haridas </li>
+<li> Robert Muratore </li>
+<li> Alexys Jacob-Monier </li>
+<li> Paolo Cantore </li>
+<li> John Palmieri </li>
+<li> Dmitri Kurbatskiy <br><br></li>
+<li> GovReady PBC </li>
+<li> Taymon A. Beal </li>
+<li> Rob Kennedy </li>
+<li> César Cruz </li>
+<li> Kevin Boers </li>
+<li> Adam Englander </li>
+<li> Mel Tearle </li>
+<li> darren fix </li>
+<li> Ryan Schave </li>
+<li> Jakob Karstens <br><br></li>
+<li> G Nyers </li>
+<li> Marc-Aurèle Coste </li>
+<li> Ramakris Sridhara </li>
+<li> Justin Duke </li>
+<li> Sheree Pena </li>
+<li> Christopher Brousseau </li>
+<li> Ed Costello </li>
+<li> Mike Miller </li>
+<li> Susannah Herrada </li>
+<li> Terrance Peppers <br><br></li>
+<li> Doyeon Kim </li>
+<li> William Tubbs </li>
+<li> Wladimir van der Laan </li>
+<li> Chan Florence </li>
+<li> Ластов Юрий </li>
+<li> Mathieu Legay </li>
+<li> José Carlos Coronas Vida </li>
+<li> Jens Nistler </li>
+<li> Luis Angell </li>
+<li> Brooke Hedrick <br><br></li>
+<li> Burak Alver </li>
+<li> David Michaels </li>
+<li> Christopher Walsh </li>
+<li> Marc Garcia </li>
+<li> Carsten Stupka </li>
+<li> Harry Moore </li>
+<li> Buddha Kumar </li>
+<li> Michael Iuzzolino </li>
+<li> Douglas Wood </li>
+<li> Alexandre Bulté <br><br></li>
+<li> Fred Fitzhugh Jr </li>
+<li> Giuseppe Cunsolo </li>
+<li> Vit Zahradnik </li>
+<li> JEROME PETAZZONI </li>
+<li> Andrew Remis </li>
+<li> Thomas Eckert </li>
+<li> Joshua Adelman </li>
+<li> Chris Erickson </li>
+<li> Mark Agustin </li>
+<li> Jason Wolosonovich <br><br></li>
+<li> Lukas Sigrist </li>
+<li> Andrew Gnias </li>
+<li> Jacob Magnusson </li>
+<li> Kevin Porterfield </li>
+<li> Sarah Clements </li>
+<li> MA Lok Lam </li>
+<li> Leena Kudalkar </li>
+<li> David Brondsema </li>
+<li> Saifuddin Abdullah </li>
+<li> Georg Schwojer <br><br></li>
+<li> David Diminnie </li>
+<li> Frontstream </li>
+<li> Daniel Halbert </li>
+<li> Jonathan Seabold </li>
+<li> Xie Zong-han </li>
+<li> Hans Braakmann </li>
+<li> Faith Schlabach </li>
+<li> Kevin Languedoc </li>
+<li> chris maenner </li>
+<li> Tsuji Shingo <br><br></li>
+<li> Христюхин Александр </li>
+<li> ROBERT LUDWICK </li>
+<li> Prakash Shenoy </li>
+<li> Matthew Beauregard </li>
+<li> T. R. Padmanabhan </li>
+<li> Steve Lindblad </li>
+<li> Matheus Dümpelmann </li>
+<li> Adam Szegedi </li>
+<li> David Beitey </li>
+<li> Calvin Black <br><br></li>
+<li> Insperity </li>
+<li> The GE Foundation </li>
+<li> David Oatway </li>
+<li> Dominic Valentino </li>
+<li> Alexander Arsky </li>
+<li> Thomas Lasinski </li>
+<li> Panorama Global Impact Fund </li>
+<li> Joshua Olson </li>
+<li> Ian Zelikman </li>
+<li> Yun Wu <br><br></li>
+<li> TIAA Charitable </li>
+<li> Edgar Roman </li>
+<li> Oliver Schubert </li>
+<li> Paul Brown </li>
+<li> Ian-Mathew Hornburg </li>
+<li> Lars Freier </li>
+<li> Manisha Patel </li>
+<li> JP Bourget </li>
+<li> Bruce Hymon </li>
+<li> Ishwar Murgodi <br><br></li>
+<li> Oleksandr Buchkovskyi </li>
+<li> John Palmer </li>
+<li> Catherine Devlin </li>
+<li> Hunor Csomortani </li>
+<li> William Hall </li>
+<li> Raymond Berg </li>
+<li> David McInnis </li>
+<li> Yayoi Ukai </li>
+<li> RODNEY CURRYWOOD </li>
+<li> Eliezer Mintz <br><br></li>
+<li> Terry Watt </li>
+<li> Verwoorders & Dutveul </li>
+<li> Vladislav Tyshkevich </li>
+<li> Holger Kohr </li>
+<li> joseph besselman </li>
+<li> Alan Vezina </li>
+<li> Sam Corner </li>
+<li> Raymond Buhr </li>
+<li> Jason Huggins </li>
+<li> Stephen Z Montsaroff <br><br></li>
+<li> Mustafa Abusharkh </li>
+<li> Ronak Vadalani </li>
+<li> Jonathan Mason </li>
+<li> Thomas McNamara </li>
+<li> Dhrubajyoti Doley </li>
+<li> David Rudling </li>
+<li> Tuong Vu </li>
+<li> BRUCE GERHARDT </li>
+<li> Tilak T </li>
+<li> 吉江 建一 <br><br></li>
+<li> mahmut dumlupinar </li>
+<li> George Lund </li>
+<li> Craig Doremus </li>
+<li> Florian Sommer </li>
+<li> Bert Raeymaekers </li>
+<li> Mózes Mózew </li>
+<li> Lukas Treber </li>
+<li> Keith Westpfahl </li>
+<li> Aidas Bendoraitis </li>
+<li> Suchindra Chandrahas <br><br></li>
+<li> Samuel Rinde </li>
+<li> Otter Software Limited </li>
+<li> Овсянников Игорь </li>
+<li> Thomas Capuano </li>
+<li> Software Freedom School </li>
+<li> David Friedman </li>
+<li> Xian Wang </li>
+<li> James Williams </li>
+<li> Adam Murphy </li>
+<li> Keith Gaughan <br><br></li>
+<li> Jonathan Barnoud </li>
+<li> U. S. Bank Foundation </li>
+<li> Justin Schechter </li>
+<li> SF Python </li>
+<li> CBAhern Communications </li>
+<li> Michael Smith </li>
+<li> Richard Tedder </li>
+<li> Willis Cummins </li>
+<li> Justin Landay </li>
+<li> Joseph Curtin <br><br></li>
+<li> Oliver Andrich </li>
+<li> Akiko Maeda </li>
+<li> Victoria Boykis </li>
+<li> Eskie </li>
+<li> Tiffany Verkaik </li>
+<li> Michael Pinkowski </li>
+<li> Samuel Madireddy </li>
+<li> MagicStack Inc </li>
+<li> nathaniel compton </li>
+<li> Jiri Kuncar <br><br></li>
+<li> Hendrik Lankers </li>
+<li> Chris Johnston </li>
+<li> MinneAnalytics </li>
+<li> Mazhalai Chellathurai </li>
+<li> stanley nash </li>
+<li> Scott Sanderson </li>
+<li> John Roa </li>
+<li> Amazon </li>
+<li> Sylvia Tran </li>
+<li> Minkyu Park <br><br></li>
+<li> Hiten jadeja </li>
+<li> Mark Lotspaih </li>
+<li> Craig Fisk </li>
+<li> Dann Halverson </li>
+<li> Thomas Wouters </li>
+<li> Edward Mann </li>
+<li> sander teunissen </li>
+<li> Brian Ehrhart </li>
+<li> Michael Kusber </li>
+<li> SeongSoo Cho <br><br></li>
+<li> Alex Willmer </li>
+<li> Bruno Bord </li>
+<li> Anthony Lapsley </li>
+<li> Sooda internetbureau B.V. </li>
+<li> Timothy White </li>
+<li> Guilherme Moralez </li>
+<li> Nathaniel Brown </li>
+<li> Doug Reynolds </li>
+<li> Robert Wlodarczyk </li>
+<li> Joseph Andrews <br><br></li>
+<li> BoB Woodraska </li>
+<li> Jason Wattier </li>
+<li> Eleven Fifty Academy </li>
+<li> Geoffrey Jost </li>
+<li> Avenue 81, Inc. </li>
+<li> Lucas Pfaff </li>
+<li> Gyorgy Fischhof </li>
+<li> Bright Hat </li>
+<li> Dolcera Corporation </li>
+<li> Catherine Nelson <br><br></li>
+<li> Christian Long </li>
+<li> Seki Hiroshi </li>
+<li> Van Lindberg </li>
+<li> bogdan chivoiu </li>
+<li> John Roth </li>
+<li> Adam Collard </li>
+<li> Eugene Callahan </li>
+<li> George Mutter </li>
+<li> Zachary Valenta </li>
+<li> Robert Wall <br><br></li>
+<li> Julien Enselme </li>
+<li> Todd Mitchell </li>
+<li> SUKREE SONG </li>
+<li> Pedro Ferraz </li>
+<li> Hyunsik Hwang </li>
+<li> Johan Herland </li>
+<li> Scott Campbell </li>
+<li> Kelsey Hawley </li>
+<li> Marcus Smith </li>
+<li> Johan Losvik <br><br></li>
+<li> Hunter DiCicco </li>
+<li> Kevin Richardson </li>
+<li> Jeremy BOIS </li>
+<li> Lloyd Analytics LLC </li>
+<li> David Gaeddert </li>
+<li> Anthony Scopatz </li>
+<li> Anthony Williams </li>
+<li> Fabrizio Romano </li>
+<li> Rajiv Vijayakumar </li>
+<li> Gilberto Goncalves <br><br></li>
+<li> Darasimi Ajewole </li>
+<li> Adrien Brunet </li>
+<li> William Eubanks </li>
+<li> Philipp Weidenhiller </li>
+<li> Paul Fontenrose </li>
+<li> Michael Herman </li>
+<li> Chaitat Piriyasatit </li>
+<li> Anirudh Surendranath </li>
+<li> Cathy Kernodle </li>
+<li> bradley searle <br><br></li>
+<li> Zoltan Schmidt </li>
+<li> Twin Panichsombat </li>
+<li> Thiago Luiz Pereira de Santana </li>
+<li> Pieter De Praetere </li>
+<li> Aruj Thirawat </li>
+<li> Arthit Suriyawongkul </li>
+<li> Andriy Andriyuk </li>
+<li> Caleb Ely </li>
+<li> Sander Schaminée </li>
+<li> Nikolaos Mavrakis <br><br></li>
+<li> George Altland </li>
+<li> Diane M. and James D. Foote </li>
+<li> Patrick Abeya </li>
+<li> Burke Consulting Inc </li>
+<li> Murali Kalapala </li>
+<li> Aono Koudai </li>
+<li> Jeanne Lane </li>
+<li> Martin Chilvers </li>
+<li> Barry Moore II </li>
+<li> Brian Whetten <br><br></li>
+<li> Wang Muyu </li>
+<li> Alexandre Chabot-Leclerc </li>
+<li> Jennifer Hua </li>
+<li> Shashidhar Mallapur </li>
+<li> Nate Pinchot </li>
+<li> Florian Kluck </li>
+<li> William Koehrsen </li>
+<li> Jarret Hardie </li>
+<li> Cagil Ulusahin </li>
+<li> Lorenz Gruber <br><br></li>
+<li> Saffet Sen </li>
+<li> Luca Masters </li>
+<li> Nina Zakharenko </li>
+<li> Ryan Nelson </li>
+<li> David Miller </li>
+<li> Praveen Bhamidipati </li>
+<li> Daisy Birch Reynardson </li>
+<li> Jaykumar Desai </li>
+<li> Leif Ulstrup </li>
+<li> Peter Lada <br><br></li>
+<li> Liam Lefebvre </li>
+<li> Gavin Kirby </li>
+<li> 陈 洪波 </li>
+<li> Shigeyuki Takeda </li>
+<li> Max Samp </li>
+<li> Dan Mattera </li>
+<li> Llewellyn Janse van Rensburg </li>
+<li> Joris Roovers </li>
+<li> Network Associate Solutions </li>
+<li> John Walker <br><br></li>
+<li> Janko Otto </li>
+<li> George Richards </li>
+<li> Alexander Afanasyev </li>
+<li> babila lima </li>
+<li> Pietro Marini </li>
+<li> Jason Bindon </li>
+<li> Kiyotoshi Ichikawa </li>
+<li> Michael Kisiel </li>
+<li> Eric Thorpe </li>
+<li> David Lauri Pla <br><br></li>
+<li> Jaganadh Gopinadhan </li>
+<li> Ben Spaulding </li>
+<li> James Hogarty </li>
+<li> Ira Qualls </li>
+<li> OReilly </li>
+<li> loic rowe </li>
+<li> Ben Freeman </li>
+<li> Andrew Beyer </li>
+<li> Jonathan Rogers </li>
+<li> Rachel Sima <br><br></li>
+<li> Hamza Sheikh </li>
+<li> David Beazley </li>
+<li> Matt Land </li>
+<li> ivan marques </li>
+<li> Sudhakar Bhide </li>
+<li> Geoffrey Ahlberg </li>
+<li> Sandip Bose </li>
+<li> SunMi Leem </li>
+<li> Sunghyun Hwang </li>
+<li> Min-Kyu Park <br><br></li>
+<li> Keith Bourgoin </li>
+<li> Robert Meineke </li>
+<li> Tanya Tickel </li>
+<li> Kai Willadsen </li>
+<li> Geoff Lawrence </li>
+<li> Chen Che Wei </li>
+<li> gooddonegreat.com </li>
+<li> Paul Hildebrandt </li>
+<li> David Smith </li>
+<li> Łukasz Dziedzia <br><br></li>
+<li> next health choice, llc </li>
+<li> Wendy Grus </li>
+<li> Praveen Patil </li>
+<li> Melissa Lewis </li>
+<li> Mark Hanson </li>
+<li> David Fischer </li>
+<li> Raymond Yee and Laura Shefler </li>
+<li> Anthony Clever </li>
+<li> Louise Collis </li>
+<li> marc davidson <br><br></li>
+<li> Nitin Madnani </li>
+<li> Markus Koziel </li>
+<li> Cory Benfield </li>
+<li> Gary Beck </li>
+<li> James Sam </li>
+<li> slah ahmed </li>
+<li> kenneth durril </li>
+<li> Thijs van Dien </li>
+<li> Ryan Campbell </li>
+<li> Robert Roskam <br><br></li>
+<li> Patipat Susumpow </li>
+<li> Hannah Aizenman </li>
+<li> Chris Moffitt </li>
+<li> Cholwich Nattee </li>
+<li> Adam J Boscarino </li>
+<li> Orcan Ogetbil </li>
+<li> Mattias Erichsén </li>
+<li> John Vrbanac </li>
+<li> Justin Shelton </li>
+<li> Joel Vasallo <br><br></li>
+<li> Brandon Grubbs </li>
+<li> Bill Griffith </li>
+<li> Vyacheslav Rossov </li>
+<li> Laurence Taylor </li>
+<li> Aaron Virshup </li>
+<li> Cogapp Ltd </li>
+<li> Franklin Ventura </li>
+<li> Daniel Watkins </li>
+<li> YUNTAO WANG </li>
+<li> Merike Sell <br><br></li>
+<li> Bernat Gabor </li>
+<li> Francky NOYEZ </li>
+<li> Lisa Quera </li>
+<li> Bad Dog Consulting </li>
+<li> Kent Shikama </li>
+<li> Algirdas Grybas </li>
+<li> Jaime Buelta Aguirre </li>
+<li> Steven Lott </li>
+<li> Elaine Wong </li>
+<li> Immanuel Buder <br><br></li>
+<li> andrew want </li>
+<li> Julien Palard </li>
+<li> Ysbrand Galama </li>
+<li> Elias Dabbas </li>
+<li> 清水川 貴之 </li>
+<li> Tony Ibbs </li>
+<li> Peter Baumgartner </li>
+<li> Mikhail Mamrouski </li>
+<li> Mark Osinski </li>
+<li> Raja Aluri <br><br></li>
+<li> REINALDO SANCHES </li>
+<li> Trenton McKinney </li>
+<li> Walker Hale </li>
+<li> Roberto Salgado Ladrero </li>
+<li> Sye van der Veen </li>
+<li> Dr A J Carr </li>
+<li> Поваляев Василий </li>
+<li> Travis Shirk </li>
+<li> David Bonner </li>
+<li> nathan MUSTAKI <br><br></li>
+<li> erik van widenfelt </li>
+<li> Nicholas Silvester </li>
+<li> Vik Paruchuri </li>
+<li> Guishan Zheng </li>
+<li> Regina Sirois </li>
+<li> Nik Kantar </li>
+<li> Cyrille Marchand </li>
+<li> Nicholas Birch </li>
+<li> personal </li>
+<li> alpheus masanga <br><br></li>
+<li> alessandro mienandi </li>
+<li> Lorenzo Moriondo </li>
+<li> Andres Pineda </li>
+<li> Thomas Rutherford </li>
+<li> Lorenzo Riches </li>
+<li> Karthikeyan Singaravelan </li>
+<li> Miguel Sousa </li>
+<li> Venkateshwaran Venkataramani </li>
+<li> james estevez </li>
+<li> 柳 泉波 <br><br></li>
+<li> Francesco Feregotto </li>
+<li> Rene Nejsum </li>
+<li> D F Moisset de Espanes </li>
+<li> Yakuza IT </li>
+<li> Andy McFarland </li>
+<li> Gregory Cappa </li>
+<li> Hellmut Hartmann </li>
+<li> Ramin Soltani </li>
+<li> Sergio Delgado Quintero </li>
+<li> Paul Egbert <br><br></li>
+<li> Kim van Wyk </li>
+<li> Nik Kraus Consulting </li>
+<li> ANDY STRUNK </li>
+<li> William Spitler </li>
+<li> Paul Ciano </li>
+<li> Samuel Partington </li>
+<li> András Mózes </li>
+<li> Matthew Lamberti </li>
+<li> sasaki renato shinji </li>
+<li> Shailyn Ortiz Jimenez <br><br></li>
+<li> בן פיינשטיין </li>
+<li> Andrés Torres </li>
+<li> William Laspas </li>
+<li> MathKnowledge </li>
+<li> Chae Jong Bin </li>
+<li> Brian Skinn </li>
+<li> Adam Parkin </li>
+<li> Moritz Wolter </li>
+<li> John Spiliotopoulos </li>
+<li> Garison Spaeth <br><br></li>
+<li> Allison Simmons </li>
+<li> Girts Folkmanis </li>
+<li> Brian Warner </li>
+<li> Alicia Florez </li>
+<li> Kalman Szabo </li>
+<li> Christoph Fink </li>
+<li> Kai Analytics </li>
+<li> William Coleman </li>
+<li> Sungwoo Jo </li>
+<li> Guillaume BLANCHY <br><br></li>
+<li> Joseph Dougherty </li>
+<li> C. J. Jennings </li>
+<li> Aaron Holm </li>
+<li> Winston Churchill-Joell </li>
+<li> George Simpson </li>
+<li> Kevin Mitchell </li>
+<li> Pawan Mehta </li>
+<li> Teemu Tynjala </li>
+<li> Olivier GIMENEZ </li>
+<li> Maxwell Mitchell <br><br></li>
+<li> Carl Niger </li>
+<li> Mario Clementi </li>
+<li> Richard Walkington </li>
+<li> Edwin Quillian </li>
+<li> Andrew Byers </li>
+<li> Fazal Abbas </li>
+<li> Angus Hollands </li>
+<li> Keyton Weissinger </li>
+<li> Nickolas Symon </li>
+<li> George Montanaro <br><br></li>
+<li> Brian Rotich </li>
+<li> Jesse Evers </li>
+<li> JULIO HENRIQUE OLIVEIRA </li>
+<li> Gideon Pertzov </li>
+<li> Alessandro Bonosa </li>
+<li> Gabriel Pestre </li>
+<li> John Holmblad </li>
+<li> Buthaina Hakamy </li>
+<li> Enzo C C Maimone </li>
+<li> Ruben Portillo <br><br></li>
+<li> PRASHANT CHEGOOR </li>
+<li> MICHIKO TAKAHASHI </li>
+<li> Markus Zapke-Gründemann </li>
+<li> Bountysource Inc. </li>
+<li> Michael Newman </li>
+<li> Tarun Kumar Rajamannar </li>
+<li> chen wen-jen </li>
+<li> Clifton Ellis </li>
+<li> Jiangang Sun </li>
+<li> Bernard Lawrence <br><br></li>
+<li> Jason Kessler </li>
+<li> Mengfei Li </li>
+<li> George Fischhof </li>
+<li> Justin Malloy </li>
+<li> David Casey </li>
+<li> Aaron Kirschenfeld </li>
+<li> Facundo Estevez </li>
+<li> Kenneth Alger </li>
+<li> Jean-Paul Thomas </li>
+<li> ed nonnenmacher <br><br></li>
+<li> Kun Xia </li>
+<li> Francois Gervais </li>
+<li> Суренков Савва </li>
+<li> Yavor Atov </li>
+<li> Pierre Chat </li>
+<li> Cristian-Petru SABAILA </li>
+<li> Matthew Hale </li>
+<li> SAU-CHUN LAM </li>
+<li> Matthew Bass </li>
+<li> Matteo Benci <br><br></li>
+<li> Beltrami Ester </li>
+<li> Rey del Rios </li>
+<li> Ivan Cabral </li>
+<li> Shreepad Shukla </li>
+<li> richard ward </li>
+<li> Jonathan Gilman </li>
+<li> CrowdPixie </li>
+<li> Juny Kesumadewi </li>
+<li> Harvey Summers </li>
+<li> Alan Willams <br><br></li>
+<li> Joe Metcalfe </li>
+<li> Addgene </li>
+<li> Peerbits Solution Pvt. Ltd. </li>
+<li> WILLIAM J SHUGARD </li>
+<li> Thiago Pavin Rodrigues </li>
+<li> Hugo Smett </li>
+<li> Gunther Strait </li>
+<li> Jiří Janoušek (Tiliado) </li>
+<li> Vivek Tripathi </li>
+<li> Kevin Samuel <br><br></li>
+<li> Clemens Hensen </li>
+<li> Network Theory Ltd </li>
+<li> Paul Weston </li>
+<li> Jan-Olov Eriksson </li>
+<li> Cyrille COLLIN </li>
+<li> Maurizio Binelli </li>
+<li> Erik Gillisjans </li>
+<li> Cory Tendal </li>
+<li> Priya Ranjan </li>
+<li> Emanuel Calso <br><br></li>
+<li> Jonathan McKenzie </li>
+<li> Yasin Bahtiyar </li>
+<li> Raul Gallegos </li>
+<li> Hillary Ellis </li>
+<li> Herald Jones </li>
+<li> Divya Gorantla </li>
+<li> Andrei Drang </li>
+<li> lauren McNerney </li>
+<li> William Chandos </li>
+<li> Vanda Turturean <br><br></li>
+<li> Tsyrema Lazarev </li>
+<li> Tamara Andrade </li>
+<li> Sara Powell </li>
+<li> Renee Murray </li>
+<li> Piyush Sharma </li>
+<li> Philipp Wissneth </li>
+<li> Marisa Gomez </li>
+<li> Katie Cunningham </li>
+<li> Kathleen Russ </li>
+<li> Jessica Obermark <br><br></li>
+<li> Hayley Cook </li>
+<li> Emma Lautz </li>
+<li> David glaser </li>
+<li> Brianne Caplan </li>
+<li> Amy Py </li>
+<li> Erin Allard </li>
+<li> Ward Fenton </li>
+<li> Vlad Tudorache </li>
+<li> Victor Stinner </li>
+<li> Philippe Gagnon <br><br></li>
+<li> Mamadou Alpha Barry </li>
+<li> LAURENCE TYLER </li>
+<li> Kevin Flynn </li>
+<li> Joseph Schmidt </li>
+<li> Constance Martineau </li>
+<li> Brooke Storm </li>
+<li> Al Brohi </li>
+<li> 何 义军 </li>
+<li> Tran Doan Hien </li>
+<li> Andrew Rash <br><br></li>
+<li> Kurt B. Kaiser </li>
+<li> 吴 冠仰 </li>
+<li> Richard Basso </li>
+<li> TSI Seung Shin </li>
+<li> Joseph Behrens </li>
+<li> Tuanjie Liu </li>
+<li> Matt Bacchi </li>
+<li> ModevNetwork, LLC </li>
+<li> Jose Ramos </li>
+<li> Willem Fourie <br><br></li>
+<li> Ida Nordang Kieler </li>
+<li> Ashina Sipiora </li>
+<li> Charities Aid Foundation </li>
+<li> franck Latinier </li>
+<li> Cristian Mora </li>
+<li> John Slawkawski </li>
+<li> utopland </li>
+<li> Jonathon Coe </li>
+<li> Dominik Kierzek </li>
+<li> Benjamin M Johnson <br><br></li>
+<li> Ashwath Ravichandran </li>
+<li> Усищев Павел </li>
+<li> Thanh Trinh </li>
+<li> Andy Smith </li>
+<li> Sam Bryan </li>
+<li> David Appleby </li>
+<li> Ricardo Solano </li>
+<li> Peter B. Sellin </li>
+<li> Paul Woo </li>
+<li> Douglas Wurst <br><br></li>
+<li> Alex Slobodnik </li>
+<li> John Harris </li>
+<li> Benjamin Naecker </li>
+<li> Gisela Eckey </li>
+<li> Guillaume Jean </li>
+<li> Anthony Kusnerik </li>
+<li> Logan Jones </li>
+<li> Edoardo Gerosa </li>
+<li> Annaelle Duff </li>
+<li> Derek Evans <br><br></li>
+<li> Esther Nam </li>
+<li> baron chandler </li>
+<li> Mykola Morhun </li>
+<li> Bryan Steele </li>
+<li> Denise Abbott </li>
+<li> kapildev kanyagundla </li>
+<li> Александр Жуков </li>
+<li> Casey MacPhee </li>
+<li> Sergio Sanchez </li>
+<li> Aaron Wise <br><br></li>
+<li> David Willson </li>
+<li> Chaos Development LLC </li>
+<li> George Schwieters </li>
+<li> Al Pankratz </li>
+<li> Zsolt Cserna </li>
+<li> Calvin Robinson </li>
+<li> Victor Vicente Palacios </li>
+<li> Brian Harrison </li>
+<li> Michael Steder </li>
+<li> Adrián Soto <br><br></li>
+<li> Levkivskyi Ivan </li>
+<li> Nicole Schlumpf </li>
+<li> Miles Erickson </li>
+<li> Heidi Seibold </li>
+<li> Matthew Stibbs </li>
+<li> Daniel Bradburn </li>
+<li> Shawn Brown </li>
+<li> 藍 公明 </li>
+<li> Don Sheu </li>
+<li> Dain Crawford <br><br></li>
+<li> Naveen Kumar Arcot Lakshman </li>
+<li> William O'Shea </li>
+<li> Mike Short </li>
+<li> Thuy Vu </li>
+<li> Daniel Hrisca </li>
+<li> Oliver Steele </li>
+<li> Greg Nisbet </li>
+<li> Jared Bowns </li>
+<li> Bo Brockman </li>
+<li> Luther Hill <br><br></li>
+<li> Aasmund Eldhuset </li>
+<li> Algoritmix </li>
+<li> Thomas Lambas </li>
+<li> Fred Jones </li>
+<li> CAF America </li>
+<li> 8ProxyMesh LLC </li>
+<li> Keaunna Cleveland </li>
+<li> Udupa Ganesh Murthy </li>
+<li> Konstantin Nazarenko </li>
+<li> Mikael Holgersson <br><br></li>
+<li> Jesus Armando Anaya Orozco </li>
+<li> Cameron Fackler </li>
+<li> Gonzalo Bustos </li>
+<li> Tony Meyer </li>
+<li> Juancarlo Añez </li>
+<li> Siming Kang </li>
+<li> Kristopher Warner </li>
+<li> Eleanor Stribling </li>
+<li> Bernard Ostil </li>
+<li> Kurt Kaiser <br><br></li>
+<li> ZANE DUFOUR </li>
+<li> CBAhern Communications, LLC </li>
+<li> Niko Niemelä </li>
+<li> Personal </li>
+<li> Jamison K. Guyton </li>
+<li> Stephan Roux </li>
+<li> James M Long </li>
+<li> David Keck </li>
+<li> Erik AM Eriksson </li>
+<li> André Bernard MENNICKEN <br><br></li>
+<li> James Patten </li>
+<li> charles mcconnell </li>
+<li> Igor Kozyrenko </li>
+<li> Jonathan Mark </li>
+<li> Bradley Crittenden </li>
+<li> zhukov oleksandr </li>
+<li> Sustainist Media </li>
+<li> Patrick Arnecke </li>
+<li> Karen McFarland </li>
+<li> Ian Dotson <br><br></li>
+<li> Michael Yu </li>
+<li> Kevin Sherwood </li>
+<li> Kookheon Kwon </li>
+<li> Alessio Marinelli </li>
+<li> Eduardo Carvalho </li>
+<li> Sverre Johan Tøvik </li>
+<li> Hae Choi </li>
+<li> Daniel Pyrathon </li>
+<li> Brennan Ashton </li>
+<li> Cynthia Calongne <br><br></li>
+<li> LAEHYOUNG KIM </li>
+<li> Davide Brunato </li>
+<li> David Pearah </li>
+<li> CHINSEOK LEE </li>
+<li> Michael Hazoglou </li>
+<li> Laurence Billingham </li>
+<li> Norman Denayer </li>
+<li> nathan mcrae </li>
+<li> Anja Tischler </li>
+<li> Bernhard Bodry <br><br></li>
+<li> Benjamin Richter </li>
+<li> MATSUEDA TOMOYA </li>
+<li> Ching Yong Goh </li>
+<li> Maria Trinick </li>
+<li> Israel Brewster </li>
+<li> Pavlo Shchelokovskyy </li>
+<li> Gana J Pango Nungui </li>
+<li> Shawn Rider </li>
+<li> Peria Nallathambi </li>
+<li> Evan Porter <br><br></li>
+<li> Manuel Kaufmann </li>
+<li> lucio messina </li>
+<li> Spigot Labs LLC </li>
+<li> Mark Shackelford </li>
+<li> Ardian Haxha </li>
+<li> Todd Moyer </li>
+<li> Thomas Loiret </li>
+<li> Paolo Galletto </li>
+<li> Konekt </li>
+<li> indy group <br><br></li>
+<li> EMELYANOV KIRILL </li>
+<li> Amitabh Divyaraj </li>
+<li> Pedro Paulo Miranda </li>
+<li> Gabriel Gironda </li>
+<li> Arai Masataka </li>
+<li> Stefan Sakalos </li>
+<li> Robert Kirberich </li>
+<li> Narong Chansoi </li>
+<li> Christopher Glass </li>
+<li> Roland Luethy <br><br></li>
+<li> Tyler Kvochick </li>
+<li> Michael Stanley </li>
+<li> Juta Pichitlamken </li>
+<li> Joachim Jablon </li>
+<li> Jittat Fakcharoenphol </li>
+<li> Henry S Telfer </li>
+<li> Rodrigo Dias Arruda Senra </li>
+<li> もわねっと </li>
+<li> Gregory Dover </li>
+<li> David Holly <br><br></li>
+<li> Christopher Short </li>
+<li> Carlo Cosenza </li>
+<li> Keith Rainey </li>
+<li> Brice Parent </li>
+<li> Hunter Senft-Grupp </li>
+<li> Matthias Braun </li>
+<li> Marcus Holmgren </li>
+<li> MR K DWYER </li>
+<li> Daw-Ran Liou </li>
+<li> Jon Ribbens <br><br></li>
+<li> Chris Waddington </li>
+<li> Daniel Contreras </li>
+<li> Franz Woellert </li>
+<li> Yuwei Ba </li>
+<li> David Stinson </li>
+<li> Additive Theory </li>
+<li> Zachary Rubin </li>
+<li> Ronald Williams </li>
+<li> Daniel Gunter </li>
+<li> Oleg Nykolyn <br><br></li>
+<li> Raissa dos Santos Ferreira </li>
+<li> Pawel Kozela </li>
+<li> Biswas Parajuli </li>
+<li> Haley Bear </li>
+<li> Melvin Fisher </li>
+<li> YaM Mesicka </li>
+<li> Silvio Capobianco </li>
+<li> Lee Godfrey </li>
+<li> Jiaxing Wang </li>
+<li> Ian Danforth <br><br></li>
+<li> Marina Nunamaker </li>
+<li> Jaime Rodríguez-Guerra Pedregal </li>
+<li> Alan Moore </li>
+<li> john tillett </li>
+<li> Sean O'Connor </li>
+<li> Kerri Reno </li>
+<li> JPTJ Berends </li>
+<li> Calvin Parker </li>
+<li> Alan Corson </li>
+<li> George Kussumoto <br><br></li>
+<li> 胡 盼卿 </li>
+<li> Helmut Eberharter </li>
+<li> Hongjun Fu </li>
+<li> Colin Carroll </li>
+<li> Todd Dembrey </li>
+<li> Jean-Sebastien Theriault </li>
+<li> Soboleva Larisa </li>
+<li> NICHOLAS SU </li>
+<li> William Hopson </li>
+<li> Bernard Jameson <br><br></li>
+<li> Sam Bull </li>
+<li> Philip Massey </li>
+<li> Eric Camplin </li>
+<li> LISA CARLYLE </li>
+<li> Britone Mwasaru </li>
+<li> Gaurav Sehrawat </li>
+<li> carl petty </li>
+<li> T sidhu </li>
+<li> Shalini Kumar </li>
+<li> Latise Smalls <br><br></li>
+<li> Amber Schalk </li>
+<li> www.bookandrew4.me </li>
+<li> Will Ware </li>
+<li> Shorena Chikhladze </li>
+<li> Gregory Lett </li>
+<li> Mark Haase </li>
+<li> Maximov Mikhail </li>
+<li> Spencer Young </li>
+<li> Christine Spang </li>
+<li> Andre Lessa <br><br></li>
+<li> Alexander Elvers </li>
+<li> ANDREW D Oram </li>
+<li> Erin Atkinson </li>
+<li> Soeren Loevborg </li>
+<li> Mark Peschel </li>
+<li> Joyell Bellinger </li>
+<li> Marci Murphy </li>
+<li> Drew Aadland </li>
+<li> Jonathan Findley </li>
+<li> Jeff Kramer <br><br></li>
+<li> Francis Lacroix </li>
+<li> Michael Johnson </li>
+<li> Barry Byford </li>
+<li> Erol Suleyman </li>
+<li> Bruno Caimar </li>
+<li> Nicolas Motte </li>
+<li> Open Source Kids </li>
+<li> Dao Duc Cuong </li>
+<li> Karl Jan Clinckspoor </li>
+<li> Jack Wilkinson <br><br></li>
+<li> KwonHan Bae </li>
+<li> Artem Tyumentsev </li>
+<li> William Silversmith </li>
+<li> James Littlefield </li>
+<li> Miquel Soldevila Gasquet </li>
+<li> Felipe del Río Rebolledo </li>
+<li> Andre Santana </li>
+<li> Daniel Knodel </li>
+<li> Andre Bienemann </li>
+<li> BLUE1647 NFP <br><br></li>
+<li> Joao Matos </li>
+<li> BravuraChicago </li>
+<li> Flash Apps </li>
+<li> Chris Balcom </li>
+<li> YOGEV REGEV </li>
+<li> Marcus Sherman </li>
+<li> Joshua Steele </li>
+<li> Andrés Cuadrado Campaña </li>
+<li> Richard Hayes </li>
+<li> Mark Casanova <br><br></li>
+<li> Konstantin Taletskiy </li>
+<li> Michael Perez </li>
+<li> Derek Payton </li>
+<li> Kojo Idrissa </li>
+<li> Ohshima Yusuke </li>
+<li> Luiz Fernando Oliveira </li>
+<li> David Sanchez </li>
+<li> Anilyka Barry </li>
+<li> James Robert Byrd </li>
+<li> Alex Lord <br><br></li>
+<li> DMITRIY ZHILTSOV </li>
+<li> Brett Cannon </li>
+<li> Christine Rehm </li>
+<li> GoodDoneGreat.com </li>
+<li> Enstaved Pty Ltd </li>
+<li> Roess Ramona </li>
+<li> Faisal Albarazi </li>
+<li> Bastien Gerard </li>
+<li> Manish Sinha </li>
+<li> Julian Colomina <br><br></li>
+<li> Edwin van Amersfoort </li>
+<li> Christian KELLENBERGER </li>
+<li> Arnaud Devie </li>
+<li> Victor Manuel NAVARRO AYALA </li>
+<li> Todd Rovito </li>
+<li> Zandra Kubota </li>
+<li> Manivannan E </li>
+<li> Seth Naugler </li>
+<li> Sung Jin Choi </li>
+<li> Robert DeVivo <br><br></li>
+<li> Gabriel Augendre </li>
+<li> william Debenham </li>
+<li> Mark Vanstone </li>
+<li> Lionel Aster Mena García </li>
+<li> Eliahy Rosenblum </li>
+<li> Dawn Hewitson </li>
+<li> boris tassou </li>
+<li> Romain Muller </li>
+<li> Michael Sverdlik </li>
+<li> Sean Wall <br><br></li>
+<li> Deepak Subhramanian </li>
+<li> Jan Lipovský </li>
+<li> Alexander Ejbekov </li>
+<li> Andrew Konstantaras </li>
+<li> 陈 昊 </li>
+<li> Stefan Steinbauer </li>
+<li> Prasannajeet Pani </li>
+<li> KOBAYASHI SHIGEAKI </li>
+<li> steven zhao </li>
+<li> 杨 玚 <br><br></li>
+<li> Shahar Dolev </li>
+<li> Rafael dos Santos de Oliveira </li>
+<li> Vishal Tak </li>
+<li> Sai Chaitanya Akella </li>
+<li> Ryo Kishimoto </li>
+<li> Julian Sequeira </li>
+<li> Griffin Derryberry </li>
+<li> Bob Belderbos </li>
+<li> Guo Baiwei </li>
+<li> anthony fagan <br><br></li>
+<li> Janos Szeman </li>
+<li> Markus Mueller </li>
+<li> 郭 人谅 </li>
+<li> Aaron Miller </li>
+<li> Michele Panzetti </li>
+<li> John Mattera </li>
+<li> YU CHUEN HUANG </li>
+<li> Claudia Greenwell </li>
+<li> Predrag Pucar </li>
+<li> Luis Miranda <br><br></li>
+<li> Tony Ly </li>
+<li> Mathieu Dupuy </li>
+<li> Franco Minucci </li>
+<li> Srikanth A </li>
+<li> Harvey Benson </li>
+<li> Augustin Garcia </li>
+<li> carlo schettini </li>
+<li> Josh McVey </li>
+<li> ERICK OCHIENG </li>
+<li> Christian Laforest <br><br></li>
+<li> Oliver Behm </li>
+<li> Tertius Rossouw </li>
+<li> Stefan Turalski </li>
+<li> Girish Devappa </li>
+<li> Benjamin Sergeant </li>
+<li> Derrick Jackson </li>
+<li> Alexander Graf </li>
+<li> Iraquitan Cordeiro Filho </li>
+<li> Sergio Monte Fernández </li>
+<li> Major William Hayden <br><br></li>
+<li> REGINALDO OLIVEIRA DE JESUS </li>
+<li> U.S. Bank Foundation </li>
+<li> Prayash Mohapatra </li>
+<li> Claes Bergman </li>
+<li> Tracy Helms </li>
+<li> Volodymyr Kirichinets </li>
+<li> Tyler Baldwin </li>
+<li> Robert Grant </li>
+<li> Fran Longueira </li>
+<li> William Garfinkel <br><br></li>
+<li> Juliusson Ivar Fridrik </li>
+<li> Carlos Mendia González </li>
+<li> Brandon Macer </li>
+<li> James Lipsey </li>
+<li> Wim Vis </li>
+<li> Joshua Campbell </li>
+<li> Walter Tross </li>
+<li> Oluwadamilare Obayanju </li>
+<li> Aiden Sherwood </li>
+<li> ninabuntic21 <br><br></li>
+<li> Rita Jenny Alemu </li>
+<li> Luca Carlotto </li>
+<li> Carl Byer </li>
+<li> Dan Olson </li>
+<li> Соколов Сергей </li>
+<li> Joshua Kammeraad </li>
+<li> Ryan Wade </li>
+<li> Mamad Blais </li>
+<li> 晋 正东 </li>
+<li> Dylan Zingler <br><br></li>
+<li> Dusan Kolic </li>
+<li> YourCause LLC </li>
+<li> Stacey Sern </li>
+<li> LUIGI FRANCESCHETTI </li>
+<li> 齐 欣 </li>
+<li> Miranda buehler </li>
+<li> Mark Martin </li>
+<li> Andrew Wilkey </li>
+<li> Sergio Fuentes </li>
+<li> Kelby Stine <br><br></li>
+<li> Greg Blonder </li>
+<li> Thiesmann Lim </li>
+<li> Matthias Kirst </li>
+<li> Philippe Docourt </li>
+<li> krishna pennacchioni </li>
+<li> donald douglas </li>
+<li> dennis dapkus </li>
+<li> Scott Godin </li>
+<li> Matthew McGraw </li>
+<li> Frederic FOIRY <br><br></li>
+<li> Alain Lubin </li>
+<li> david baird </li>
+<li> Maelle Vance </li>
+<li> Supayut Raksuk </li>
+<li> Per Underdal </li>
+<li> Derek Morrison </li>
+<li> Sai Nudurupati </li>
+<li> Bryan Siepert </li>
+<li> SANDRO MOCCI </li>
+<li> Brad Montgomery <br><br></li>
+<li> Wojciech Semik </li>
+<li> Juan Comesaña Fernández </li>
+<li> Jonathan Eckel </li>
+<li> DHAVAL PATEL </li>
+<li> Gregory Fuller </li>
+<li> Phyllis Dobbs </li>
+<li> Ilija Liebermann </li>
+<li> David Wilson </li>
+<li> chiu ping kei </li>
+<li> Ander Zarketa Astigarraga <br><br></li>
+<li> Melodee Center </li>
+<li> Thomas Eichhorn </li>
+<li> Paul Cuda </li>
+<li> Keith Brooks </li>
+<li> Don Fitzpatrick </li>
+<li> David Chen </li>
+<li> Ramakrishna Reddy Pappula </li>
+<li> Otto Felix Winter </li>
+<li> ARVIND SINGH </li>
+<li> Nataliia Serebryakova <br><br></li>
+<li> Christopher Lubinski </li>
+<li> Kerry Creech </li>
+<li> Briceida Mariscal </li>
+<li> Saahil Desai </li>
+<li> nathaniel mccourtney </li>
+<li> Peter McCormick </li>
+<li> Shun Chen </li>
+<li> Scott Gordon </li>
+<li> Sanchit Sharma </li>
+<li> Neutron Drive <br><br></li>
+<li> David Morse </li>
+<li> RYAN COOPER </li>
+<li> Vasilios Syrakis </li>
+<li> Adam Rosier </li>
+<li> Dimitris Charalampis </li>
+<li> Jennifer Miller </li>
+<li> Dianna Sambolin </li>
+<li> Sam Thirugnanasampanthan </li>
+<li> Pablo Rodriguez </li>
+<li> Leland Johnson <br><br></li>
+<li> DIMITRIOS KADOGLOU </li>
+<li> Waleed Alhaider </li>
+<li> Jessica Ross </li>
+<li> Catherine Sawatzky </li>
+<li> Selamu Masebo </li>
+<li> Rory Hartong-Redden </li>
+<li> John Chandler </li>
+<li> David Niemi </li>
+<li> MARK HELLYER </li>
+<li> De Canniere Jean <br><br></li>
+<li> Barbara Miller </li>
+<li> John Stephens </li>
+<li> Daniel Riggs </li>
+<li> Maria Vergara </li>
+<li> Kathryn Cogert </li>
+<li> Paolo Anastagi </li>
+<li> Venkata Ramana </li>
+<li> Akhil Ravipati </li>
+<li> Brian Williams </li>
+<li> Paul Friedman <br><br></li>
+<li> Dmitry Kisler </li>
+<li> Seamus Johnston </li>
+<li> Sabrina Spencer </li>
+<li> Jason Friedman / Julia White </li>
+<li> Glenn Travis </li>
+<li> Andre Miras </li>
+<li> Wells Fargo Community Support Campaign </li>
+<li> Adrián Chaves Fernández </li>
+<li> SurveyNgBayan </li>
+<li> John Q. Glasgow <br><br></li>
+<li> Alexandra Rosenbaum </li>
+<li> Aaron Wood </li>
+<li> Maria McLinn </li>
+<li> Douglas Lamar </li>
+<li> David Mauricio Delgado Ruiz </li>
+<li> Caleb Gosnell </li>
+<li> Andrew Woodward </li>
+<li> Bhaskar teja Yerneni </li>
+<li> Плугин Андрей </li>
+<li> w scott stornetta <br><br></li>
+<li> Ahsan Haq </li>
+<li> Mark Feinberg </li>
+<li> eBay </li>
+<li> Sven Rahmann </li>
+<li> Norman Elliott </li>
+<li> Tom Schultz </li>
+<li> Rodrigo Pereira Garcia </li>
+<li> Katrina Durance </li>
+<li> Kirk Strauser </li>
+<li> David Wood <br><br></li>
+<li> Ari Cristiano Raimundo </li>
+<li> Selena Flannery </li>
+<li> marlon keating </li>
+<li> Fatima Coronado </li>
+<li> Eloy Romero Alcalde </li>
+<li> Moshe Zadka </li>
+<li> Dražen Lazarevicć </li>
+<li> Eric Matthes </li>
+<li> Aleksandar Veselinovic </li>
+<li> David Kurkov <br><br></li>
+<li> Alex Johnson </li>
+<li> Quentin CAUDRON </li>
+<li> John DeRosa </li>
+<li> Edward Gormley </li>
+<li> Rizky Ariestiyansyah </li>
+<li> Michael Jolliffe </li>
+<li> Brett Vitaz </li>
+<li> Stephen Broumley </li>
+<li> Peggy Fisher </li>
+<li> Milen Genov <br><br></li>
+<li> Flavio Diomede </li>
+<li> Vitor Freitas e Souza </li>
+<li> Галаганов Сергей </li>
+<li> sai krishna aravalli </li>
+<li> Jaime Garcia </li>
+<li> Sumeet Kishnani </li>
+<li> Perry Randall </li>
+<li> David Thomson </li>
+<li> SHALABH BHATNAGAR </li>
+<li> Sergi Puso Gallart <br><br></li>
+<li> Conrad Thiele </li>
+<li> Tyrone Scott </li>
+<li> Emmitt Tibbitts </li>
+<li> Thomas Alton </li>
+<li> PAMELA MCA'NULTY </li>
+<li> Jakob Adams </li>
+<li> Davis Nunes de Mesquita </li>
+<li> gorgonzo.la </li>
+<li> Carles Pina Estany </li>
+<li> Kushal Das <br><br></li>
+<li> Kittipong Piyawanno </li>
+<li> Ewen McNeill </li>
+<li> William Clemens </li>
+<li> Mark Mikofski </li>
+<li> Donald Rogers </li>
+<li> Julie Pichon </li>
+<li> Florian Bruhin </li>
+<li> Mudranik Technologies Private Limited </li>
+<li> Bryan Deere </li>
+<li> Marcus Williams <br><br></li>
+<li> Ryan T Bard </li>
+<li> Jessica Freasier </li>
+<li> Mateusz Wrzyciel </li>
+<li> Ondrej Zuffa </li>
+<li> Lee Supe </li>
+<li> Thomas Nuegyn </li>
+<li> 郭 喜涌 </li>
+<li> José Gómez Vázquez </li>
+<li> Julio Di Nocco </li>
+<li> Jaqueline soriano <br><br></li>
+<li> Juan David Gonzalez Cobas </li>
+<li> Ravishankar N R </li>
+<li> Питько Любовь </li>
+<li> Philipp Horn </li>
+<li> Siddarth Ganguri </li>
+<li> Rutger Stapelkamp </li>
+<li> Oscar Becerril Domínguez </li>
+<li> Khanh Nguyen </li>
+<li> Phil Simonson </li>
+<li> Efim Krakhalev <br><br></li>
+<li> Shinan Yang </li>
+<li> Steven C Howell </li>
+<li> Kevan Swanberg </li>
+<li> Gamal Crichton </li>
+<li> Kenneth Durril </li>
+<li> Soapify.ch </li>
+<li> Nick Geller </li>
+<li> James Bruzek </li>
+<li> Prema Roman </li>
+<li> Pramote Teerasetmanakul <br><br></li>
+<li> Eisa Mohsen </li>
+<li> Amit Chapatwala </li>
+<li> Mathieu Poussin </li>
+<li> Diego Amicabile </li>
+<li> Allison Fero </li>
+<li> Robert Graham </li>
+<li> F Douglas Baker </li>
+<li> Erica Asai </li>
+<li> Peter Taveira </li>
+<li> Marissa Utterberg <br><br></li>
+<li> Craig Boman </li>
+<li> David Rogers </li>
+<li> 林 準一 </li>
+<li> VANESSA VAN GILDER </li>
+<li> Stephen Gross </li>
+<li> Stephanie Parrott </li>
+<li> Oliver Bestwalter </li>
+<li> Mark Lindberg </li>
+<li> Mario Corchero </li>
+<li> MARIA ISABEL DELGADO BABIANO <br><br></li>
+<li> Laura Drummer </li>
+<li> João Franco </li>
+<li> HANHO YOON </li>
+<li> Emmanuelle COLIN </li>
+<li> Dennis Gomer </li>
+<li> Daniel Thomas </li>
+<li> Cirrustack, ltd. </li>
+<li> Chrles Gilbert </li>
+<li> Christopher Kiraly </li>
+<li> Axai Soluciones Avanzadas, S.C. <br><br></li>
+<li> Alex Fogleman </li>
+<li> James Mategko </li>
+<li> LUKMAN EDWINDRA </li>
+<li> ria baldevia </li>
+<li> gurudev devanla </li>
+<li> Thomas Zakrajsek </li>
+<li> Susmitha Kothapalli </li>
+<li> Sean Boisen </li>
+<li> Samantha Yeargin </li>
+<li> Paul Craven <br><br></li>
+<li> Melanie Crutchfield </li>
+<li> Manasa Patibandla </li>
+<li> Laura Beaufort </li>
+<li> Emma Willemsma </li>
+<li> Elizabeth Durflinger </li>
+<li> Dotte Dinnet, Inc. </li>
+<li> Chelsea Stapleton Cordasco </li>
+<li> Andrew Selzer </li>
+<li> Alan Williams </li>
+<li> XIAO XIAO <br><br></li>
+<li> Wesley Smiley </li>
+<li> Liaw Wey-Han </li>
+<li> Daniel Allan </li>
+<li> Annalee Flower Horne </li>
+<li> Abhishek Keny </li>
+<li> Drazen Lucanin </li>
+<li> Surya Jayanthi </li>
+<li> Studenten Net Twente </li>
+<li> 윤석 이 </li>
+<li> mingyu jo <br><br></li>
+<li> SEUNG HO KIM </li>
+<li> PARK JUN YONG PARK </li>
+<li> Junghyun Park </li>
+<li> Richard MacCutchan </li>
+<li> David Albone </li>
+<li> Patrick Burns </li>
+<li> Brian K Okken </li>
+<li> Daniel Ellis </li>
+<li> Bas Meijer </li>
+<li> srikrishna ch <br><br></li>
+<li> Sean Oldham </li>
+<li> Qumisha Goss </li>
+<li> James Traub </li>
+<li> Antonio Beltran </li>
+<li> Mark Fackler </li>
+<li> ashutosh bhatt </li>
+<li> UAN FRANCISCO Correoso </li>
+<li> Ravi Taneja </li>
+<li> John Harrison </li>
+<li> Ignacio Vergara Kausel <br><br></li>
+<li> Chris Rands </li>
+<li> Blackbaud Cares Center </li>
+<li> Roman Mogilatov </li>
+<li> Randall Rodakowski </li>
+<li> Mouse Vs Python </li>
+<li> Israel Fruchter </li>
+<li> Graham Wheeler </li>
+<li> Gaspar Modelo Howard </li>
+<li> Chris Lasher </li>
+<li> evren kutar <br><br></li>
+<li> Evan Hurley </li>
+<li> Alexander Lutchko </li>
+<li> Finan </li>
+<li> kate mosier </li>
+<li> Ville Säävuori </li>
+<li> Tal Einat </li>
+<li> John Keyes </li>
+<li> Bernd Schlapsi </li>
+<li> Mitch Jablonski </li>
+<li> Lauri Lepistö <br><br></li>
+<li> Sérgio Agostinho </li>
+<li> Pierre Augier </li>
+<li> Markus Banfi </li>
+<li> Bogdan Cordier </li>
+<li> Ankesh Kumar </li>
+<li> Alexandre Barrozo do Amaral Villares </li>
+<li> 叶 思俊 </li>
+<li> Raj Shekhar </li>
+<li> Jörg Tremmel </li>
+<li> Huang Zhugang <br><br></li>
+<li> Bernardo Roschke </li>
+<li> ToolBeats </li>
+<li> Florent Viard </li>
+<li> Daniel Castillo Casanova </li>
+<li> 梁 瀚 </li>
+<li> yohanes gultom </li>
+<li> lonetwin.net </li>
+<li> Vishnu Gopal </li>
+<li> Uriel Fernando Sandoval Pérez </li>
+<li> Sumudu Tennakoon <br><br></li>
+<li> Pro Wrestling Superstar </li>
+<li> Philip Roche </li>
+<li> Oliver Stapel </li>
+<li> Nuttaphon Nuanyaisrithong </li>
+<li> Nicholas Sweeting </li>
+<li> Matthew Lemon </li>
+<li> Manuel Solorzano </li>
+<li> Maik Figura </li>
+<li> M ET MME FREDERIC ROLAND </li>
+<li> Jose Pedro Valdes Herrera <br><br></li>
+<li> Jordan Dawe </li>
+<li> James Abel </li>
+<li> Hans Olav Melberg </li>
+<li> Daniel Verdugo Moreno </li>
+<li> CycleVault </li>
+<li> Craig Richardson </li>
+<li> Christine Waigl </li>
+<li> Christan Grant </li>
+<li> Atthaphong Limsupanark </li>
+<li> Attakorn Putwattana <br><br></li>
+<li> Ana Balica </li>
+<li> Aart Goossens </li>
+<li> Eric Palakovich Carr </li>
+<li> Daniel Brooks </li>
+<li> Yves Roy </li>
+<li> ปฐมพงศ์ กวางทอง </li>
+<li> nadia karlinsky </li>
+<li> Wiennat Mongkulmann </li>
+<li> Vincent Jesús Bahena Serrano </li>
+<li> Surote Wongpaiboon <br><br></li>
+<li> Smital Desai </li>
+<li> Sivathanu Kumaraswamy </li>
+<li> Richard Jones </li>
+<li> Preechai Mekbungwan </li>
+<li> Pisacha Srinuan </li>
+<li> Nattawat Palakawong </li>
+<li> Lisa Ballard </li>
+<li> Gonzalo Andres Pena Castellanos </li>
+<li> David Thompson </li>
+<li> Daniel Clementi <br><br></li>
+<li> Gilbert Forsyth </li>
+<li> Oleksandr Allakhverdiyev </li>
+<li> Tomas Mrozek </li>
+<li> Leo Kreymborg </li>
+<li> Sasidhar Donaparthi </li>
+<li> Patrick Morris </li>
+<li> James Seden Smith </li>
+<li> Alan Hobesh </li>
+<li> Lucia Reyes </li>
+<li> Ronald Ridley <br><br></li>
+<li> Clemens Lange </li>
+<li> Gökmen Görgen </li>
+<li> Marc-Anthony Taylor </li>
+<li> Luke Clarke </li>
+<li> Ray McCarthy </li>
+<li> Marcus Sharp II </li>
+<li> Marcel Loher </li>
+<li> Gary Davis </li>
+<li> Dungjit Shiowattana </li>
+<li> Alain Ledon <br><br></li>
+<li> Yungchieh Chang </li>
+<li> ulf sjodin </li>
+<li> Rikard Westman </li>
+<li> Mancini Giampaolo </li>
+<li> Kay Schink </li>
+<li> Jordan Eremieff </li>
+<li> Jan Wagner </li>
+<li> Hamilton Goonan </li>
+<li> Gabriel Foo </li>
+<li> Denis Sergeev <br><br></li>
+<li> Anders Ballegaard </li>
+<li> Wouter De Coster </li>
+<li> Will McGugan </li>
+<li> Tony Friis </li>
+<li> Thomas Viner </li>
+<li> Shihao Xu </li>
+<li> Perica Zivkovic </li>
+<li> Paul Smith </li>
+<li> Motion Group </li>
+<li> Greg Roodt <br><br></li>
+<li> Gary Martin </li>
+<li> Carlos Pereira Atencio </li>
+<li> Anil Srikantham </li>
+<li> Andrés Delfino </li>
+<li> Tomasz Kalata </li>
+<li> Steve Barnes </li>
+<li> Matthew Hayes </li>
+<li> Matej Tacer </li>
+<li> Joost Molenaar </li>
+<li> Elias Bonauer <br><br></li>
+<li> Druzhinin Pavel </li>
+<li> Drew Walker </li>
+<li> BigDataChromium Tech </li>
+<li> Alex Ward </li>
+<li> Lukas Rupp </li>
+<li> Rodolfo Oliveira </li>
+<li> John Griffith </li>
+<li> Reinhard Dämon </li>
+<li> S Holden </li>
+<li> Serendipity Accelerator <br><br></li>
+<li> Doug Fortner </li>
+<li> Daniel Watson </li>
+<li> Allen Seelye </li>
+<li> Daniel Quinn </li>
+<li> Charlie Gunyon </li>
+<li> Alvaro Lopez Garcia </li>
+<li> Samuel Focht </li>
+<li> Ollie Mignot </li>
+<li> Hynek Schlawack </li>
+<li> Ben Kinsella <br><br></li>
+<li> Aviad Lori </li>
+<li> James Medd </li>
+<li> Daniel Godfrey </li>
+<li> Claire Dodd </li>
+<li> Carlos Joel Delgado Pizarro </li>
+<li> Magnus Brattlöf </li>
+<li> Vincenzo Demasi </li>
+<li> LB </li>
+<li> glenn waterman </li>
+<li> Erik Doffagne <br><br></li>
+<li> Zehua Wei </li>
+<li> George Reilly </li>
+<li> 杨 守仁 </li>
+<li> Evan Beese </li>
+<li> Patricia Tressel </li>
+<li> Nick Denny </li>
+<li> Luke Petschauer </li>
+<li> Jasmine Sandhu </li>
+<li> Thomas Pohl </li>
+<li> Daniel Godot <br><br></li>
+<li> Renee MacDonald </li>
+<li> NICOLAS LOPEZ CISNEROS </li>
+<li> Lucas Prado Polo </li>
+<li> Glen English </li>
+<li> Dylan Herrada </li>
+<li> Marcus Nelson </li>
+<li> Elsa Birch Morgan </li>
+<li> Donna Darling </li>
+<li> Cartina Trotter </li>
+<li> Ettienne Montagner <br><br></li>
+<li> Martijn Jacobs </li>
+<li> Patrik Reiske </li>
+<li> Zhang Zhijian </li>
+<li> Niklas Sombert </li>
+<li> S D Kennedy </li>
+<li> Matthias Kühl </li>
+<li> 夏 验证 </li>
+<li> Salomon G Davila Jr </li>
+<li> Hervé Mignot </li>
+<li> Jonas Salcedo <br><br></li>
+<li> Jay Shery </li>
+<li> Joseph winland </li>
+<li> Morgan Visnesky </li>
+<li> Chris Perkins </li>
+<li> Anomaly Software Pty Ltd </li>
+<li> RAMESH DORAISWAMY </li>
+<li> zak kohler </li>
+<li> Fernanda Diomede </li>
+<li> Hansel Dunlop </li>
+<li> Romeo Lorenzo <br><br></li>
+<li> Jesse Hughson </li>
+<li> Anurag Palreddy </li>
+<li> Paul Hoffman </li>
+<li> Bruno Inaja de Almeida Caimar </li>
+<li> Josephine amaldhas </li>
+<li> Chris Schmautz </li>
+<li> Calamia Enzo </li>
+<li> Timothy Mccormack </li>
+<li> 刘 明军 </li>
+<li> Thomas Groshong <br><br></li>
+<li> David Foster </li>
+<li> Sarah K </li>
+<li> Juan Manuel Cordova </li>
+<li> ROBERT KEPNER </li>
+<li> Александр Кузьменко </li>
+<li> Joseph Montgomery </li>
+<li> Peter Jakobsen </li>
+<li> Кулаков Игорь </li>
+<li> Dmitry Vikhorev </li>
+<li> David Nicholson <br><br></li>
+<li> Tim Savage </li>
+<li> Tim Phillips </li>
+<li> Evgeny Ivanov </li>
+<li> Veaceslav Doina </li>
+<li> Julien Salinas </li>
+<li> Michal Krassowski </li>
+<li> Emilio Mari Coppola </li>
+<li> Robert Rickman </li>
+<li> Jesus Martinez </li>
+<li> Michal Cihar <br><br></li>
+<li> KITE AG </li>
+<li> 潘 佳鑫 </li>
+<li> DAN KATZUV </li>
+<li> YOGESH SIDDHAYYA </li>
+<li> Thejaswi Puthraya </li>
+<li> Prashanth Sirsagi </li>
+<li> Joseph Murray </li>
+<li> Oliver Obrien </li>
+<li> Payoj Jain </li>
+<li> Daniel Gonzalez <br><br></li>
+<li> Shivu H </li>
+<li> Kiran Kaki </li>
+<li> Srichand Avala </li>
+<li> Robert Haydt </li>
+<li> Earl Clark </li>
+<li> Bernard Chester </li>
+<li> Noa Grossman </li>
+<li> YU CHENG </li>
+<li> Spencer Tollefson </li>
+<li> Xunzhen Quan <br><br></li>
+<li> DOUGLAS MAHUGH </li>
+<li> Sai Gunda </li>
+<li> CHONGLI DI </li>
+<li> Alexandra Pawlak </li>
+<li> K GALANIS </li>
+<li> Thane Williams </li>
+<li> Aaron R Seelye </li>
+<li> Vamsee Kasavajhala </li>
+<li> Samata Dutta </li>
+<li> Alexander Rice <br><br></li>
+<li> Peter Holm </li>
+<li> Khoa Tran </li>
+<li> Bibin Varghese </li>
+<li> Alexander Miranda </li>
+<li> Jacob Crotts </li>
+<li> ZaunerTech Ltd </li>
+<li> Timothy Beauchamp </li>
+<li> Richard Edwards </li>
+<li> Maui Craft Creations </li>
+<li> Matthew McCoy <br><br></li>
+<li> Khalid Siddiqui </li>
+<li> Kevin Zhou </li>
+<li> Karsten Aichholz </li>
+<li> Joel Herrick </li>
+<li> Jay Adams </li>
+<li> James Christopher Bare </li>
+<li> Evan Frisch </li>
+<li> Dmitri Bouianov </li>
+<li> Thomas Colvin </li>
+<li> Jennifer Welch <br><br></li>
+<li> Jacqueline Wilson </li>
+<li> Maher Lahmar </li>
+<li> Lauren Williams </li>
+<li> Parthibaraj Karunanidhi </li>
+<li> Michael Gat </li>
+<li> oliver OBrien </li>
+<li> Loren Cardella </li>
+<li> Shelly Elizabeth Mitchell </li>
+<li> Just Passing By </li>
+<li> José Andrés Garita Flores <br><br></li>
+<li> James Ball </li>
+<li> Aaron Rabach </li>
+<li> XIAOJUN WANG </li>
+<li> Aymen Djellal </li>
+<li> Yanshuo Sun </li>
+<li> Clyde Zerba </li>
+<li> Alejandro Cavagna </li>
+<li> Ariel Ladegård </li>
+<li> Haitian Luo </li>
+<li> Jared Lynn <br><br></li>
+<li> Timothy Edwards </li>
+<li> Anahi Costa </li>
+<li> Qusai Karam </li>
+<li> Nick Fernandez </li>
+<li> Нагорский Алексей </li>
+<li> Reinier de Blois </li>
+<li> Tigran Babaian </li>
+<li> Chad Dillingham </li>
+<li> Abdelkarim Ahroba </li>
+<li> Shannon Bedore <br><br></li>
+<li> Amanullah Ansari </li>
+<li> Kai I Chang </li>
+<li> Raz Steinmetz </li>
+<li> Heath Robertson </li>
+<li> Bruno Oliveira </li>
+<li> Susan Hutner </li>
+<li> Kathleen Perez-Lopez </li>
+<li> Christine Rehm-Zola </li>
+<li> Renato Oliveira </li>
+<li> Zoran Milic <br><br></li>
+<li> paul sorenson </li>
+<li> Marcus Collins </li>
+<li> Joel Grossman </li>
+<li> Elizabeth johnson </li>
+<li> Camille Welcher </li>
+<li> Ben Roy </li>
+<li> Richard van Liessum </li>
+<li> Damian Southard </li>
+<li> Stacey Smith </li>
+<li> James Hutton <br><br></li>
+<li> Michael Larsson </li>
+<li> João Matos </li>
+<li> Jose Navarrete </li>
+<li> Roland Knapp </li>
+<li> Kelly McBride </li>
+<li> Daniel Porteous </li>
+<li> Chad Rifenberick </li>
+<li> Anything-Aviation </li>
+<li> Roland Henrie </li>
+<li> Adrian Chifor <br><br></li>
+<li> Andres Danter </li>
+<li> Zhong Zhuang </li>
+<li> Wang Tao </li>
+<li> Mauro Mitsuyuki Yamaguchi </li>
+<li> Em Barry </li>
+<li> Ian Maurer </li>
+<li> Martin Leubner </li>
+<li> YOU SONGWEN </li>
+<li> Oriol Jimenez Cilleruelo </li>
+<li> Heikki Lehtinen <br><br></li>
+<li> James Gill </li>
+<li> James Browning </li>
+<li> Arthur Goldhammer </li>
+<li> Jeff Nielsen </li>
+<li> Rachel Knowler </li>
+<li> Leah Hoogstra </li>
+<li> Laszlo Kiss-Kollar </li>
+<li> Gabrielle Simard-Moore </li>
+<li> Anthony DiCola </li>
+<li> Alexander Bock <br><br></li>
+<li> salvador nunez </li>
+<li> juan Rodríguez uribe </li>
+<li> Dipika Bhattacharya </li>
+<li> Young Sand </li>
+<li> james mun </li>
+<li> James Warner </li>
+<li> Bobby Compton </li>
+<li> Greg Reda </li>
+<li> Eric T Simandle </li>
+<li> Filip Tomic <br><br></li>
+<li> Иванов Станислав </li>
+<li> Naman Bajaj </li>
+<li> Roberta Eastman </li>
+<li> Rômulo Collopy Souza Carrijo </li>
+<li> Wang Hitachi </li>
+<li> Christian Frömmel </li>
+<li> Alejandro Sánchez Saldaña </li>
+<li> Boris Pavlovic </li>
+<li> Marcelo Lima Souza </li>
+<li> Pavlos Georgiou <br><br></li>
+<li> Teerapat Jenrungrot </li>
+<li> Kalle Kietäväinen </li>
+<li> Matteo Bertini </li>
+<li> Andrew Angel </li>
+<li> Lakshami Mahajan </li>
+<li> Ashish Patil </li>
+<li> Paul Garner </li>
+<li> Christoph Haas </li>
+<li> 8 Dancing Elephants </li>
+<li> Jerry Segers Jr <br><br></li>
+<li> Wafeeq Zakariyya </li>
+<li> Bridgette Moore </li>
+<li> Deanne DiPietro </li>
+<li> Rakesh Guha </li>
+<li> Kay-Uwe Clemens </li>
+<li> Jenn Morton </li>
+<li> karolyi </li>
+<li> Yotam Manor </li>
+<li> Karthik Reddy Mekala </li>
+<li> Dustin Vaselaar <br><br></li>
+<li> Matthias Leeder </li>
+<li> Ard Mulders </li>
+<li> Sujit Ray </li>
+<li> Soeren Howe Gersager </li>
+<li> Peter W Bachant </li>
+<li> Aida Shoydokova </li>
+<li> Sidharth Mallick </li>
+<li> Jeff Kiefer </li>
+<li> Goncalo Alves </li>
+<li> Ravi Kotecha <br><br></li>
+<li> Manuel Frei </li>
+<li> Justin Hui </li>
+<li> ChannelRobot </li>
+<li> Semih Hazar </li>
+<li> Alex Gerdom </li>
+<li> PRASAD GODAVARTHI </li>
+<li> Govardhan Rao Sunkishela </li>
+<li> donald nathan </li>
+<li> Marcus Sharp </li>
+<li> Darjus Loktevic <br><br></li>
+<li> Veit Heller </li>
+<li> Mickael Hubert </li>
+<li> JBD Solutions </li>
+<li> michael dunn </li>
+<li> Franziskus Nakajima </li>
+<li> mario alemi </li>
+<li> Alexander Zhukov </li>
+<li> Eric Casteleijn </li>
+<li> Dauren Zholdasbayev </li>
+<li> Vladyslav Kartavets <br><br></li>
+<li> Kevin Reed </li>
+<li> Diego Argueta </li>
+<li> William May </li>
+<li> Matthew Clapp </li>
+<li> Linus Jäger </li>
+<li> James Houghton </li>
+<li> Dmitrij Perminov </li>
+<li> S Rahul Bose </li>
+<li> Radoslaw Skiba </li>
+<li> James Simmons <br><br></li>
+<li> BOB HOGG </li>
+<li> Donald Watkins </li>
+<li> Erik Storrs </li>
+<li> Devon Warren </li>
+<li> Ayesha Mendoza </li>
+<li> ian frith </li>
+<li> Harry Park </li>
+<li> Lawrence Michel </li>
+<li> William Forster </li>
+<li> Rodrigo Senra <br><br></li>
+<li> Midhun M M </li>
+<li> Anthony Liang </li>
+<li> Eldon Berg </li>
+<li> Лесь Константин </li>
+<li> Nicole Galaz </li>
+<li> Meghan Halton </li>
+<li> Dong Xiangqian </li>
+<li> chan kin </li>
+<li> Neal Pignatora </li>
+<li> Venkatramnath Vyasarayani <br><br></li>
+<li> James Mazur </li>
+<li> freelance </li>
+<li> Rg Lee </li>
+<li> Thomas gretten </li>
+<li> Robert Flansburgh </li>
+<li> 柳 杨 </li>
+<li> Robert Marchese </li>
+<li> Andrés Perez Albela Hernandez </li>
+<li> Chris Glick </li>
+<li> ROBERT B MCCLAIN JR <br><br></li>
+<li> Daniel Vaughan </li>
+<li> Rafael Römhild </li>
+<li> Dāvis Mošenkovs </li>
+<li> Kristopher Nybakken </li>
+<li> NARENDRA DHARMAVARAPU </li>
+<li> keith schmaljohn </li>
+<li> Michael Beasley </li>
+<li> Steve Cataline </li>
+<li> Andrew Hunt </li>
+<li> Marcio Rotta <br><br></li>
+<li> Christian Plümer </li>
+<li> Geng ShunRong </li>
+<li> Bart Jeukendrup </li>
+<li> Michael Dostal </li>
+<li> maufonfa </li>
+<li> Nicole Patock </li>
+<li> Christian Strozyk </li>
+<li> Tony Morrow </li>
+<li> Mace Ojala </li>
+<li> Mieczyslaw Liber <br><br></li>
+<li> cao wangjie </li>
+<li> MARY HILLESTAD </li>
+<li> Brandon Gallardo </li>
+<li> en zyme </li>
+<li> Robert Gellman </li>
+<li> Jorden Quast </li>
+<li> Paweł Baranowski </li>
+<li> graham richards </li>
+<li> Joana Robles </li>
+<li> ARULOLI M <br><br></li>
+<li> felipe melis </li>
+<li> elizabeth cleveland </li>
+<li> Sergio Campo </li>
+<li> Orlando Garcia </li>
+<li> Jessica Unrein </li>
+<li> Irma Kramer </li>
+<li> Hanna Landrus </li>
+<li> BADIA DAAMASH </li>
+<li> derek payton </li>
+<li> Viktoriya Savkina <br><br></li>
+<li> Tyler Evans </li>
+<li> Thomas Storey </li>
+<li> Tashay Green </li>
+<li> Stephanie Keske </li>
+<li> Rachel Kelly </li>
+<li> Patrick Boland </li>
+<li> DeadTiger </li>
+<li> Bay Grabowski </li>
+<li> Ask Solem Hoel </li>
+<li> Alyssa Swift <br><br></li>
+<li> William Reiher </li>
+<li> Mike Pacer </li>
+<li> Jeffery Read </li>
+<li> michelle majorie </li>
+<li> Suad Hani </li>
+<li> Morgyn Stryker </li>
+<li> Joe Friedrich </li>
+<li> 滝澤 成人 </li>
+<li> Craig Kelly </li>
+<li> billy williams <br><br></li>
+<li> Sarala Akella </li>
+<li> Kyle Marten </li>
+<li> roberta gaines </li>
+<li> SI QIN MENG </li>
+<li> Tharavy Douc </li>
+<li> Anthony Kuback </li>
+<li> Nolan Dyck </li>
+<li> Prerana Kanakia </li>
+<li> Patrick Melanson </li>
+<li> Narcis Simu <br><br></li>
+<li> akshay lad </li>
+<li> gabriel meringolo </li>
+<li> Roberto Hernandez </li>
+<li> Carl Petter Levy </li>
+<li> Julio Luna Reynoso </li>
+<li> Michael Anderson </li>
+<li> Bruce Benson </li>
+<li> Steven Mesiner </li>
+<li> XU ZIYU </li>
+<li> Hangyul Lee <br><br></li>
+<li> Christine Maki </li>
+<li> Nicholas Chammas </li>
+<li> Mark Webster </li>
+<li> VAN HAVRE YORIK </li>
+<li> Aretha Alemu </li>
+<li> Steven Susemihl </li>
+<li> Brendon Keelan </li>
+<li> 余 森彬 </li>
+<li> 陈 泳桦 </li>
+<li> Richard Mfitumukiza <br><br></li>
+<li> Philip Stewart </li>
+<li> Gustavo Kunzel </li>
+<li> Alexandre Garel </li>
+<li> Pratham Singh </li>
+<li> Esteban Feldman </li>
+<li> Wu Jing </li>
+<li> Senokuchi Hiroshi </li>
+<li> Roman Gres </li>
+<li> Jonathan Dayton </li>
+<li> Rafael Fonseca <br><br></li>
+<li> Xie Shi </li>
+<li> David Lord </li>
+<li> gaylin larson </li>
+<li> Anton Neururer </li>
+<li> Ярослав Н </li>
+<li> Sune Wøller </li>
+<li> Le Hoai Nham </li>
+<li> ENZO CALAMIA </li>
+<li> Benjamin Lerner </li>
+<li> Thijs Metsch <br><br></li>
+<li> Ben Knudson </li>
+<li> Simon PAYAN </li>
+<li> Peter Pelberg </li>
+<li> Hermann Schuster </li>
+<li> Talata </li>
+<li> Dana Mosley </li>
+<li> Tiago Boldt Sousa </li>
+<li> Daniel Wernicke </li>
+<li> nicole embrey </li>
+<li> Iulius-Ioan Curt <br><br></li>
+<li> Михайленко Дмитрий </li>
+<li> Trevor Bell </li>
+<li> Tiago Possato </li>
+<li> Joan Marc Tuduri Cladera </li>
+<li> Jeffrey Jacobs </li>
+<li> Ashley Wilson </li>
+<li> Liam Schumm </li>
+<li> Ziqiang Chen </li>
+<li> annamma george </li>
+<li> YIOTA ADAMOU <br><br></li>
+<li> MySelf </li>
+<li> Indradeep Biswas </li>
+<li> Osvaldo Dias dos Santos </li>
+<li> Xiaotao Zhang </li>
+<li> Kenneth Smith </li>
+<li> 邹 健军 </li>
+<li> Денис Звездов </li>
+<li> devova </li>
+<li> Michael Gang </li>
+<li> Bharath Gundala <br><br></li>
+<li> Du Yining </li>
+<li> 郑 翔 </li>
+<li> Matthew Bellis </li>
+<li> Banafsheh Khakipoor </li>
+<li> Frederick Alger </li>
+<li> Jan Wilhelm Münch </li>
+<li> bronson lowery </li>
+<li> Wonseok Jang </li>
+<li> HIMENO KOUSEI </li>
+<li> Bishwa Giri <br><br></li>
+<li> BRET A. BENNETT </li>
+<li> Donna Bennet </li>
+<li> MARYE. OKERSON </li>
+<li> Theodorus Sluijs </li>
+<li> Mr Kilian </li>
+<li> 温 福铨 </li>
+<li> Michael Vacha </li>
+<li> Angelek Larkins </li>
+<li> carol McCann </li>
+<li> Frederic Guilleux <br><br></li>
+<li> Tatyana Gladkova </li>
+<li> Derian Andersen </li>
+<li> Meng Da xing </li>
+<li> Greg Frazier </li>
+<li> Moritz Schubert </li>
+<li> Sun Fulong </li>
+<li> Simon Biewald </li>
+<li> Luca Verginer </li>
+<li> Dirk Kulawiak </li>
+<li> wenhe lin <br><br></li>
+<li> Карпов Игорь </li>
+<li> Rik Wanders </li>
+<li> MANOHAR KUMAR </li>
+<li> Arnold Coto Marcia </li>
+<li> John Shegonee </li>
+<li> Pedro Lopes </li>
+<li> Sasidhar Reddy </li>
+<li> Zurich Premium </li>
+<li> Laurel Makusztak </li>
+<li> Asiri Fernando <br><br></li>
+<li> peter stroud </li>
+<li> Philippe Gouin </li>
+<li> Mher Petrosyan </li>
+<li> 劉 盈妤 </li>
+<li> e goetze </li>
+<li> James Mertz </li>
+<li> Olivier PELLET-MANY </li>
+<li> Kassandra R Keeton </li>
+<li> Fran Fitzpatrick </li>
+<li> Julie Knapp <br><br></li>
+<li> DAVID ŽIHALA </li>
+<li> Ted Gaubert </li>
+<li> JEF Industries </li>
+<li> Ramakrishna Pappula </li>
+<li> Andrea Monti </li>
+<li> Jay Reyes </li>
+<li> jinsong wu </li>
+<li> caitlin choban </li>
+<li> Andrew Bednar </li>
+<li> Natalie Serebryakova <br><br></li>
+<li> Steven Larson </li>
+<li> 张 明素 </li>
+<li> João Teixeira </li>
+<li> Paweł Adamek </li>
+<li> 张 策 </li>
+<li> Willette Barnett </li>
+<li> joseph bokongo </li>
+<li> Chris Andrews </li>
+<li> Patrick Laban </li>
+<li> RAFAEL TORRES RAMIREZ <br><br></li>
+<li> Juan José D'Ambrosio </li>
+<li> Robert Meyer </li>
+<li> 吴 哈哈 </li>
+<li> Martin Banduch </li>
+<li> Ganesh Murdeshwar </li>
+<li> Nancy Koroloff </li>
+<li> Donald Morrison </li>
+<li> Akshay Singh </li>
+<li> Trihandoyo Soesilo </li>
+<li> Vipul Borikar <br><br></li>
+<li> Graeme Phillipson </li>
+<li> Daniel Gonzalez Ibeas </li>
+<li> Edward Vogel </li>
+<li> Nikita Korneev </li>
+<li> Eduardo Coll </li>
+<li> Ashish Ram </li>
+<li> Antoine Trudel </li>
+<li> Salar Satti </li>
+<li> Chaim Krause </li>
+<li> Alex Good <br><br></li>
+<li> Warren Friedrich </li>
+<li> Boris Sadkhin </li>
+<li> Marek Goslicki </li>
+<li> Inseo Hwang </li>
+<li> Samuel Villamonte Grimaldo </li>
+<li> Byung Wook Seoh </li>
+<li> Gabriel Boorse </li>
+<li> Matthew Cox </li>
+<li> Taneka Everett </li>
+<li> Brenno Lemos Melquiades dos Santos <br><br></li>
+<li> Daniel Olejarz </li>
+<li> Huang Yu-Heng </li>
+<li> Brandon Gallardo Alvarado </li>
+<li> Liu Yunqing </li>
+<li> Leilani V. De Guzman </li>
+<li> Jackson Isaac </li>
+<li> Mahesh Fofandi </li>
+<li> Andrés García García </li>
+<li> Коротеев Максим </li>
+<li> Mikuláš Poul <br><br></li>
+<li> Daniel Rusek </li>
+<li> Gary Soli </li>
+<li> Law Patrick </li>
+<li> Senan Kelly </li>
+<li> Louis Filardi </li>
+<li> Daniel Bokor </li>
+<li> Радченко Илья </li>
+<li> Glenn Franxman </li>
+<li> Масловский Артём </li>
+<li> Djoko Soelarno A <br><br></li>
+<li> Chan Tin Tsun </li>
+<li> พิชัย เลิศวชิรกุล </li>
+<li> Benjamin Crom </li>
+<li> Marcelo Moreira de Mello </li>
+<li> 刁 子豪 </li>
+<li> 温 业民 </li>
+<li> chernomirdin macuvele </li>
+<li> DIMITRIOS MAKROPOULOS </li>
+<li> 杨 沁珑 </li>
+<li> Jim Paul Belgado <br><br></li>
+<li> Bogdan Sergiu Dragos </li>
+<li> Robert Tian </li>
+<li> 周 维 </li>
+<li> Noé Alberto Reyes Guerra </li>
+<li> Spokane Data Recovery </li>
+<li> Brody Robertson </li>
+<li> Jenkins Aviles </li>
+<li> Shannon Moore </li>
+<li> VALERIE DACIW </li>
+<li> Shane Feely <br><br></li>
+<li> James Reese </li>
+<li> Rocio Askew </li>
+<li> RENATA BRANDAO </li>
+<li> Alberta Parkhurst </li>
+<li> BIKASH PRADHAN </li>
+<li> Malia McClure </li>
+<li> Laura Pyne </li>
+<li> TANESHA JORDAN </li>
+<li> 李 灿灿 </li>
+<li> PARIS COLLINS <br><br></li>
+<li> Brian Schreffler </li>
+<li> Enevie Mullone </li>
+<li> Josh Johnson </li>
+<li> Yang Zhaohui </li>
+<li> Gwen Conley </li>
+<li> Mary Chipman </li>
+<li> Manuel wang </li>
+<li> shelia ash </li>
+<li> RedHeLL-Hosting </li>
+<li> David Loop <br><br></li>
+<li> Jayne wang </li>
+<li> Bertha Jacobs </li>
+<li> Harold Bordy </li>
+<li> Paul Gorelick </li>
+<li> SIDNEY WALKER </li>
+</ol>
+
+<!-- DO NOT DELETE: end honor roll -->
+    </div>
+
+    </article>
+
+
+                </section>
+
+                
+    <aside class="left-sidebar" role="secondary">
+
+        
+
+        <div class="psf-sidebar-widget sidebar-widget">
+            <h3 class="widget-title">The PSF</h3>
+<p>The Python Software Foundation is the organization behind Python. Become a member of the PSF and help advance the software and our mission. </p>
+
+        </div>
+
+            <div class="twitter-widget sidebar-widget">
+        <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/ThePSF" data-widget-id="434113224703610882">Tweets by @ThePSF</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </div>
+
+    </aside>
+
+
+
+                
+                
+
+
+            </div><!-- end .container -->
+        </div><!-- end #content .content-wrapper -->
+
+        <!-- Footer and social media list -->
+        <footer id="site-map" class="main-footer" role="contentinfo">
+            <div class="main-footer-links">
+                <div class="container">
+
+                    
+                    <a id="back-to-top-1" class="jump-link" href="#python-network"><span aria-hidden="true" class="icon-arrow-up"><span>&#9650;</span></span> Back to Top</a>
+
+                    
+
+<ul class="sitemap navigation menu do-not-print" role="tree" id="container">
+    
+    <li class="tier-1 element-1">
+        <a href="/about/" >About</a>
+        
+            
+
+<ul class="subnav menu">
+    
+        <li class="tier-2 element-1" role="treeitem"><a href="/about/apps/" title="">Applications</a></li>
+    
+        <li class="tier-2 element-2" role="treeitem"><a href="/about/quotes/" title="">Quotes</a></li>
+    
+        <li class="tier-2 element-3" role="treeitem"><a href="/about/gettingstarted/" title="">Getting Started</a></li>
+    
+        <li class="tier-2 element-4" role="treeitem"><a href="/about/help/" title="">Help</a></li>
+    
+        <li class="tier-2 element-5" role="treeitem"><a href="http://brochure.getpython.info/" title="">Python Brochure</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    <li class="tier-1 element-2">
+        <a href="/downloads/" >Downloads</a>
+        
+            
+
+<ul class="subnav menu">
+    
+        <li class="tier-2 element-1" role="treeitem"><a href="/downloads/" title="">All releases</a></li>
+    
+        <li class="tier-2 element-2" role="treeitem"><a href="/downloads/source/" title="">Source code</a></li>
+    
+        <li class="tier-2 element-3" role="treeitem"><a href="/downloads/windows/" title="">Windows</a></li>
+    
+        <li class="tier-2 element-4" role="treeitem"><a href="/downloads/mac-osx/" title="">Mac OS X</a></li>
+    
+        <li class="tier-2 element-5" role="treeitem"><a href="/download/other/" title="">Other Platforms</a></li>
+    
+        <li class="tier-2 element-6" role="treeitem"><a href="https://docs.python.org/3/license.html" title="">License</a></li>
+    
+        <li class="tier-2 element-7" role="treeitem"><a href="/download/alternatives" title="">Alternative Implementations</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    <li class="tier-1 element-3">
+        <a href="/doc/" >Documentation</a>
+        
+            
+
+<ul class="subnav menu">
+    
+        <li class="tier-2 element-1" role="treeitem"><a href="/doc/" title="">Docs</a></li>
+    
+        <li class="tier-2 element-2" role="treeitem"><a href="/doc/av" title="">Audio/Visual Talks</a></li>
+    
+        <li class="tier-2 element-3" role="treeitem"><a href="https://wiki.python.org/moin/BeginnersGuide" title="">Beginner&#39;s Guide</a></li>
+    
+        <li class="tier-2 element-4" role="treeitem"><a href="https://devguide.python.org/" title="">Developer&#39;s Guide</a></li>
+    
+        <li class="tier-2 element-5" role="treeitem"><a href="https://docs.python.org/faq/" title="">FAQ</a></li>
+    
+        <li class="tier-2 element-6" role="treeitem"><a href="http://wiki.python.org/moin/Languages" title="">Non-English Docs</a></li>
+    
+        <li class="tier-2 element-7" role="treeitem"><a href="http://python.org/dev/peps/" title="">PEP Index</a></li>
+    
+        <li class="tier-2 element-8" role="treeitem"><a href="https://wiki.python.org/moin/PythonBooks" title="">Python Books</a></li>
+    
+        <li class="tier-2 element-9" role="treeitem"><a href="/doc/essays/" title="">Python Essays</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    <li class="tier-1 element-4">
+        <a href="/community/" >Community</a>
+        
+            
+
+<ul class="subnav menu">
+    
+        <li class="tier-2 element-1" role="treeitem"><a href="/community/survey" title="">Community Survey</a></li>
+    
+        <li class="tier-2 element-2" role="treeitem"><a href="/community/diversity/" title="">Diversity</a></li>
+    
+        <li class="tier-2 element-3" role="treeitem"><a href="/community/lists/" title="">Mailing Lists</a></li>
+    
+        <li class="tier-2 element-4" role="treeitem"><a href="/community/irc/" title="">IRC</a></li>
+    
+        <li class="tier-2 element-5" role="treeitem"><a href="/community/forums/" title="">Forums</a></li>
+    
+        <li class="tier-2 element-6" role="treeitem"><a href="/psf/annual-report/2019/" title="">PSF Annual Impact Report</a></li>
+    
+        <li class="tier-2 element-7" role="treeitem"><a href="/community/workshops/" title="">Python Conferences</a></li>
+    
+        <li class="tier-2 element-8" role="treeitem"><a href="/community/sigs/" title="">Special Interest Groups</a></li>
+    
+        <li class="tier-2 element-9" role="treeitem"><a href="/community/logos/" title="">Python Logo</a></li>
+    
+        <li class="tier-2 element-10" role="treeitem"><a href="https://wiki.python.org/moin/" title="">Python Wiki</a></li>
+    
+        <li class="tier-2 element-11" role="treeitem"><a href="/community/merchandise/" title="">Merchandise</a></li>
+    
+        <li class="tier-2 element-12" role="treeitem"><a href="/community/awards" title="">Community Awards</a></li>
+    
+        <li class="tier-2 element-13" role="treeitem"><a href="/psf/conduct/" title="">Code of Conduct</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    <li class="tier-1 element-5">
+        <a href="/success-stories/" title="success-stories">Success Stories</a>
+        
+            
+
+<ul class="subnav menu">
+    
+        <li class="tier-2 element-1" role="treeitem"><a href="/success-stories/category/arts/" title="">Arts</a></li>
+    
+        <li class="tier-2 element-2" role="treeitem"><a href="/success-stories/category/business/" title="">Business</a></li>
+    
+        <li class="tier-2 element-3" role="treeitem"><a href="/success-stories/category/education/" title="">Education</a></li>
+    
+        <li class="tier-2 element-4" role="treeitem"><a href="/success-stories/category/engineering/" title="">Engineering</a></li>
+    
+        <li class="tier-2 element-5" role="treeitem"><a href="/success-stories/category/government/" title="">Government</a></li>
+    
+        <li class="tier-2 element-6" role="treeitem"><a href="/success-stories/category/scientific/" title="">Scientific</a></li>
+    
+        <li class="tier-2 element-7" role="treeitem"><a href="/success-stories/category/software-development/" title="">Software Development</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    <li class="tier-1 element-6">
+        <a href="/blogs/" title="News from around the Python world">News</a>
+        
+            
+
+<ul class="subnav menu">
+    
+        <li class="tier-2 element-1" role="treeitem"><a href="/blogs/" title="Python Insider Blog Posts">Python News</a></li>
+    
+        <li class="tier-2 element-2" role="treeitem"><a href="/psf/newsletter/" title="Python Software Foundation Newsletter">PSF Newsletter</a></li>
+    
+        <li class="tier-2 element-3" role="treeitem"><a href="http://planetpython.org/" title="Planet Python">Community News</a></li>
+    
+        <li class="tier-2 element-4" role="treeitem"><a href="http://pyfound.blogspot.com/" title="PSF Blog">PSF News</a></li>
+    
+        <li class="tier-2 element-5" role="treeitem"><a href="http://pycon.blogspot.com/" title="PyCon Blog">PyCon News</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    <li class="tier-1 element-7">
+        <a href="/events/" >Events</a>
+        
+            
+
+<ul class="subnav menu">
+    
+        <li class="tier-2 element-1" role="treeitem"><a href="/events/python-events" title="">Python Events</a></li>
+    
+        <li class="tier-2 element-2" role="treeitem"><a href="/events/python-user-group/" title="">User Group Events</a></li>
+    
+        <li class="tier-2 element-3" role="treeitem"><a href="/events/python-events/past/" title="">Python Events Archive</a></li>
+    
+        <li class="tier-2 element-4" role="treeitem"><a href="/events/python-user-group/past/" title="">User Group Events Archive</a></li>
+    
+        <li class="tier-2 element-5" role="treeitem"><a href="https://wiki.python.org/moin/PythonEventsCalendar#Submitting_an_Event" title="">Submit an Event</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    <li class="tier-1 element-8">
+        <a href="/dev/" >Contributing</a>
+        
+            
+
+<ul class="subnav menu">
+    
+        <li class="tier-2 element-1" role="treeitem"><a href="https://devguide.python.org/" title="">Developer&#39;s Guide</a></li>
+    
+        <li class="tier-2 element-2" role="treeitem"><a href="https://bugs.python.org/" title="">Issue Tracker</a></li>
+    
+        <li class="tier-2 element-3" role="treeitem"><a href="https://mail.python.org/mailman/listinfo/python-dev" title="">python-dev list</a></li>
+    
+        <li class="tier-2 element-4" role="treeitem"><a href="/dev/core-mentorship/" title="">Core Mentorship</a></li>
+    
+        <li class="tier-2 element-5" role="treeitem"><a href="/dev/security/" title="">Report a Security Issue</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+
+                    <a id="back-to-top-2" class="jump-link" href="#python-network"><span aria-hidden="true" class="icon-arrow-up"><span>&#9650;</span></span> Back to Top</a>
+                    
+
+                </div><!-- end .container -->
+            </div> <!-- end .main-footer-links -->
+
+            <div class="site-base">
+                <div class="container">
+                    
+                    <ul class="footer-links navigation menu do-not-print" role="tree">
+                        <li class="tier-1 element-1"><a href="/about/help/">Help &amp; <span class="say-no-more">General</span> Contact</a></li>
+                        <li class="tier-1 element-2"><a href="/community/diversity/">Diversity <span class="say-no-more">Initiatives</span></a></li>
+                        <li class="tier-1 element-3"><a href="https://github.com/python/pythondotorg/issues">Submit Website Bug</a></li>
+                        <li class="tier-1 element-4">
+                            <a href="https://status.python.org/">Status <span class="python-status-indicator-default" id="python-status-indicator"></span></a>
+                        </li>
+                    </ul>
+
+                    <div class="copyright">
+                        <p><small>
+                            <span class="pre">Copyright &copy;2001-2020.</span>
+                            &nbsp;<span class="pre"><a href="/psf-landing/">Python Software Foundation</a></span>
+                            &nbsp;<span class="pre"><a href="/about/legal/">Legal Statements</a></span>
+                            &nbsp;<span class="pre"><a href="/privacy/">Privacy Policy</a></span>
+                            &nbsp;<span class="pre"><a href="/psf/sponsorship/sponsors/#heroku">Powered by Heroku</a></span>
+                        </small></p>
+                    </div>
+
+                </div><!-- end .container -->
+            </div><!-- end .site-base -->
+
+        </footer>
+
+    </div><!-- end #touchnav-wrapper -->
+
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/static/js/libs/jquery-1.8.2.min.js"><\/script>')</script>
+
+    <script src="/static/js/libs/masonry.pkgd.min.js"></script>
+    <script src="/static/js/libs/html-includes.js"></script>
+
+    <script type="text/javascript" src="/static/js/main-min.037d9037f112.js" charset="utf-8"></script>
+    
+
+    <!--[if lte IE 7]>
+    <script type="text/javascript" src="/static/js/plugins/IE8-min.798605d5f7a2.js" charset="utf-8"></script>
+    
+    
+    <![endif]-->
+
+    <!--[if lte IE 8]>
+    <script type="text/javascript" src="/static/js/plugins/getComputedStyle-min.c3860be1d290.js" charset="utf-8"></script>
+    
+    
+    <![endif]-->
+
+    
+
+    
+    
+
+</body>
+</html>
