@@ -3,7 +3,7 @@
 """
 # TODO: Atividade  23: Proceder com as implementações necessárias para que passe nos testes
 
-1 - Criar uma nova classe que herda de incolumepy.tdd.employers.Employee:
+1 - Criar uma nova classe que herda de incolume.py.tdd.employers.Employee:
 EmployeeCorp[Employee](fullname, born, address, fone, estado, cidade, login, email, login)
 
 2 - Construir um programa que carregue instancias de EmployeeCorp contendo, todas as informações de todos
@@ -21,8 +21,8 @@ from pathlib import Path
 from faker import Faker
 from tempfile import NamedTemporaryFile
 from datetime import datetime
-from incolumepy.tdd import employers
-from incolumepy.tdd.utils.read_employers_csv import EmployeerCorp, load_employers, dump_employers_xlsx
+from incolume.py.tdd import employers
+from incolume.py.tdd.utils.read_employers_csv import EmployeerCorp, load_employers, dump_employers_xlsx
 
 
 class MyTestCase(unittest.TestCase):

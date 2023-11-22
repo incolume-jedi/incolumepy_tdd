@@ -11,17 +11,17 @@ import locale
 from faker import Factory
 from faker.providers import internet
 from faker.providers import date_time
-from incolumepy.tdd.utils.regex import re
-from incolumepy.tdd.utils.regex import is_ccredito_amex
-from incolumepy.tdd.utils.regex import is_ccredito_diners
-from incolumepy.tdd.utils.regex import is_ccredito_master
-from incolumepy.tdd.utils.regex import is_ccredito_visa
-from incolumepy.tdd.utils.regex import is_date
-from incolumepy.tdd.utils.regex import isemail
-from incolumepy.tdd.utils.regex import isfone
-from incolumepy.tdd.utils.regex import is_ipv4
-from incolumepy.tdd.utils.regex import is_ipv6
-from incolumepy.tdd.utils.regex import is_url
+from incolume.py.tdd.utils.regex import re
+from incolume.py.tdd.utils.regex import is_ccredito_amex
+from incolume.py.tdd.utils.regex import is_ccredito_diners
+from incolume.py.tdd.utils.regex import is_ccredito_master
+from incolume.py.tdd.utils.regex import is_ccredito_visa
+from incolume.py.tdd.utils.regex import is_date
+from incolume.py.tdd.utils.regex import isemail
+from incolume.py.tdd.utils.regex import isfone
+from incolume.py.tdd.utils.regex import is_ipv4
+from incolume.py.tdd.utils.regex import is_ipv6
+from incolume.py.tdd.utils.regex import is_url
 
 
 class MyTestCase(unittest.TestCase):

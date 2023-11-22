@@ -11,7 +11,7 @@ Observação: sua resposta deve sempre ter 5 caracteres, a abreviação com 3 n�
 """
 __author__ = '@britodfbr'
 import unittest
-from incolumepy.tdd.utils.decode.rgb_to_hex_conversion import rgb2hex
+from incolume.py.tdd.utils.decode.rgb_to_hex_conversion import rgb2hex
 
 
 class MyTestCase(unittest.TestCase):

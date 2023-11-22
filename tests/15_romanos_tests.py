@@ -6,7 +6,7 @@
 """
 __author__ = '@britodfbr'
 import unittest
-from incolumepy.tdd.romanos import Romanos
+from incolume.py.tdd.romanos import Romanos
 from types import FunctionType
 
 

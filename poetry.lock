@@ -751,8 +751,8 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 
 [metadata]
 lock-version = "1.1"
-python-versions = ">=3.7.0,<3.11.0"
-content-hash = "ccc3f9a6c936c70b2da2e06de2cb807295aa16d73e3de25a7ef73f9e56975515"
+python-versions = ">=3.7.0,<3.10.0"
+content-hash = "4b2519e33a9b8daeac5e38197905079c7d0d173696d88d69ed9a34a378e33609"
 
 [metadata.files]
 appnope = [

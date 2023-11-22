@@ -7,10 +7,10 @@ Utilize o pacote requests para acessar a lei 8666/1993 no webcache do projeto
 referente a 2019, disponível em
 http://localhost:8000/legis.senado.leg.br/norma/527942/publicacao/15718520.html
 salve o texto original com o nome
-"incolumepy/tdd/scraping/artefacts/atos/l8666-txtSF.html";
+"incolume/py/tdd/scraping/artefacts/atos/l8666-txtSF.html";
 mantenha o texto original sem alterações!
 Transforme em HTML5, aplique o CSS disponível em
-"incolumepy/static_html/css/legis_3.css",
+"incolume/py/static_html/css/legis_3.css",
 formate o cabeçalho (head, h1, h2, h3), aplique as
 classes presidente, ministro, data e dou.
 arquivo final com todas as alterações deverá estar em
@@ -28,7 +28,7 @@ from collections import namedtuple
 import os
 from pathlib import Path
 from tests import has_internet
-from incolumepy.tdd.scraping.htmlformating import (
+from incolume.py.tdd.scraping.htmlformating import (
     formating, requests, req_lei8666, get_content, gravar, save_content,
     partial, identify_recover, outputdir, output,
 )
@@ -62,7 +62,7 @@ class HandleHTMLTest(unittest.TestCase):
 
     def setUp(self) -> None:
         self.filebase = Path(__file__).parents[1].joinpath(
-            'incolumepy', 'tdd', 'scraping', 'artefacts', 'atos')
+            'incolume','py', 'tdd', 'scraping', 'artefacts', 'atos')
         self.filename = lambda: Path(self.tmp).joinpath(
             Path(__file__).stem, f'{time.time():.0f}.txt')
 
@@ -112,7 +112,7 @@ class HandleHTMLTest(unittest.TestCase):
         self.assertIsNotNone(get_content(self.url))
 
     def test_content_offline(self):
-        with mock.patch('incolumepy.tdd.scraping.htmlformating.requests.get') as m:
+        with mock.patch('incolume.py.tdd.scraping.htmlformating.requests.get') as m:
             mock_req_get = namedtuple('Mock', 'content status_code')
             mock_req_get.content = self.filebase.joinpath('l8666-txtSF.html')
             m.return_value = mock_req_get
@@ -131,7 +131,7 @@ class HandleHTMLTest(unittest.TestCase):
         test_get_content:
         """
         with mock.patch(
-                'incolumepy.tdd.scraping.htmlformating.requests.get') as m:
+                'incolume.py.tdd.scraping.htmlformating.requests.get') as m:
             mock_req_get = namedtuple('Mock', 'content status_code')
             mock_req_get.status_code = 200
             mock_req_get.content = self.filebase.joinpath(

@@ -3,7 +3,7 @@
 """
 # TODO: Atividade  22: Proceder com as implementações necessárias para que passe nos testes
 
-Fatorar incolumepy.tdd.employers em 2 classes:
+Fatorar incolume.py.tdd.employers em 2 classes:
 Pessoa(fullname, born, email, address, fone, cidade, estado)
 Employer(Pessoa(), login, email, salario)
 """
@@ -11,7 +11,7 @@ __author__ = '@britodfbr'
 import unittest
 import locale
 from faker import Faker
-from incolumepy.tdd.employers import Employee, Pessoa
+from incolume.py.tdd.employers import Employee, Pessoa
 from datetime import datetime
 
 

@@ -6,7 +6,7 @@
 """
 __author__ = '@britodfbr'
 import unittest
-from incolumepy.tdd.veiculos.aeronaves import Aeronave
+from incolume.py.tdd.veiculos.aeronaves import Aeronave
 
 
 class TestAeronave(unittest.TestCase):

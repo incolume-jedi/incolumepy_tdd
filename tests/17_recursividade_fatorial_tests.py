@@ -8,7 +8,7 @@ __author__ = '@britodfbr'
 import unittest
 import mock
 from types import FunctionType
-from incolumepy.tdd.sequences.fatorial import fatorial
+from incolume.py.tdd.sequences.fatorial import fatorial
 
 
 class RecursividadeTest(unittest.TestCase):
@@ -33,7 +33,7 @@ class RecursividadeTest(unittest.TestCase):
         self.assertEqual([1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800], [fatorial(x) for x in range(11)])
 
     def test_fuction_called(self):
-        with mock.patch('incolumepy.tdd.sequences.fatorial.fatorial', autospec=True) as mock_fact:
+        with mock.patch('incolume.py.tdd.sequences.fatorial.fatorial', autospec=True) as mock_fact:
             # mock_fact.__rmul__ = lambda x: fatorial(x)
             entrada = 99
             result = fatorial(entrada)
@@ -42,7 +42,7 @@ class RecursividadeTest(unittest.TestCase):
             self.assertRegex(str(result), r'__rmul__')
 
     def test_recursividade_1(self):
-        with mock.patch('incolumepy.tdd.sequences.fatorial.fatorial') as mock_fact:
+        with mock.patch('incolume.py.tdd.sequences.fatorial.fatorial') as mock_fact:
             entrada = 99
             fatorial(entrada)
             # print(mock_fact.call_args)
@@ -51,7 +51,7 @@ class RecursividadeTest(unittest.TestCase):
             self.assertIn(mock.call(entrada - 1), mock_fact.call_args_list)
 
     def test_recursividade_2(self):
-        with mock.patch('incolumepy.tdd.sequences.fatorial.fatorial') as mock_fact:
+        with mock.patch('incolume.py.tdd.sequences.fatorial.fatorial') as mock_fact:
             for i in range(1, 99, -2):
                 expected = i - 1
                 fatorial(i)

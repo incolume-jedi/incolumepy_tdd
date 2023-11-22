@@ -7,7 +7,7 @@
 __author__ = '@britodfbr'
 import unittest
 from time import sleep
-from incolumepy.tdd.utils.decorators import timeit
+from incolume.py.tdd.utils.decorators import timeit
 
 
 @timeit

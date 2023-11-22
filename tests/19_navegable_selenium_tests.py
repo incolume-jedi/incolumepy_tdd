@@ -7,11 +7,11 @@ Instruções:
 
 Baixe a versão mais recente do webdriver para seu sistema operacional em https://github.com/mozilla/geckodriver/tags
 
-Descompacte-o em incolumepy/tdd/geckodrivers
+Descompacte-o em incolume/py/tdd/geckodrivers
 Altere suas permisões para somente leitura
 
 Em um terminal exclusivo, siga as etapas abaixo para ativar micro servidor web:
-$ cd incolumepy/tdd/static_html/
+$ cd incolume/py/tdd/static_html/
 $ python -m http.server
 
 Mantenha este terminal ativo para realizar os testes necessários.
@@ -20,7 +20,7 @@ import unittest
 import urllib3
 from pathlib import Path
 import os
-from incolumepy.tdd.scraping.python_org import PythonOrg, webdriver, platform
+from incolume.py.tdd.scraping.python_org import PythonOrg, webdriver, platform
 
 __author__ = '@britodfbr'
 
@@ -29,7 +29,7 @@ class NavegableSeleniumTest(unittest.TestCase):
 
     def setUp(self) -> None:
         self.sitepy = Path(__file__).parent.parent.joinpath(
-            'incolumepy', 'static_html', 'www.python.org', 'index.html'
+            'incolume', 'py', 'static_html', 'www.python.org', 'index.html'
         )
         self.atualdir = os.getcwd()
         self.serverdir = os.path.dirname(self.sitepy)
@@ -56,7 +56,7 @@ class NavegableSeleniumTest(unittest.TestCase):
         self.assertEqual('www.python.org', self.serverdir.split('/')[-1])
 
     def test_ifdrivers(self):
-        localbase = Path(__file__).parent.parent.joinpath('incolumepy', 'tdd', 'geckodrivers')
+        localbase = Path(__file__).parent.parent.joinpath('incolume','py', 'tdd', 'geckodrivers')
         local = ''
         if platform.system().lower() in ('linux', 'macos'):
             local = localbase / 'geckodriver'
@@ -68,7 +68,7 @@ class NavegableSeleniumTest(unittest.TestCase):
 
     @unittest.skip('activation future')
     def test_permitions(self):
-        localbase = Path(__file__).parent.parent.joinpath('incolumepy', 'tdd', 'geckodrivers')
+        localbase = Path(__file__).parent.parent.joinpath('incolume','py', 'tdd', 'geckodrivers')
         local = localbase / 'geckodriver.exe' if platform.system().lower() == 'windows' else localbase / 'geckdriver'
 
         # Validação de permissões
