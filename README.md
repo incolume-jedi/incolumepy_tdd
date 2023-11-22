@@ -51,18 +51,19 @@ OK
 Se o resultado for similar ao apresentado, Meus parabéns!! Você concluiu o curso com sucesso!!
 
 ## Ambiente necessário
-| incolumepy_tdd version | status        | python version      | requisitos                         |
-|------------------------|---------------|---------------------|------------------------------------|
-| 2.7.0                  |               | 3.7, 3.8, 3.9, 3.10 | cliente git, poetry, tox          |
-| 2.6.1                  | obsoleto      | 3.7, 3.8, 3.9       | cliente git, poetry, tox           |
-| 2.5.0                  | descontinuado | 3.7, 3.8, 3.9       | cliente git, pipenv, poetry, tox   |
-| 2.4.0                  | descontinuado | 3.6, 3.7, 3.8       | cliente git, pipenv, tox           |
-| 2.3.0                  | descontinuado | 3.6, 3.7, 3.8       | cliente git, pipenv, tox           |
-| 2.2.0                  | descontinuado | 3.6, 3.7, 3.8       | cliente git, pipenv, tox           |
-| 2.1.0                  | descontinuado | 3.6                 | cliente git, pipenv                |
-| 2.0.0                  | descontinuado | 3.6                 | cliente git, virtualenv, nosetests |
-| 1.0.0                  | descontinuado | 3.6                 | cliente git, virtualenv            |
-| 0.1.0                  | descontinuado | 3.6                 | cliente git, virtualenv            |
+| incolumepy_tdd version | status        | python version   | requisitos                         |
+|------------------------|---------------|------------------|------------------------------------|
+| 2.8.0                  |               | 3.8, 3.9, 3.10   | cliente git, poetry, tox           |
+| 2.7.0                  |               | 3.7, 3.8, 3.9    | cliente git, poetry, tox           |
+| 2.6.1                  | obsoleto      | 3.7, 3.8, 3.9    | cliente git, poetry, tox           |
+| 2.5.0                  | descontinuado | 3.7, 3.8, 3.9    | cliente git, pipenv, poetry, tox   |
+| 2.4.0                  | descontinuado | 3.6, 3.7, 3.8    | cliente git, pipenv, tox           |
+| 2.3.0                  | descontinuado | 3.6, 3.7, 3.8    | cliente git, pipenv, tox           |
+| 2.2.0                  | descontinuado | 3.6, 3.7, 3.8    | cliente git, pipenv, tox           |
+| 2.1.0                  | descontinuado | 3.6              | cliente git, pipenv                |
+| 2.0.0                  | descontinuado | 3.6              | cliente git, virtualenv, nosetests |
+| 1.0.0                  | descontinuado | 3.6              | cliente git, virtualenv            |
+| 0.1.0                  | descontinuado | 3.6              | Estrutura inicial                  |
 
 
 Para melhor aproveitamento do ambiente de desenvolvimento
