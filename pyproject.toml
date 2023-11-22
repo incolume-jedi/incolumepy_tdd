@@ -67,7 +67,7 @@ log_date_format ='%FT%T%N%z'
 #addopts = "--doctest-modules --cov=coding_dojo_jedi -sx --cov-report term-missing --cov-report html:coverage_report/html --cov-report xml:coverage_report/cov.xml"
 testpaths = [
   "tests",
-  "src/incolumepy/tdd",
+  "incolumepy/tdd",
 ]
 python_files = [
   "test_*.py",
@@ -161,9 +161,9 @@ commands = poetry run task safety
 """
 
 [tool.taskipy.variables]
-path = "incolume/ tests/"
-CHANGELOGFILE = "docs/about/CHANGELOG.md"
-URLCOMPARE = "https://github.com/incolume-jedi/coding-dojo/compare"
+path = "incolumepy/ tests/"
+CHANGELOGFILE = "CHANGELOG.md"
+URLCOMPARE = "https://github.com/incolume-jedi/incolumepy_tdd/compare"
 
 [tool.taskipy.tasks]
 #bandit={help='', cmd='poetry run bandit -c pyproject.toml -r {path}', use_vars=true}
