@@ -2,6 +2,7 @@ import requests
 import pytest
 import sys
 from pathlib import Path
+from http import HTTPStatus
 
 """ # TODO: Atividade  : Proceder com as implementações necessárias para que passe nos testes
 
@@ -27,33 +28,33 @@ class TestMicroWebServer:
     @pytest.mark.parametrize(
         'entrance',
         [
-            'localhost',
-            '127.0.0.1',
+            'http://localhost:8000/',
+            'http://127.0.0.1:8000/',
         ],
     )
     def test_local_server_http_is_active(self, entrance) -> None:
         """Test if local server HTTP is active."""
-        result = requests.get(f'http://{entrance}:8000/')
-        assert result.status_code == 200
+        result = requests.get(entrance)
+        assert result.status_code == HTTPStatus.OK
 
     @pytest.mark.parametrize(
         'entrance',
         [
-            ('localhost', 'google.com'),
-            ('localhost', 'css/legis_3.css'),
-            ('localhost', 'legis.senado.leg.br'),
-            ('localhost', 'www.python.org'),
-            ('127.0.0.1', 'google.com'),
-            ('127.0.0.1', 'css/legis_3.css'),
-            ('127.0.0.1', 'legis.senado.leg.br'),
-            ('127.0.0.1', 'www.python.org'),
+            ('localhost:8000', 'google.com'),
+            ('localhost:8000', r'css/legis_3.css'),
+            ('localhost:8000', 'legis.senado.leg.br'),
+            ('localhost:8000', 'www.python.org'),
+            ('127.0.0.1:8000', 'google.com'),
+            ('127.0.0.1:8000', r'css/legis_3.css'),
+            ('127.0.0.1:8000', 'legis.senado.leg.br'),
+            ('127.0.0.1:8000', 'www.python.org'),
         ],
     )
     def test_local_server_http_directories(self, entrance) -> None:
         """Test if local server http has correct directories."""
-        url = 'http://{}/{}/'.format(*entrance)
+        url = 'http://{}/{}'.format(*entrance)
         result = requests.get(url)
-        assert result.status_code == 200
+        assert result.status_code == HTTPStatus.OK
 
 
 class TestPluginGeckoDriver:
