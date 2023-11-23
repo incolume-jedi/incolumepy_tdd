@@ -5,12 +5,14 @@
 
 Proceder com as implementações necessárias para que passe nos testes
 
+OBS: Para proceder com este exercício o ambiente deve ser configurado como descrito em
+00_environment_tests.py; o http.server deve permanecer ativo para realizar este exercício.
 """
 __author__ = '@britodfbr'
 import unittest
 import os
 from pathlib import Path
-from incolumepy.tdd.scraping.google import (
+from incolume.py.tdd.scraping.google import (
     GoogleSearch, BeautifulSoup, NavigableString,
 )
 
@@ -19,7 +21,7 @@ class ScrapingHTMLTest(unittest.TestCase):
     def setUp(self) -> None:
         self.path = os.path.join(
             Path(__file__).parent.parent.joinpath(
-                'incolumepy', 'static_html', 'google.com', 'index.html')
+                'incolume','py', 'static_html', 'google.com', 'index.html')
         )
         self.google_search = GoogleSearch(self.path)
 

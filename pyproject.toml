@@ -8,7 +8,7 @@ homepage="https://gitlab.com/development-incolume/treinamentos/incolumepy_tdd"
 keywords = ['python', 'jedy', 'incolume', 'incolumepy', 'treinamento']
 repository = 'https://gitlab.com/development-incolume/incolumepy.utils'
 packages = [
-    {include = "incolumepy", from=''},
+    {include = "incolume", from=''},
 ]
 classifiers = [
     'Development Status :: 5 - Production/Stable',

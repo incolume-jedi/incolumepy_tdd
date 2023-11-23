@@ -3,7 +3,7 @@
 
 import pytest
 
-from incolumepy.tdd import (
+from incolume.py.tdd import (
     __version__,
     configfile,
     load,

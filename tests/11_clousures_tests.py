@@ -6,7 +6,7 @@
 """
 __author__ = '@britodfbr'
 import unittest
-from incolumepy.tdd.utils.clousures import multiple, dobro
+from incolume.py.tdd.utils.clousures import multiple, dobro
 
 
 class TestClousure(unittest.TestCase):

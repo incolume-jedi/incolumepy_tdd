@@ -4,7 +4,7 @@ import re
 
 import pytest
 
-from incolumepy.tdd import __version__
+from incolume.py.tdd import __version__
 
 
 @pytest.mark.fast()

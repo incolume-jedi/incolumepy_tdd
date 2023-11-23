@@ -8,7 +8,7 @@ __author__ = '@britodfbr'
 from unittest import TestCase, main
 import datetime as dt
 from datetime import datetime
-from incolumepy.tdd.employers import Employee
+from incolume.py.tdd.employers import Employee
 
 
 class EmployersTests(TestCase):

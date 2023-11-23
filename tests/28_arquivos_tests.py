@@ -11,13 +11,13 @@ import pathlib
 import magic
 import mimetypes
 import pandas as pd
-from incolumepy.tdd import arquivos
+from incolume.py.tdd import arquivos
 
 
 class MyTextFiles(unittest.TestCase):
     def setUp(self) -> None:
         self.fout = pathlib.Path(tempfile.NamedTemporaryFile(suffix='.txt').name)
-        self.package = pathlib.Path(__file__).parent.joinpath('..', 'incolumepy', 'tdd', 'arquivos').resolve()
+        self.package = pathlib.Path(__file__).parent.joinpath('..', 'incolume','py', 'tdd', 'arquivos').resolve()
 
     # @unittest.skip
     def test_package(self):
@@ -52,7 +52,7 @@ class MyTextFiles(unittest.TestCase):
 class MyCSVFiles(unittest.TestCase):
     def setUp(self) -> None:
         self.fout = pathlib.Path(tempfile.NamedTemporaryFile(suffix='.csv').name)
-        self.package = pathlib.Path(__file__).parent.joinpath('..', 'incolumepy', 'tdd', 'arquivos').resolve()
+        self.package = pathlib.Path(__file__).parent.joinpath('..', 'incolume','py', 'tdd', 'arquivos').resolve()
 
     def test_package(self):
         assert self.package.is_dir(), f'{self.package}'
@@ -89,7 +89,7 @@ class MyCSVFiles(unittest.TestCase):
 class MyJsonFiles(unittest.TestCase):
     def setUp(self) -> None:
         self.fout = pathlib.Path(tempfile.NamedTemporaryFile(suffix='.json').name)
-        self.package = pathlib.Path(__file__).parent.joinpath('..', 'incolumepy', 'tdd', 'arquivos').resolve()
+        self.package = pathlib.Path(__file__).parent.joinpath('..', 'incolume','py', 'tdd', 'arquivos').resolve()
 
     def test_package(self):
         assert self.package.is_dir(), f'{self.package}'
@@ -124,7 +124,7 @@ class MyJsonFiles(unittest.TestCase):
 class MyXLSXFiles(unittest.TestCase):
     def setUp(self) -> None:
         self.fout = pathlib.Path(tempfile.NamedTemporaryFile(suffix='.xlsx').name)
-        self.package = pathlib.Path(__file__).parent.joinpath('..', 'incolumepy', 'tdd', 'arquivos').resolve()
+        self.package = pathlib.Path(__file__).parent.joinpath('..', 'incolume','py', 'tdd', 'arquivos').resolve()
 
     def test_package(self):
         assert self.package.is_dir(), f'{self.package}'
