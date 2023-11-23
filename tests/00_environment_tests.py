@@ -77,9 +77,7 @@ class TestPluginGeckoDriver:
         assert driver.is_file(), f"Driver indisponível: \"{driver}\""
 
     @pytest.mark.skipif(
-        sys.platform.startswith('lin'), reason='Available only Windows.',)
-    @pytest.mark.skipif(
-        sys.platform.startswith('mac'), reason='Available only Windows.',)
+        not sys.platform.startswith('win'), reason='Available only Windows.',)
     def test_has_plugin_win_like(self, driver_dir) -> None:
         """Test if has plugin geckocriver."""
         driver = driver_dir / 'geckodriver.exe'
