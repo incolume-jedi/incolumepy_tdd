@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-# TODO: Atividade  28: Proceder com as implementações necessárias para que passe nos testes
+# TODO: Atividade  28: Proceder com as implementações necessárias
+para que passe nos testes
 
 """
 __author__ = '@britodfbr'
@@ -16,8 +17,10 @@ from incolume.py.tdd import arquivos
 
 class MyTextFiles(unittest.TestCase):
     def setUp(self) -> None:
-        self.fout = pathlib.Path(tempfile.NamedTemporaryFile(suffix='.txt').name)
-        self.package = pathlib.Path(__file__).parent.joinpath('..', 'incolume','py', 'tdd', 'arquivos').resolve()
+        self.fout = pathlib.Path(
+            tempfile.NamedTemporaryFile(suffix='.txt').name)
+        self.package = pathlib.Path(__file__).parents[1].joinpath(
+            'incolume','py', 'tdd', 'arquivos').resolve()
 
     # @unittest.skip
     def test_package(self):
@@ -51,8 +54,10 @@ class MyTextFiles(unittest.TestCase):
 
 class MyCSVFiles(unittest.TestCase):
     def setUp(self) -> None:
-        self.fout = pathlib.Path(tempfile.NamedTemporaryFile(suffix='.csv').name)
-        self.package = pathlib.Path(__file__).parent.joinpath('..', 'incolume','py', 'tdd', 'arquivos').resolve()
+        self.fout = pathlib.Path(
+            tempfile.NamedTemporaryFile(suffix='.csv').name)
+        self.package = pathlib.Path(__file__).parents[1].joinpath(
+            'incolume', 'py', 'tdd', 'arquivos').resolve()
 
     def test_package(self):
         assert self.package.is_dir(), f'{self.package}'
@@ -88,8 +93,10 @@ class MyCSVFiles(unittest.TestCase):
 
 class MyJsonFiles(unittest.TestCase):
     def setUp(self) -> None:
-        self.fout = pathlib.Path(tempfile.NamedTemporaryFile(suffix='.json').name)
-        self.package = pathlib.Path(__file__).parent.joinpath('..', 'incolume','py', 'tdd', 'arquivos').resolve()
+        self.fout = pathlib.Path(
+            tempfile.NamedTemporaryFile(suffix='.json').name)
+        self.package = pathlib.Path(__file__).parents[1].joinpath(
+            'incolume','py', 'tdd', 'arquivos').resolve()
 
     def test_package(self):
         assert self.package.is_dir(), f'{self.package}'
@@ -118,13 +125,16 @@ class MyJsonFiles(unittest.TestCase):
 
     def test_mimetype(self):
         self.assertTrue(arquivos.json_create(self.fout))
-        self.assertIn('application/json', mimetypes.guess_type(self.fout))
+        self.assertIn('application/json',
+                      mimetypes.guess_type(self.fout))
 
 
 class MyXLSXFiles(unittest.TestCase):
     def setUp(self) -> None:
-        self.fout = pathlib.Path(tempfile.NamedTemporaryFile(suffix='.xlsx').name)
-        self.package = pathlib.Path(__file__).parent.joinpath('..', 'incolume','py', 'tdd', 'arquivos').resolve()
+        self.fout = pathlib.Path(
+            tempfile.NamedTemporaryFile(suffix='.xlsx').name)
+        self.package = pathlib.Path(__file__).parents[1].joinpath(
+            'incolume','py', 'tdd', 'arquivos').resolve()
 
     def test_package(self):
         assert self.package.is_dir(), f'{self.package}'
@@ -150,12 +160,17 @@ class MyXLSXFiles(unittest.TestCase):
     def test_mimetype_magic(self):
         arquivos.xlsx_create(self.fout)
         mime = magic.Magic(mime=True)
-        self.assertEqual(mime.from_file(self.fout), 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+        self.assertEqual(
+            mime.from_file(self.fout),
+            'application/vnd.openxmlformats-'
+            'officedocument.spreadsheetml.sheet'
+        )
 
     def test_mimetype(self):
         self.assertTrue(arquivos.xlsx_create(self.fout))
         self.assertIn(
-            'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+            'application/vnd.openxmlformats-'
+            'officedocument.spreadsheetml.sheet',
             mimetypes.guess_type(self.fout)
         )
 
