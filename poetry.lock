@@ -1045,8 +1045,8 @@ cffi = ["cffi (>=1.11)"]
 
 [metadata]
 lock-version = "1.1"
-python-versions = "^3.8"
-content-hash = "b51609103d6e0fa0dbc87ca923c01e61032fe351952ce3a2701be8201cfea2f5"
+python-versions = ">=3.8.0,<3.12.0"
+content-hash = "26f3b5c3e0adc137b9894ff566e3977fc5fd42697667377fb4060041304cc412"
 
 [metadata.files]
 appnope = [
