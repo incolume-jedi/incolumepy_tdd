@@ -8,6 +8,8 @@ Regras para identificar bandeira do cartão de crédito: https://pastebin.com/Ci
 __author__ = '@britodfbr'
 import unittest
 import locale
+import rstr
+import pytest
 from faker import Factory
 from faker.providers import internet
 from faker.providers import date_time
@@ -22,6 +24,49 @@ from incolume.py.tdd.utils.regex import isfone
 from incolume.py.tdd.utils.regex import is_ipv4
 from incolume.py.tdd.utils.regex import is_ipv6
 from incolume.py.tdd.utils.regex import is_url
+from itertools import chain
+
+
+def fake_factory():
+    locale.setlocale(locale.LC_ALL, "pt_BR.UTF-8")
+    FakeFactory = Factory.create('pt_BR')
+    FakeFactory.add_provider(date_time)
+    FakeFactory.add_provider(internet)
+    return FakeFactory
+
+
+class TestRegex:
+    """Class TestRegex for 21_regex."""
+
+    @pytest.mark.parametrize(
+        'entrance',
+        chain(
+            [
+                rstr.xeger(
+                    r'(?:\+5{2} )?\(?([14689][1-9]|2[12478]|'
+                    r'3[1234578]|5[1345]|7[134579])\)? \d?\d{4}[ -]?\d{4}'
+                )
+                for _ in range(100)
+            ],
+            [
+                '+55 21 5555-5555',
+                '+55 22 5555 5555',
+                '+55 24 95555 5555',
+                '+55 75 5555 5555',
+                '+55 27 5555 5555',
+                '+55 28 5555 5555',
+                '+55 51 1693-9021',
+                '+55 53 16939021',
+                '+55 54 1693-9021',
+                '+55 55 1693-9021',
+                '+55 (11) 99999 9999',
+                '+55 61 99999-9999',
+                '+55 62 99999-9999',
+            ],
+        ),
+    )
+    def test_fone(self, entrance):
+        assert isfone(entrance)
 
 
 class MyTestCase(unittest.TestCase):
@@ -100,9 +145,11 @@ class MyTestCase(unittest.TestCase):
             self.assertEqual(True, isemail(self.FakeFactory.ascii_safe_email()))
             self.assertEqual(True, isemail(self.FakeFactory.ascii_company_email()))
 
+    @unittest.skip(reason='implemented on pytest.')
     def test_fone(self):
         for i in range(100):
-            self.assertEqual(True, isfone(self.FakeFactory.phone_number()))
+            result = self.FakeFactory.phone_number()
+            self.assertEqual(True, isfone(result))
 
     def test_ipv4(self):
         for i in range(100):
