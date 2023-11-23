@@ -4,18 +4,21 @@ import sys
 from pathlib import Path
 from http import HTTPStatus
 
-""" # TODO: Atividade  : Proceder com as implementações necessárias para que passe nos testes
+""" # TODO: Atividade  : Proceder com as implementações necessárias
+para que passe nos testes
 
 Instruções:
     Para Micro servidor web local:
-    1. Em um terminal exclusivo, siga as etapas abaixo para ativar micro servidor web:
+    1. Em um terminal exclusivo, siga as etapas abaixo para
+    ativar micro servidor web:
+
       $ cd incolume/py/tdd/static_html/
       $ python -m http.server 8000
-    
+
     2. Mantenha este terminal ativo para realizar os testes.
 
     Para plugin Geckodrive:
-    1. Baixe a versão mais recente do webdriver para seu sistema 
+    1. Baixe a versão mais recente do webdriver para seu sistema
     operacional em https://github.com/mozilla/geckodriver/tags
 
     2. Descompacte-o em incolume/py/tdd/geckodrivers
@@ -63,16 +66,20 @@ class TestPluginGeckoDriver:
     @pytest.fixture()
     def driver_dir(self) -> Path:
         """Driver directory."""
-        return Path(__file__).parents[1].joinpath('incolume','py', 'tdd', 'geckodrivers')
+        return Path(__file__).parents[1].joinpath(
+            'incolume','py', 'tdd', 'geckodrivers')
 
-    @pytest.mark.skipif(sys.platform.startswith('win'), reason='Not available on windows.',)
+    @pytest.mark.skipif(
+        sys.platform.startswith('win'), reason='Not available on windows.',)
     def test_has_plugin_unix_like(self, driver_dir) -> None:
         """Test if has plugin geckocriver."""
         driver = driver_dir / 'geckodriver'
         assert driver.is_file(), f"Driver indisponível: \"{driver}\""
 
-    @pytest.mark.skipif(sys.platform.startswith('lin'), reason='Not available on Unix-like.',)
-    @pytest.mark.skipif(sys.platform.startswith('mac'), reason='Not available on Unix-like.',)
+    @pytest.mark.skipif(
+        sys.platform.startswith('lin'), reason='Available only Windows.',)
+    @pytest.mark.skipif(
+        sys.platform.startswith('mac'), reason='Available only Windows.',)
     def test_has_plugin_win_like(self, driver_dir) -> None:
         """Test if has plugin geckocriver."""
         driver = driver_dir / 'geckodriver.exe'
