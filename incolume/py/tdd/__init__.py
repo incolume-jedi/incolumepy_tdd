@@ -1,8 +1,8 @@
 """Principal Module."""
+from pathlib import Path
 from tempfile import NamedTemporaryFile
 
 from tomli import load
-from pathlib import Path
 
 __author__ = '@britodfbr'
 
