@@ -1,11 +1,10 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
-"""
-# TODO: Atividade  4: implementar Veiculo para que passe nos testes
-"""
+"""# TODO: Atividade  4: implementar Veiculo para que passe nos testes."""
 __author__ = '@britodfbr'
 import unittest
-from incolume.py.tdd.veiculos.veiculos import Veiculo, datetime, abc
+
+import pytest
+from incolume.py.tdd.veiculos.veiculos import Veiculo, abc, datetime
 
 
 class VeiculoTests(unittest.TestCase):
@@ -24,52 +23,48 @@ class VeiculoTests(unittest.TestCase):
         del self.veic
 
     def test_veiculo_interface(self):
-        self.assertTrue(Veiculo.__metaclass__ == abc.ABCMeta)
-        with self.assertRaises(NotImplementedError):
+        assert Veiculo.__metaclass__ == abc.ABCMeta
+        with pytest.raises(NotImplementedError):
             self.veic.acelerar(3)
             self.veic.frenar(3)
 
     def test_veiculo_interface_atributos(self):
         dir(self.veic)
-        self.assertTrue(hasattr(self.veic, 'modelo'))
-        self.assertTrue(hasattr(self.veic, 'fabricante'))
-        self.assertTrue(hasattr(self.veic, 'velocidade'))
-        self.assertFalse(hasattr(self.veic, 'cor'))
+        assert hasattr(self.veic, 'modelo')
+        assert hasattr(self.veic, 'fabricante')
+        assert hasattr(self.veic, 'velocidade')
+        assert not hasattr(self.veic, 'cor')
 
     def test_veiculo_interface_tipo(self):
-        self.assertIn('terrestre'.upper(), Veiculo.categoria)
-        self.assertIn('aéreo'.upper(), Veiculo.categoria)
-        self.assertIn('aquático'.upper(), Veiculo.categoria)
-        self.assertIn('espacial'.upper(), Veiculo.categoria)
+        assert 'terrestre'.upper() in Veiculo.categoria
+        assert 'aéreo'.upper() in Veiculo.categoria
+        assert 'aquático'.upper() in Veiculo.categoria
+        assert 'espacial'.upper() in Veiculo.categoria
         self.veic.tipo = 'Terrestre'
         self.veic.tipo = 'Aéreo'
         self.veic.tipo = 'AÉREO'
         self.veic.tipo = 'Aquático'
         self.veic.tipo = 'ESPACIAL'
 
-        with self.assertRaises(AssertionError):
+        with pytest.raises(AssertionError):
             self.veic.tipo = 'espaciale'
             self.veic.tipo = 'Aerio'
 
-        with self.assertRaisesRegex(
-            AssertionError, 'Categoria não disponível'
-        ):
+        with pytest.raises(AssertionError, match='Categoria não disponível'):
             self.veic.tipo = 'espaciale'
             self.veic.tipo = 'Aerio'
 
     def test_veiculo_interface_ano(self):
 
         self.veic.ano = 1976
-        self.assertTrue(isinstance(self.veic.ano, datetime))
-        self.assertEqual(self.veic.getAno(), '1976')
+        assert isinstance(self.veic.ano, datetime)
+        assert self.veic.getAno() == '1976'
 
         self.veic.ano = '2018'
-        self.assertTrue(isinstance(self.veic.ano, datetime))
-        self.assertEqual(self.veic.getAno(), '2018')
+        assert isinstance(self.veic.ano, datetime)
+        assert self.veic.getAno() == '2018'
 
-        with self.assertRaisesRegex(
-            ValueError, 'Informe o Ano com 4 algarismos'
-        ):
+        with pytest.raises(ValueError, match='Informe o Ano com 4 algarismos'):
             self.veic.ano = 'aaaa'
 
 

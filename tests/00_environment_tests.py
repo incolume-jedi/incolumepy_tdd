@@ -1,8 +1,9 @@
-import requests
-import pytest
 import sys
-from pathlib import Path
 from http import HTTPStatus
+from pathlib import Path
+
+import pytest
+import requests
 
 """ # TODO: Atividade  : Proceder com as implementações necessárias
 para que passe nos testes

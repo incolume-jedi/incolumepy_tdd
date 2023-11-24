@@ -3,9 +3,7 @@ from pathlib import Path
 from sys import version_info
 
 import pytest
-
 from incolume.py.tdd import genfile
-
 
 collect_ignore = [
     'incolume/py/static_html',

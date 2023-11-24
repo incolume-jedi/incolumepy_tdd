@@ -1,10 +1,8 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
-"""
-# TODO: Atividade  5: implementar Aeronave para que passe nos testes
-"""
+"""# TODO: Atividade  5: implementar Aeronave para que passe nos testes."""
 __author__ = '@britodfbr'
 import unittest
+
 from incolume.py.tdd.veiculos.aeronaves import Aeronave
 
 
@@ -17,15 +15,15 @@ class TestAeronave(unittest.TestCase):
         del self.veic
 
     def test_isInterface(self):
-        self.assertTrue(isinstance(self.veic, Aeronave))
-        self.assertTrue(issubclass(self.cls, Aeronave))
+        assert isinstance(self.veic, Aeronave)
+        assert issubclass(self.cls, Aeronave)
 
     def test_veiculo_interface_atributos(self):
         dir(self.veic)
-        self.assertTrue(hasattr(self.veic, 'modelo'))
-        self.assertTrue(hasattr(self.veic, 'fabricante'))
-        self.assertTrue(hasattr(self.veic, 'velocidade'))
-        self.assertFalse(hasattr(self.veic, 'cor'))
+        assert hasattr(self.veic, 'modelo')
+        assert hasattr(self.veic, 'fabricante')
+        assert hasattr(self.veic, 'velocidade')
+        assert not hasattr(self.veic, 'cor')
 
 
 if __name__ == '__main__':
