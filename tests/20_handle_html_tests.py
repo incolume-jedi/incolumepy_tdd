@@ -20,6 +20,7 @@ OBS: Para proceder com este exercício o ambiente deve ser configurado como desc
 __author__ = '@britodfbr'
 import hashlib
 import os
+import re
 import shutil
 import tempfile
 import time
@@ -77,7 +78,8 @@ class HandleHTMLTest(unittest.TestCase):
             .joinpath('incolume', 'py', 'tdd', 'scraping', 'artefacts', 'atos')
         )
         self.filename = lambda: Path(self.tmp).joinpath(
-            Path(__file__).stem, f'{time.time():.0f}.txt',
+            Path(__file__).stem,
+            f'{time.time():.0f}.txt',
         )
 
     def tearDown(self) -> None:
@@ -93,8 +95,8 @@ class HandleHTMLTest(unittest.TestCase):
         del cls.tmp
 
     def test_packages_variables(self):
-        assert isinstance(output, str | Path)
-        assert isinstance(outputdir, str | Path)
+        assert isinstance(output, (str, Path))
+        assert isinstance(outputdir, (str, Path))
 
     @unittest.skipUnless(has_internet(), reason='Requer Internet')
     def test_resquest_http_response(self):
@@ -110,7 +112,12 @@ class HandleHTMLTest(unittest.TestCase):
 
     def test_gravar(self):
         filename = self.filename()
-        assert gravar.__annotations__ == {'code': (str, bytes), 'filename': str, 'mode': str, 'return': bool}
+        assert gravar.__annotations__ == {
+            'code': (str, bytes),
+            'filename': str,
+            'mode': str,
+            'return': bool,
+        }
         conteudo = 'conteúdo de teste\n'
         assert gravar(conteudo, filename)
         with open(filename) as f:
@@ -194,7 +201,10 @@ class HandleHTMLTest(unittest.TestCase):
         assert os.path.isfile(filein), f'Ops: {filein}'
         fileout = self.filebase.joinpath('L8666.html')
 
-        assert identify_recover.__annotations__ == {'pathfile': str, 'return': str}
+        assert identify_recover.__annotations__ == {
+            'pathfile': str,
+            'return': str,
+        }
         result = identify_recover(filein)
         assert isinstance(result, bytes)
         assert len(result) == 168065

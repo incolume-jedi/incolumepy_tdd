@@ -81,42 +81,90 @@ class MyTestCase(unittest.TestCase):
 
     def setUp(self) -> None:
         self.FakeFactory.credit_card_expire(
-            start='now', end='+10y', date_format='%m/%y',
+            start='now',
+            end='+10y',
+            date_format='%m/%y',
         )
 
     def re_validate(self):
         assert __file__ == re.match('tests')
 
     def test_is_ccredito_amex(self):
-        assert is_ccredito_amex(self.FakeFactory.credit_card_full(card_type='amex')) is True
-        assert not is_ccredito_amex(self.FakeFactory.credit_card_full(card_type='diners'))
-        assert not is_ccredito_amex(self.FakeFactory.credit_card_full(card_type='mastercard'))
-        assert not is_ccredito_amex(self.FakeFactory.credit_card_full(card_type='visa'))
-        assert not is_ccredito_amex('VISA 16 digit \nVinicius Novaes \n4210582570068192 07/28 \nCVC: 846')
+        assert (
+            is_ccredito_amex(
+                self.FakeFactory.credit_card_full(card_type='amex')
+            )
+            is True
+        )
+        assert not is_ccredito_amex(
+            self.FakeFactory.credit_card_full(card_type='diners')
+        )
+        assert not is_ccredito_amex(
+            self.FakeFactory.credit_card_full(card_type='mastercard')
+        )
+        assert not is_ccredito_amex(
+            self.FakeFactory.credit_card_full(card_type='visa')
+        )
+        assert not is_ccredito_amex(
+            'VISA 16 digit \nVinicius Novaes \n4210582570068192 07/28 \nCVC: 846'
+        )
         with pytest.raises(TypeError, match='required string'):
             is_ccredito_amex(4210582570068192)
 
     def test_is_ccredito_diners(self):
-        assert is_ccredito_diners(self.FakeFactory.credit_card_full(card_type='diners')) is True
-        assert not is_ccredito_diners(self.FakeFactory.credit_card_full(card_type='amex'))
-        assert not is_ccredito_diners(self.FakeFactory.credit_card_full(card_type='mastercard'))
-        assert not is_ccredito_diners(self.FakeFactory.credit_card_full(card_type='visa'))
+        assert (
+            is_ccredito_diners(
+                self.FakeFactory.credit_card_full(card_type='diners')
+            )
+            is True
+        )
+        assert not is_ccredito_diners(
+            self.FakeFactory.credit_card_full(card_type='amex')
+        )
+        assert not is_ccredito_diners(
+            self.FakeFactory.credit_card_full(card_type='mastercard')
+        )
+        assert not is_ccredito_diners(
+            self.FakeFactory.credit_card_full(card_type='visa')
+        )
         with pytest.raises(TypeError, match='required string'):
             is_ccredito_amex(4210582570068192)
 
     def test_is_ccredito_master(self):
-        assert is_ccredito_master(self.FakeFactory.credit_card_full(card_type='mastercard')) is True
-        assert not is_ccredito_master(self.FakeFactory.credit_card_full(card_type='amex'))
-        assert not is_ccredito_master(self.FakeFactory.credit_card_full(card_type='diners'))
-        assert not is_ccredito_master(self.FakeFactory.credit_card_full(card_type='visa'))
+        assert (
+            is_ccredito_master(
+                self.FakeFactory.credit_card_full(card_type='mastercard')
+            )
+            is True
+        )
+        assert not is_ccredito_master(
+            self.FakeFactory.credit_card_full(card_type='amex')
+        )
+        assert not is_ccredito_master(
+            self.FakeFactory.credit_card_full(card_type='diners')
+        )
+        assert not is_ccredito_master(
+            self.FakeFactory.credit_card_full(card_type='visa')
+        )
         with pytest.raises(TypeError, match='required string'):
             is_ccredito_amex(4210582570068192)
 
     def test_is_ccredito_visa(self):
-        assert is_ccredito_visa(self.FakeFactory.credit_card_full(card_type='visa')) is True
-        assert not is_ccredito_visa(self.FakeFactory.credit_card_full(card_type='amex'))
-        assert not is_ccredito_visa(self.FakeFactory.credit_card_full(card_type='diners'))
-        assert not is_ccredito_visa(self.FakeFactory.credit_card_full(card_type='mastercard'))
+        assert (
+            is_ccredito_visa(
+                self.FakeFactory.credit_card_full(card_type='visa')
+            )
+            is True
+        )
+        assert not is_ccredito_visa(
+            self.FakeFactory.credit_card_full(card_type='amex')
+        )
+        assert not is_ccredito_visa(
+            self.FakeFactory.credit_card_full(card_type='diners')
+        )
+        assert not is_ccredito_visa(
+            self.FakeFactory.credit_card_full(card_type='mastercard')
+        )
         with pytest.raises(TypeError, match='required string'):
             is_ccredito_amex(375854865070103)
 
@@ -131,13 +179,52 @@ class MyTestCase(unittest.TestCase):
             return ' '.join(result)
 
         for item in range(100):
-            assert is_date(self.FakeFactory.date_this_year().strftime('%d/%m/%Y')) is True
-            assert is_date(self.FakeFactory.date_this_year().strftime('%d.%m.%Y')) is True
-            assert is_date(self.FakeFactory.date_this_century().strftime('%Y-%m-%d')) is True
-            assert is_date(self.FakeFactory.date_this_century().strftime('%Y.%m.%d')) is True
-            assert is_date(self.FakeFactory.date_this_century().strftime('%d de %B de %Y')) is True
-            assert is_date(self.FakeFactory.date_this_century().strftime('%B %d, %Y').title()) is True
-            assert is_date(tile(self.FakeFactory.date_this_century().strftime('%A, %d de %B de %Y.'))) is True
+            assert (
+                is_date(self.FakeFactory.date_this_year().strftime('%d/%m/%Y'))
+                is True
+            )
+            assert (
+                is_date(self.FakeFactory.date_this_year().strftime('%d.%m.%Y'))
+                is True
+            )
+            assert (
+                is_date(
+                    self.FakeFactory.date_this_century().strftime('%Y-%m-%d')
+                )
+                is True
+            )
+            assert (
+                is_date(
+                    self.FakeFactory.date_this_century().strftime('%Y.%m.%d')
+                )
+                is True
+            )
+            assert (
+                is_date(
+                    self.FakeFactory.date_this_century().strftime(
+                        '%d de %B de %Y'
+                    )
+                )
+                is True
+            )
+            assert (
+                is_date(
+                    self.FakeFactory.date_this_century()
+                    .strftime('%B %d, %Y')
+                    .title()
+                )
+                is True
+            )
+            assert (
+                is_date(
+                    tile(
+                        self.FakeFactory.date_this_century().strftime(
+                            '%A, %d de %B de %Y.'
+                        )
+                    )
+                )
+                is True
+            )
         assert not is_date('Januario 26, 2021')
         assert not is_date('Sexta, 30 de Fevereiro de 2008.')
         assert not is_date('Sexto, 03 de Outubro de 2008.')
@@ -159,21 +246,52 @@ class MyTestCase(unittest.TestCase):
     def test_ipv4(self):
         for i in range(100):
             assert True is is_ipv4(self.FakeFactory.ipv4_private())
-            assert True is is_ipv4(self.FakeFactory.ipv4_public(network=False, address_class=None))
-            assert True is is_ipv4(self.FakeFactory.ipv4(network=False, address_class=None, private=None))
-            assert True is is_ipv4(self.FakeFactory.ipv4(network=False, address_class='a', private=None))
-            assert True is is_ipv4(self.FakeFactory.ipv4(network=False, address_class='b', private=None))
-            assert True is is_ipv4(self.FakeFactory.ipv4(network=False, address_class='c', private=None))
-            assert True is is_ipv4(self.FakeFactory.ipv4(network=False, address_class='a', private=True))
-            assert True is is_ipv4(self.FakeFactory.ipv4(network=False, address_class='b', private=True))
-            assert True is is_ipv4(self.FakeFactory.ipv4(network=False, address_class='c', private=True))
+            assert True is is_ipv4(
+                self.FakeFactory.ipv4_public(network=False, address_class=None)
+            )
+            assert True is is_ipv4(
+                self.FakeFactory.ipv4(
+                    network=False, address_class=None, private=None
+                )
+            )
+            assert True is is_ipv4(
+                self.FakeFactory.ipv4(
+                    network=False, address_class='a', private=None
+                )
+            )
+            assert True is is_ipv4(
+                self.FakeFactory.ipv4(
+                    network=False, address_class='b', private=None
+                )
+            )
+            assert True is is_ipv4(
+                self.FakeFactory.ipv4(
+                    network=False, address_class='c', private=None
+                )
+            )
+            assert True is is_ipv4(
+                self.FakeFactory.ipv4(
+                    network=False, address_class='a', private=True
+                )
+            )
+            assert True is is_ipv4(
+                self.FakeFactory.ipv4(
+                    network=False, address_class='b', private=True
+                )
+            )
+            assert True is is_ipv4(
+                self.FakeFactory.ipv4(
+                    network=False, address_class='c', private=True
+                )
+            )
         assert not is_ipv4('256.158.155.13')
         assert not is_ipv4('255.158.155.256')
 
     def test_ipv6(self):
         [
             self.assertEqual(
-                True, is_ipv6(self.FakeFactory.ipv6(network=False)),
+                True,
+                is_ipv6(self.FakeFactory.ipv6(network=False)),
             )
             for _ in range(100)
         ]

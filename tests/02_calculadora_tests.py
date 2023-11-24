@@ -47,7 +47,9 @@ class CalcTest(unittest.TestCase):
             calc.div(-1, 1)
 
     def test_div_raises_msg(self):
-        with pytest.raises(ValueError, match=r'Somente operações com números naturais!'):
+        with pytest.raises(
+            ValueError, match=r'Somente operações com números naturais!'
+        ):
             calc.div(1, 0)
             calc.div(1, -1)
             calc.div(-1, 1)

@@ -23,7 +23,11 @@ class ScrapingHTMLTest(unittest.TestCase):
     def setUp(self) -> None:
         self.path = os.path.join(
             Path(__file__).parent.parent.joinpath(
-                'incolume', 'py', 'static_html', 'google.com', 'index.html',
+                'incolume',
+                'py',
+                'static_html',
+                'google.com',
+                'index.html',
             ),
         )
         self.google_search = GoogleSearch(self.path)
@@ -40,7 +44,9 @@ class ScrapingHTMLTest(unittest.TestCase):
 
     def test_filein_exists(self):
         assert os.path.exists(self.google_search.filein)
-        assert os.path.realpath(self.path) == os.path.realpath(self.google_search.filein)
+        assert os.path.realpath(self.path) == os.path.realpath(
+            self.google_search.filein
+        )
 
     def test_content(self):
         assert self.google_search.content
@@ -55,7 +61,9 @@ class ScrapingHTMLTest(unittest.TestCase):
         assert self.google_search.soup
         assert '_soup' in self.google_search.__dict__
         assert isinstance(self.google_search.soup, BeautifulSoup)
-        assert self.google_search.soup.title.text == 'Google treinamento Incólume'
+        assert (
+            self.google_search.soup.title.text == 'Google treinamento Incólume'
+        )
 
         with pytest.raises(AttributeError, match="can't set attribute"):
             self.google_search.soup = BeautifulSoup('', 'html.parser')
