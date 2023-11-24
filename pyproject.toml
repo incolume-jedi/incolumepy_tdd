@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "incolume.py.tdd"
-version = "2.8.0a1"
+version = "2.8.0a2"
 description = "Python Utilities for trainning"
 authors = ["britodfbr <contato@incolume.com.br>"]
 homepage="https://gitlab.com/development-incolume/treinamentos/incolumepy_tdd"
@@ -264,6 +264,7 @@ commands = poetry run task safety
 [tool.taskipy.variables]
 path = "incolumepy/ tests/"
 CHANGELOGFILE = "CHANGELOG.md"
+VERSIONFILE = "incolume/py/tdd/version.txt"
 URLCOMPARE = "https://github.com/incolume-jedi/incolumepy_tdd/compare"
 
 [tool.taskipy.tasks]
@@ -293,7 +294,7 @@ patch={cmd='v=$(poetry version patch) && poetry run task tests && git ci -m "$v"
 post_patch={help='Run securety tools', cmd="poetry run task bandit && poetry run task safety"}
 premajor={cmd='v=$(poetry version premajor) && poetry run task tests && git ci -m "$v" pyproject.toml $(find incolume* -name version.txt)', help='poetry version premajor'}
 preminor={cmd='v=$(poetry version preminor) && poetry run task tests && git ci -m "$v" pyproject.toml $(find incolume* -name version.txt)', help='poetry version preminor'}
-prerelease={cmd='v=$(poetry version prerelease) && poetry run task tests && git ci -m "$v" pyproject.toml $(find incolume* -name version.txt)', help='poetry version prerelease'}
+prerelease={cmd='v=$(poetry version prerelease) && poetry version -s > VERSIONFILE && git ci -m "$v" pyproject.toml $(find incolume* -name version.txt)', help='poetry version prerelease', use_vars=true}
 safety={help='Check safety of packages into project.', cmd='poetry run safety check'}
 pre_sec={help='Securance validations', cmd='poetry run task bandit && poetry run task safety'}
 sec={help="Checking environment's safety", cmd=''}
