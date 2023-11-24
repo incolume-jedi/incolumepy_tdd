@@ -10,13 +10,23 @@ This file was automatically generated for [incolumepy.utils](https://gitlab.com/
 ---
 
 
-## [Unreleased]	 &#8212; 	2023-11-22:
-### Deprecated
-  - Python 3.8;
+## [Unreleased]	 &#8212; 	2023-11-24:
+### Added
   - Prospecção Python 3.11;
   - Prospecção Python 3.12;
-  - Atualização documentação;
+### Changed
+  - Atualizado a documentação;
   - Gerenciamento de changelog com incolumepy.utils;
+  - Configuração do tox incorporada ao pyproject.toml;
+  - Namespace atualizado para incolume.py.tdd;
+### Deprecated
+  - Python 3.8;
+### Fixed
+  - Tornado permanente o diretório do plugin em incolume/py/geckodrivers e respectiva configuração gitignore;
+### Removed
+  - Pacote **bumpversion** e respectiva configuração;
+  - Pacote **pipenv** e respectivas configurações;
+  - Removido **suporte a Python 3.7** tornado obsoleto em 27-06-2023;
 
 ## [2.7.0]	 &#8212; 	2023-11-22:
 ### Added
