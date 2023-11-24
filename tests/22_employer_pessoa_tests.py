@@ -11,6 +11,7 @@ import unittest
 from datetime import datetime
 
 import pytest
+import re
 from faker import Faker
 from incolume.py.tdd.employers import Employee, Pessoa
 
@@ -33,7 +34,8 @@ class MyTestCase(unittest.TestCase):
             pessoa = Pessoa(
                 nome,
                 self.fake.date(
-                    pattern='%d/%m/%Y', end_datetime=datetime(2003, 1, 1),
+                    pattern='%d/%m/%Y',
+                    end_datetime=datetime(2003, 1, 1),
                 ),
             )
             assert nome == pessoa.fullname
@@ -51,7 +53,8 @@ class MyTestCase(unittest.TestCase):
             pessoa = Employee(
                 nome,
                 self.fake.date(
-                    pattern='%d/%m/%Y', end_datetime=datetime(2003, 1, 1),
+                    pattern='%d/%m/%Y',
+                    end_datetime=datetime(2003, 1, 1),
                 ),
                 self.fake.random_int(min=900, max=9999, step=1),
             )
@@ -71,7 +74,8 @@ class MyTestCase(unittest.TestCase):
 
         with pytest.raises(Exception):
             dic = Employee(
-                self.fake.name(), datetime.today().strftime('%d/%m/%Y'),
+                self.fake.name(),
+                datetime.today().strftime('%d/%m/%Y'),
             ).to_dict()
 
 

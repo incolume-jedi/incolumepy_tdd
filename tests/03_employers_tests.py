@@ -144,7 +144,9 @@ class EmployersTests(TestCase):
                 datetime.today() + dt.timedelta(weeks=53)
             ).strftime('%d/%m/%Y')
 
-        with pytest.raises(ValueError, match='Data de Nascimento inferior a permitida'):
+        with pytest.raises(
+            ValueError, match='Data de Nascimento inferior a permitida'
+        ):
             self.emp3.born = (
                 datetime.today() + dt.timedelta(days=352)
             ).strftime('%d/%m/%Y')

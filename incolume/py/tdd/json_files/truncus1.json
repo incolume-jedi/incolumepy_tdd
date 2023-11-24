@@ -1,0 +1,132 @@
+[
+    {
+        "estado":"Acre",
+        "sigla":"AC",
+        "capital":"Rio Branco"
+    },
+    {
+        "estado":"Alagoas",
+        "sigla":"AL",
+        "capital":"Macei\u00f3"
+    },
+    {
+        "estado":"Amap\u00e1",
+        "sigla":"AP",
+        "capital":"Macap\u00e1"
+    },
+    {
+        "estado":"Amazonas",
+        "sigla":"AM",
+        "capital":"Manaus"
+    },
+    {
+        "estado":"Bahia",
+        "sigla":"BA",
+        "capital":"Salvador"
+    },
+    {
+        "estado":"Cear\u00e1",
+        "sigla":"CE",
+        "capital":"Fortaleza"
+    },
+    {
+        "estado":"Esp\u00edrito Santo",
+        "sigla":"ES",
+        "capital":"Vit\u00f3ria"
+    },
+    {
+        "estado":"Goi\u00e1s",
+        "sigla":"GO",
+        "capital":"Goi\u00e2nia"
+    },
+    {
+        "estado":"Maranh\u00e3o",
+        "sigla":"MA",
+        "capital":"S\u00e3o Lu\u00eds"
+    },
+    {
+        "estado":"Mato Grosso",
+        "sigla":"MT",
+        "capital":"Cuiab\u00e1"
+    },
+    {
+        "estado":"Mato Grosso do Sul",
+        "sigla":"MS",
+        "capital":"Campo Grande"
+    },
+    {
+        "estado":"Minas Gerais",
+        "sigla":"MG",
+        "capital":"Belo Horizonte"
+    },
+    {
+        "estado":"Par\u00e1",
+        "sigla":"PA",
+        "capital":"Bel\u00e9m"
+    },
+    {
+        "estado":"Para\u00edba",
+        "sigla":"PB",
+        "capital":"Jo\u00e3o Pessoa"
+    },
+    {
+        "estado":"Paran\u00e1",
+        "sigla":"PR",
+        "capital":"Curitiba"
+    },
+    {
+        "estado":"Pernambuco",
+        "sigla":"PE",
+        "capital":"Recife"
+    },
+    {
+        "estado":"Piau\u00ed",
+        "sigla":"PI",
+        "capital":"Teresina"
+    },
+    {
+        "estado":"Rio de Janeiro",
+        "sigla":"RJ",
+        "capital":"Rio de Janeiro"
+    },
+    {
+        "estado":"Rio Grande do Norte",
+        "sigla":"RN",
+        "capital":"Natal"
+    },
+    {
+        "estado":"Rio Grande do Sul",
+        "sigla":"RS",
+        "capital":"Porto Alegre"
+    },
+    {
+        "estado":"Rond\u00f4nia",
+        "sigla":"RO",
+        "capital":"Porto Velho"
+    },
+    {
+        "estado":"Roraima",
+        "sigla":"RR",
+        "capital":"Boa Vista"
+    },
+    {
+        "estado":"Santa Catarina",
+        "sigla":"SC",
+        "capital":"Florian\u00f3polis"
+    },
+    {
+        "estado":"S\u00e3o Paulo",
+        "sigla":"SP",
+        "capital":"S\u00e3o Paulo"
+    },
+    {
+        "estado":"Sergipe",
+        "sigla":"SE",
+        "capital":"Aracaju"
+    },
+    {
+        "estado":"Tocantins",
+        "sigla":"TO",
+        "capital":"Palmas"
+    }
+]

@@ -27,7 +27,9 @@ class MyTestCase(unittest.TestCase):
     def test_length_min(self):
         for i in range(100):
             assert len(senhas()) == 6
-        with pytest.raises(ValueError, match='Tamanho mínimo aceito: 6 caracteres'):
+        with pytest.raises(
+            ValueError, match='Tamanho mínimo aceito: 6 caracteres'
+        ):
             senhas(4)
 
     def test_alphanumeric(self):

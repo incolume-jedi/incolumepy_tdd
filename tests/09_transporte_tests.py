@@ -19,7 +19,10 @@ class TransporteTest(TestCase):
         assert self.cls.__metaclass__ == ABCMeta
 
     def test_instancia(self):
-        with pytest.raises(TypeError, match=rf".*Can't instantiate abstract class {self.cls.__name__} with abstract method.*"):
+        with pytest.raises(
+            TypeError,
+            match=rf".*Can't instantiate abstract class {self.cls.__name__} with abstract method.*",
+        ):
             self.cls()
 
     def test_tipo_transporte(self):
