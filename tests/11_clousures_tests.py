@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 """# TODO: Atividade  11: implementar multiple* para que passe nos testes."""
 __author__ = '@britodfbr'
 import unittest

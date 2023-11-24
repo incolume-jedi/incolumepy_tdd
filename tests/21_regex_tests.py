@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 """# TODO: Atividade  21: Proceder com as implementações necessárias para
 que passe nos testes.
 

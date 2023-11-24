@@ -1,5 +1,5 @@
-#!/usr/bin/env python
-"""# TODO: Atividade  20: Proceder com as implementações necessárias para que passe nos testes.
+"""# TODO: Atividade  20: HTML
+Proceder com as implementações necessárias para que passe nos testes.
 
 Utilize o pacote requests para acessar a lei 8666/1993 no webcache do projeto
 referente a 2019, disponível em
@@ -14,8 +14,9 @@ classes presidente, ministro, data e dou.
 arquivo final com todas as alterações deverá estar em
 "incolume/tdd/scraping/artefacts/atos/L8666.html".
 
-OBS: Para proceder com este exercício o ambiente deve ser configurado como descrito em
-00_environment_tests.py; o http.server deve permanecer ativo para realizar este exercício.
+OBS: Para proceder com este exercício o ambiente deve ser configurado
+como descrito em 00_environment_tests.py; o http.server deve permanecer
+ativo para realizar este exercício.
 """
 __author__ = '@britodfbr'
 import hashlib

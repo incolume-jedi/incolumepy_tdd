@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 """# TODO: Atividade  7: implementar Bicicleta para que passe nos testes."""
 __author__ = '@britodfbr'
 import unittest

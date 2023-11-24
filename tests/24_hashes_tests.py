@@ -1,5 +1,5 @@
-#!/usr/bin/env python
-"""# TODO: Atividade  24: Proceder com as implementações necessárias para que passe nos testes."""
+"""# TODO: Atividade  24: Hash
+Proceder com as implementações necessárias para que passe nos testes."""
 __author__ = '@britodfbr'
 import os
 import unittest

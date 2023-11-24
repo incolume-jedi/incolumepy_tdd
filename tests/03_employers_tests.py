@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 """# TODO: Atividade  3: implementar Employee para que passe nos testes."""
 __author__ = '@britodfbr'
 import datetime as dt

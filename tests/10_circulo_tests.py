@@ -1,5 +1,5 @@
-#!/usr/bin/env python
-"""# TODO: Atividade  10: implementar circulo_area para que passe nos testes."""
+"""# TODO: Atividade  10: Geometria.
+implementar circulo_area para que passe nos testes."""
 __author__ = '@britodfbr'
 from unittest import TestCase
 

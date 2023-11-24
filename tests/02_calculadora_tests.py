@@ -1,5 +1,6 @@
 #!/usr/bin/env python
-"""# TODO: Atividade  2: implementar calculadora (calc) para que passe nos testes."""
+"""# TODO: Atividade  2: Calculadora.
+implementar calculadora (calc) para que passe nos testes."""
 __author__ = '@britodfbr'
 import unittest
 

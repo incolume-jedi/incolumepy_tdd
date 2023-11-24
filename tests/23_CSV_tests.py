@@ -1,12 +1,14 @@
-#!/usr/bin/env python
-"""# TODO: Atividade  23: Proceder com as implementações necessárias para que passe nos testes.
+"""# TODO: Atividade  23: CSV.
+Proceder com as implementações necessárias para que passe nos testes.
 
 1 - Criar uma nova classe que herda de incolume.py.tdd.employers.Employee:
-EmployeeCorp[Employee](fullname, born, address, fone, estado, cidade, login, email, login)
+EmployeeCorp[Employee](fullname, born, address, fone, estado, cidade,
+login, email, login)
 
-2 - Construir um programa que carregue instancias de EmployeeCorp contendo, todas as informações de todos
- os funcionários a partir de um arquivo CSV, Defina o domínio como "tabajara.com.br" e
-  grave as informações produzidas em um arquivo XLSX.
+2 - Construir um programa que carregue instancias de EmployeeCorp contendo,
+todas as informações de todos  os funcionários a partir de um arquivo CSV,
+Defina o domínio como "tabajara.com.br" e grave as informações produzidas
+em um arquivo XLSX.
 """
 __author__ = '@britodfbr'
 import csv

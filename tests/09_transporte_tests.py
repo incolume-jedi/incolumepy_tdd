@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 """# TODO: Atividade 9: implementar Transporte para que passe nos testes."""
 __author__ = '@britodfbr'
 from unittest import TestCase, main

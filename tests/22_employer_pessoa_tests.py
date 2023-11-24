@@ -1,5 +1,5 @@
-#!/usr/bin/env python
-"""# TODO: Atividade  22: Proceder com as implementações necessárias para que passe nos testes.
+"""# TODO: Atividade  22: Classe.
+Proceder com as implementações necessárias para que passe nos testes.
 
 Fatorar incolume.py.tdd.employers em 2 classes:
 Pessoa(fullname, born, email, address, fone, cidade, estado)

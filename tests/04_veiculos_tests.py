@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 """# TODO: Atividade  4: implementar Veiculo para que passe nos testes."""
 __author__ = '@britodfbr'
 import unittest

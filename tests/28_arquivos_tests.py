@@ -1,6 +1,5 @@
-#!/usr/bin/env python
-"""# TODO: Atividade  28: Proceder com as implementações necessárias
-para que passe nos testes.
+"""# TODO: Atividade  28: Arquivos.
+Proceder com as implementações necessárias para que passe nos testes.
 """
 __author__ = '@britodfbr'
 import mimetypes
@@ -179,7 +178,8 @@ class MyXLSXFiles(unittest.TestCase):
         mime = magic.Magic(mime=True)
         assert (
             mime.from_file(self.fout)
-            == 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+            == 'application/vnd.openxmlformats-officedocument'
+               '.spreadsheetml.sheet'
         )
 
     def test_mimetype(self):
