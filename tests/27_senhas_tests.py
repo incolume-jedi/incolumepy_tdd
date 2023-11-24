@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 """
 # TODO: Atividade  27: Proceder com as implementações necessárias para que passe nos testes
-
 """
 __author__ = '@britodfbr'
 import unittest
@@ -20,8 +19,9 @@ class MyTestCase(unittest.TestCase):
     - ser formada por caracteres alphanumericos;
 
     """
+
     def setUp(self) -> None:
-        self.regex = r"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[^\W_]{6,}$"
+        self.regex = r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[^\W_]{6,}$'
 
     def test_senha_validation(self):
         self.assertTrue(re.match(self.regex, senhas()))
@@ -29,7 +29,9 @@ class MyTestCase(unittest.TestCase):
     def test_length_min(self):
         for i in range(100):
             self.assertEqual(len(senhas()), 6)
-        with self.assertRaisesRegex(ValueError, "Tamanho mínimo aceito: 6 caracteres"):
+        with self.assertRaisesRegex(
+            ValueError, 'Tamanho mínimo aceito: 6 caracteres'
+        ):
             senhas(4)
 
     def test_alphanumeric(self):

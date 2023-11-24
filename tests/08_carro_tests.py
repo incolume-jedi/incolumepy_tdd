@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 """
 # TODO: Atividade  8: implementar Carro para que passe nos testes
-
 """
 __author__ = '@britodfbr'
 import unittest

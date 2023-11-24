@@ -18,8 +18,8 @@ from datetime import datetime
 class MyTestCase(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
-        cls.fake = Faker("pt_BR")
-        locale.setlocale(locale.LC_ALL, "pt_BR.UTF-8")
+        cls.fake = Faker('pt_BR')
+        locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
 
     def setUp(self) -> None:
         pass
@@ -29,8 +29,13 @@ class MyTestCase(unittest.TestCase):
 
     def test_pessoa_nome(self):
         for i in range(1000):
-            nome = F"{self.fake.first_name()} {self.fake.last_name()} {self.fake.last_name()}"
-            pessoa = Pessoa(nome, self.fake.date(pattern="%d/%m/%Y", end_datetime=datetime(2003, 1, 1)))
+            nome = f'{self.fake.first_name()} {self.fake.last_name()} {self.fake.last_name()}'
+            pessoa = Pessoa(
+                nome,
+                self.fake.date(
+                    pattern='%d/%m/%Y', end_datetime=datetime(2003, 1, 1)
+                ),
+            )
             self.assertEqual(nome, pessoa.fullname)
             self.assertEqual(nome.split()[0], pessoa.firstname)
             self.assertEqual(nome.split()[-1], pessoa.lastname)
@@ -42,11 +47,13 @@ class MyTestCase(unittest.TestCase):
 
     def test_employer_nome(self):
         for i in range(1000):
-            nome = F"{self.fake.first_name()} {self.fake.last_name()} {self.fake.last_name()}"
+            nome = f'{self.fake.first_name()} {self.fake.last_name()} {self.fake.last_name()}'
             pessoa = Employee(
                 nome,
-                self.fake.date(pattern="%d/%m/%Y", end_datetime=datetime(2003, 1, 1)),
-                self.fake.random_int(min=900, max=9999, step=1)
+                self.fake.date(
+                    pattern='%d/%m/%Y', end_datetime=datetime(2003, 1, 1)
+                ),
+                self.fake.random_int(min=900, max=9999, step=1),
             )
             pessoa.domain = 'test.incolume.com.br'
             self.assertEqual(nome, pessoa.fullname)
@@ -63,7 +70,9 @@ class MyTestCase(unittest.TestCase):
             self.assertRegex(pessoa.email, r'[\w.-]+@[a-z.]+')
 
         with self.assertRaises(Exception):
-            dic = Employee(self.fake.name(), datetime.today().strftime("%d/%m/%Y")).to_dict()
+            dic = Employee(
+                self.fake.name(), datetime.today().strftime('%d/%m/%Y')
+            ).to_dict()
 
 
 if __name__ == '__main__':

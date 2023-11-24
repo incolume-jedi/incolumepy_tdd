@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 """
 # TODO: Atividade  15: Fatorar Romanos para que passe nos testes
-
 """
 __author__ = '@britodfbr'
 import unittest
@@ -51,14 +50,16 @@ class TestRomanos(unittest.TestCase):
         self.assertEqual(self.num.calc_roman(1978), 'MCMLXXVIII')
 
     def test_arabic_exceptions(self):
-        with self.assertRaisesRegex(ValueError, "O argumento deve ser inteiro maior que zero."):
+        with self.assertRaisesRegex(
+            ValueError, 'O argumento deve ser inteiro maior que zero.'
+        ):
             self.num.calc_roman(0)
 
-        with self.assertRaisesRegex(TypeError, "Esperado inteiro, obtido"):
-            self.num.calc_roman("s")
+        with self.assertRaisesRegex(TypeError, 'Esperado inteiro, obtido'):
+            self.num.calc_roman('s')
             self.num.calc_roman(1.1)
             self.num.calc_roman(True)
-            self.num.calc_roman("-1+0j")
+            self.num.calc_roman('-1+0j')
 
 
 if __name__ == '__main__':

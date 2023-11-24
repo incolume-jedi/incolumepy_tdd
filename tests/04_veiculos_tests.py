@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 """
 # TODO: Atividade  4: implementar Veiculo para que passe nos testes
-
 """
 __author__ = '@britodfbr'
 import unittest
@@ -52,7 +51,9 @@ class VeiculoTests(unittest.TestCase):
             self.veic.tipo = 'espaciale'
             self.veic.tipo = 'Aerio'
 
-        with self.assertRaisesRegex(AssertionError, "Categoria não disponível"):
+        with self.assertRaisesRegex(
+            AssertionError, 'Categoria não disponível'
+        ):
             self.veic.tipo = 'espaciale'
             self.veic.tipo = 'Aerio'
 
@@ -66,7 +67,9 @@ class VeiculoTests(unittest.TestCase):
         self.assertTrue(isinstance(self.veic.ano, datetime))
         self.assertEqual(self.veic.getAno(), '2018')
 
-        with self.assertRaisesRegex(ValueError, "Informe o Ano com 4 algarismos"):
+        with self.assertRaisesRegex(
+            ValueError, 'Informe o Ano com 4 algarismos'
+        ):
             self.veic.ano = 'aaaa'
 
 

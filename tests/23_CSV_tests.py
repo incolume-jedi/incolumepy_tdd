@@ -22,44 +22,72 @@ from faker import Faker
 from tempfile import NamedTemporaryFile
 from datetime import datetime
 from incolume.py.tdd import employers
-from incolume.py.tdd.utils.read_employers_csv import EmployeerCorp, load_employers, dump_employers_xlsx
+from incolume.py.tdd.utils.read_employers_csv import (
+    EmployeerCorp,
+    load_employers,
+    dump_employers_xlsx,
+)
 
 
 class MyTestCase(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
-        cls.fake = Faker("pt_BR")
+        cls.fake = Faker('pt_BR')
         cls.fout = NamedTemporaryFile(delete=False, suffix='.csv', mode='wt')
         cls.csvfile = cls.fout.name
         cls.xlsxfile = Path(cls.csvfile).with_suffix('.xlsx')
-        headers = ["nome", "born", "salario", "telefone", "cep", "address", "bairro", "cidade", "estado"]
+        headers = [
+            'nome',
+            'born',
+            'salario',
+            'telefone',
+            'cep',
+            'address',
+            'bairro',
+            'cidade',
+            'estado',
+        ]
         writer = csv.DictWriter(cls.fout, fieldnames=headers)
         writer.writeheader()
         user = namedtuple('funcionario', '')
         for e in range(1000):
-            user.fullname = f"{cls.fake.first_name()} {cls.fake.last_name()} {cls.fake.last_name()}"
-            user.born = cls.fake.date(pattern="%d/%m/%Y", end_datetime=datetime(2003, 1, 1))
+            user.fullname = f'{cls.fake.first_name()} {cls.fake.last_name()} {cls.fake.last_name()}'
+            user.born = cls.fake.date(
+                pattern='%d/%m/%Y', end_datetime=datetime(2003, 1, 1)
+            )
             user.salario = cls.fake.random_int(min=900, max=9999, step=1)
-            user.domain = "exemplo.incolume.com.br"
+            user.domain = 'exemplo.incolume.com.br'
             # user.fone = cls.fake.phone_number()
-            user.fone = "+55 61 9{}{}-{}{}".format(randint(70, 99), randint(70, 99), randint(70, 99), randint(11, 99))
-            user.address, user.bairro, value = re.split(r'\n', cls.fake.address())
+            user.fone = '+55 61 9{}{}-{}{}'.format(
+                randint(70, 99),
+                randint(70, 99),
+                randint(70, 99),
+                randint(11, 99),
+            )
+            user.address, user.bairro, value = re.split(
+                r'\n', cls.fake.address()
+            )
             # user.estado = re.split(r' |/', value)[-1]
             user.estado = 'Distrito Federal'
             # user.cep = re.split(r' |/', value)[0]
-            user.cep = "72.{}-{}".format(randint(100, 999), randint(100, 999))
+            user.cep = '72.{}-{}'.format(randint(100, 999), randint(100, 999))
             # user.cidade = ''.join(re.split(r' |/', value)[1:-1])
             user.cidade = 'Brasília'
             d = {
                 k: v
-                for k, v
-                in zip(
+                for k, v in zip(
                     headers,
                     [
-                        user.fullname, user.born,
-                        user.salario, user.fone, user.cep, user.bairro, user.address,
-                        user.cidade, user.estado
-                    ]
+                        user.fullname,
+                        user.born,
+                        user.salario,
+                        user.fone,
+                        user.cep,
+                        user.bairro,
+                        user.address,
+                        user.cidade,
+                        user.estado,
+                    ],
                 )
             }
             print(d)
@@ -73,7 +101,9 @@ class MyTestCase(unittest.TestCase):
         self.assertTrue(issubclass(EmployeerCorp, employers.Pessoa))
 
     def test_load_employers_assign(self):
-        self.assertEqual(load_employers.__annotations__, {'csvfile': (str, Path)})
+        self.assertEqual(
+            load_employers.__annotations__, {'csvfile': (str, Path)}
+        )
 
     def test_load_employers_on_dict(self):
         loadeds = load_employers(self.csvfile)
@@ -92,14 +122,21 @@ class MyTestCase(unittest.TestCase):
             self.assertIn(loadeds[0].fullname.lower(), record.lower())
 
     def test_dump_employers_xlsx_assing(self):
-        self.assertEqual(dump_employers_xlsx.__annotations__, {'emps': list, 'xlsxfile': (str, Path)})
+        self.assertEqual(
+            dump_employers_xlsx.__annotations__,
+            {'emps': list, 'xlsxfile': (str, Path)},
+        )
 
     def test_dump_employers_xlsx_created(self):
-        dump_employers_xlsx(load_employers(self.csvfile).values(), self.xlsxfile)
+        dump_employers_xlsx(
+            load_employers(self.csvfile).values(), self.xlsxfile
+        )
         self.assertTrue(Path(self.xlsxfile).is_file())
 
     def test_dump_employers_xlsx_fields(self):
-        dump_employers_xlsx(load_employers(self.csvfile).values(), self.xlsxfile)
+        dump_employers_xlsx(
+            load_employers(self.csvfile).values(), self.xlsxfile
+        )
         df0 = pd.read_csv(self.csvfile)
         df1 = pd.read_excel(self.xlsxfile, engine='openpyxl')
         self.assertEqual(df0.shape[0], df1.shape[0])
@@ -116,7 +153,9 @@ class MyTestCase(unittest.TestCase):
         self.assertIn('estado', list(df1.columns))
 
     def test_dump_employers_xlsx_content(self):
-        dump_employers_xlsx(load_employers(self.csvfile).values(), self.xlsxfile)
+        dump_employers_xlsx(
+            load_employers(self.csvfile).values(), self.xlsxfile
+        )
         df0 = pd.read_csv(self.csvfile)
         df1 = pd.read_excel(self.xlsxfile, engine='openpyxl')
         # print(df0.born, df1.born)

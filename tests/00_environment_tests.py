@@ -25,6 +25,7 @@ Instruções:
     3. Altere suas permisões para somente leitura
 """
 
+
 class TestMicroWebServer:
     """Test micro webserver ativate."""
 
@@ -66,19 +67,26 @@ class TestPluginGeckoDriver:
     @pytest.fixture()
     def driver_dir(self) -> Path:
         """Driver directory."""
-        return Path(__file__).parents[1].joinpath(
-            'incolume','py', 'tdd', 'geckodrivers')
+        return (
+            Path(__file__)
+            .parents[1]
+            .joinpath('incolume', 'py', 'tdd', 'geckodrivers')
+        )
 
     @pytest.mark.skipif(
-        sys.platform.startswith('win'), reason='Not available on windows.',)
+        sys.platform.startswith('win'),
+        reason='Not available on windows.',
+    )
     def test_has_plugin_unix_like(self, driver_dir) -> None:
         """Test if has plugin geckocriver."""
         driver = driver_dir / 'geckodriver'
-        assert driver.is_file(), f"Driver indisponível: \"{driver}\""
+        assert driver.is_file(), f'Driver indisponível: "{driver}"'
 
     @pytest.mark.skipif(
-        not sys.platform.startswith('win'), reason='Available only Windows.',)
+        not sys.platform.startswith('win'),
+        reason='Available only Windows.',
+    )
     def test_has_plugin_win_like(self, driver_dir) -> None:
         """Test if has plugin geckocriver."""
         driver = driver_dir / 'geckodriver.exe'
-        assert driver.is_file(), f"Driver indisponível: \"{driver}\""
+        assert driver.is_file(), f'Driver indisponível: "{driver}"'

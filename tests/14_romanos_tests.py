@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 """
 # TODO: Atividade  14: Fatorar Romanos para que passe nos testes
-
 """
 __author__ = '@britodfbr'
 import unittest
@@ -70,7 +69,9 @@ class TestRomanos(unittest.TestCase):
         self.assertEqual(self.num.MDCDLXXVIII, 1978)
 
     def test_romanos_exceptions(self):
-        with self.assertRaisesRegex(ValueError, "Não pertencem aos numerais romanos"):
+        with self.assertRaisesRegex(
+            ValueError, 'Não pertencem aos numerais romanos'
+        ):
             self.num.s
             self.num.G
             self.num.yH

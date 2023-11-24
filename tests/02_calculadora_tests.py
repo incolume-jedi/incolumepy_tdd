@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 """
 # TODO: Atividade  2: implementar calculadora (calc) para que passe nos testes
-
 """
 __author__ = '@britodfbr'
 import unittest
@@ -11,6 +10,7 @@ from incolume.py.tdd import calc
 
 class CalcTest(unittest.TestCase):
     """verifica os valores de resultado"""
+
     def test_soma(self):
         self.assertEqual(calc.soma(2, 2), 4)
         self.assertEqual(calc.soma(2, -2), 0)
@@ -48,7 +48,9 @@ class CalcTest(unittest.TestCase):
             calc.div(-1, 1)
 
     def test_div_raises_msg(self):
-        with self.assertRaisesRegex(ValueError, r"Somente operações com números naturais!"):
+        with self.assertRaisesRegex(
+            ValueError, r'Somente operações com números naturais!'
+        ):
             calc.div(1, 0)
             calc.div(1, -1)
             calc.div(-1, 1)

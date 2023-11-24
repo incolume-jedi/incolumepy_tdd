@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 """
 # TODO: Atividade  3: implementar Employee para que passe nos testes
-
 """
 __author__ = '@britodfbr'
 from unittest import TestCase, main
@@ -12,7 +11,6 @@ from incolume.py.tdd.employers import Employee
 
 
 class EmployersTests(TestCase):
-
     @classmethod
     def setUpClass(cls):
         ...
@@ -110,13 +108,13 @@ class EmployersTests(TestCase):
         self.emp2.aumento_salario(8)
         self.emp3.aumento_salario(10)
 
-        self.assertEqual(960*1.05, self.emp1.salario)
-        self.assertEqual(1000*1.08, self.emp2.salario)
-        self.assertEqual(1000*1.10, self.emp3.salario)
+        self.assertEqual(960 * 1.05, self.emp1.salario)
+        self.assertEqual(1000 * 1.08, self.emp2.salario)
+        self.assertEqual(1000 * 1.10, self.emp3.salario)
 
     def test_aumento_salario_float(self):
-        self.emp3.aumento_salario(.1)
-        self.assertEqual(1000*1.10, self.emp3.salario)
+        self.emp3.aumento_salario(0.1)
+        self.assertEqual(1000 * 1.10, self.emp3.salario)
 
     def test_date_born(self):
         # assert isinstance(self.emp1.born, datetime), "Objeto não é instancia de datetime.datetime"
@@ -131,15 +129,31 @@ class EmployersTests(TestCase):
     def test_date_born_Raiser(self):
         with self.assertRaises(ValueError):
             self.emp3.born = datetime.today().strftime('%d/%m/%Y')
-            self.emp3.born = (datetime.today() + dt.timedelta(days=1)).strftime('%d/%m/%Y')
-            self.emp3.born = (datetime.today() + dt.timedelta(weeks=1)).strftime('%d/%m/%Y')
-            self.emp3.born = (datetime.today() + dt.timedelta(weeks=5)).strftime('%d/%m/%Y')
-            self.emp3.born = (datetime.today() + dt.timedelta(weeks=15)).strftime('%d/%m/%Y')
-            self.emp3.born = (datetime.today() + dt.timedelta(weeks=53)).strftime('%d/%m/%Y')
+            self.emp3.born = (
+                datetime.today() + dt.timedelta(days=1)
+            ).strftime('%d/%m/%Y')
+            self.emp3.born = (
+                datetime.today() + dt.timedelta(weeks=1)
+            ).strftime('%d/%m/%Y')
+            self.emp3.born = (
+                datetime.today() + dt.timedelta(weeks=5)
+            ).strftime('%d/%m/%Y')
+            self.emp3.born = (
+                datetime.today() + dt.timedelta(weeks=15)
+            ).strftime('%d/%m/%Y')
+            self.emp3.born = (
+                datetime.today() + dt.timedelta(weeks=53)
+            ).strftime('%d/%m/%Y')
 
-        with self.assertRaisesRegex(ValueError, "Data de Nascimento inferior a permitida"):
-            self.emp3.born = (datetime.today() + dt.timedelta(days=352)).strftime('%d/%m/%Y')
-            self.emp3.born = (datetime.today() + dt.timedelta(days=5475)).strftime('%d/%m/%Y')
+        with self.assertRaisesRegex(
+            ValueError, 'Data de Nascimento inferior a permitida'
+        ):
+            self.emp3.born = (
+                datetime.today() + dt.timedelta(days=352)
+            ).strftime('%d/%m/%Y')
+            self.emp3.born = (
+                datetime.today() + dt.timedelta(days=5475)
+            ).strftime('%d/%m/%Y')
 
 
 if __name__ == '__main__':
