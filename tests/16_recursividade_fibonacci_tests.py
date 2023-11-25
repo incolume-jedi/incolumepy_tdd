@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 """# TODO: Atividade  16: implementar fibonacci para que passe nos testes."""
 __author__ = '@britodfbr'
 import unittest
@@ -55,7 +54,9 @@ class RecursividadeTest(unittest.TestCase):
         assert fibonacci(10) == 55
 
     def test_values_1(self):
-        assert [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55] == [fibonacci(x) for x in range(11)]
+        assert [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55] == [
+            fibonacci(x) for x in range(11)
+        ]
 
 
 if __name__ == '__main__':

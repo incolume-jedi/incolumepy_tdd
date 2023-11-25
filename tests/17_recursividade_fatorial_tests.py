@@ -1,6 +1,7 @@
-#!/usr/bin/env python
 """# TODO: Atividade  17: implementar fatorial para que passe nos testes."""
 __author__ = '@britodfbr'
+
+import re
 import unittest
 from types import FunctionType
 from unittest import mock
@@ -27,11 +28,14 @@ class RecursividadeTest(unittest.TestCase):
         assert fatorial(10) == 3628800
 
     def test_values_1(self):
-        assert [1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800] == [fatorial(x) for x in range(11)]
+        assert [1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800] == [
+            fatorial(x) for x in range(11)
+        ]
 
     def test_fuction_called(self):
         with mock.patch(
-            'incolume.py.tdd.sequences.fatorial.fatorial', autospec=True,
+            'incolume.py.tdd.sequences.fatorial.fatorial',
+            autospec=True,
         ) as mock_fact:
             # mock_fact.__rmul__ = lambda x: fatorial(x)
             entrada = 99

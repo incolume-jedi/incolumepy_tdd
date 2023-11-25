@@ -1,8 +1,9 @@
-#!/usr/bin/env python
-"""# TODO: Atividade  19: Proceder com as implementações necessárias para que passe nos testes.
+"""# TODO: Atividade  19: Selenium
 
-OBS: Para proceder com este exercício o ambiente deve ser configurado como descrito em
-00_environment_tests.py
+Proceder com as implementações necessárias para que passe nos testes.
+
+OBS: Para proceder com este exercício o ambiente deve ser configurado
+como descrito em 00_environment_tests.py
 
 o http.server deve permanecer ativo para realizar este exercício.
 """
@@ -20,7 +21,11 @@ __author__ = '@britodfbr'
 class NavegableSeleniumTest(unittest.TestCase):
     def setUp(self) -> None:
         self.sitepy = Path(__file__).parent.parent.joinpath(
-            'incolume', 'py', 'static_html', 'www.python.org', 'index.html',
+            'incolume',
+            'py',
+            'static_html',
+            'www.python.org',
+            'index.html',
         )
         self.atualdir = os.getcwd()
         self.serverdir = os.path.dirname(self.sitepy)
@@ -47,7 +52,10 @@ class NavegableSeleniumTest(unittest.TestCase):
 
     def test_ifdrivers(self):
         localbase = Path(__file__).parent.parent.joinpath(
-            'incolume', 'py', 'tdd', 'geckodrivers',
+            'incolume',
+            'py',
+            'tdd',
+            'geckodrivers',
         )
         local = ''
         if platform.system().lower() in {'linux', 'macos'}:
@@ -61,7 +69,10 @@ class NavegableSeleniumTest(unittest.TestCase):
     @unittest.skip('activation future')
     def test_permitions(self):
         localbase = Path(__file__).parent.parent.joinpath(
-            'incolume', 'py', 'tdd', 'geckodrivers',
+            'incolume',
+            'py',
+            'tdd',
+            'geckodrivers',
         )
         local = (
             localbase / 'geckodriver.exe'
@@ -109,10 +120,16 @@ class NavegableSeleniumTest(unittest.TestCase):
         assert ' ' not in result
         assert '' not in result
         assert 'All releases' in result
-        assert 'https://mail.python.org/mailman/listinfo/python-dev' in result.values()
+        assert (
+            'https://mail.python.org/mailman/listinfo/python-dev'
+            in result.values()
+        )
         assert result['All releases'] == 'http://127.0.0.1:8000/downloads/'
         assert result['PEP Index'] == 'http://python.org/dev/peps/'
-        assert ('Other Platforms', 'http://127.0.0.1:8000/download/other/') in result.items()
+        assert (
+            'Other Platforms',
+            'http://127.0.0.1:8000/download/other/',
+        ) in result.items()
 
     def test_navegabilidade(self):
         """Capture o link contido em

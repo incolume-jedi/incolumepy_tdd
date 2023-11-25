@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 """# TODO: Atividade  15: Fatorar Romanos para que passe nos testes."""
 __author__ = '@britodfbr'
 import unittest
@@ -49,7 +48,9 @@ class TestRomanos(unittest.TestCase):
         assert self.num.calc_roman(1978) == 'MCMLXXVIII'
 
     def test_arabic_exceptions(self):
-        with pytest.raises(ValueError, match='O argumento deve ser inteiro maior que zero.'):
+        with pytest.raises(
+            ValueError, match='O argumento deve ser inteiro maior que zero.'
+        ):
             self.num.calc_roman(0)
 
         with pytest.raises(TypeError, match='Esperado inteiro, obtido'):

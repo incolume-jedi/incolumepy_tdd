@@ -1,5 +1,6 @@
 #!/usr/bin/env python
-"""# TODO: Atividade  2: implementar calculadora (calc) para que passe nos testes."""
+"""# TODO: Atividade  2: Calculadora.
+implementar calculadora (calc) para que passe nos testes."""
 __author__ = '@britodfbr'
 import unittest
 
@@ -47,7 +48,9 @@ class CalcTest(unittest.TestCase):
             calc.div(-1, 1)
 
     def test_div_raises_msg(self):
-        with pytest.raises(ValueError, match=r'Somente operações com números naturais!'):
+        with pytest.raises(
+            ValueError, match=r'Somente operações com números naturais!'
+        ):
             calc.div(1, 0)
             calc.div(1, -1)
             calc.div(-1, 1)

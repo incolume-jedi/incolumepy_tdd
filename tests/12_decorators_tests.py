@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 """# TODO: Atividade  12: implementar timeit para que passe nos testes."""
 __author__ = '@britodfbr'
 import unittest

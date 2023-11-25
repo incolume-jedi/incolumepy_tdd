@@ -1,5 +1,5 @@
-#!/usr/bin/env python
-"""# TODO: Atividade  26: Proceder com as implementações necessárias para que passe nos testes.
+"""# TODO: Atividade  26: Morse
+Proceder com as implementações necessárias para que passe nos testes.
 
 Decodificar Código Morse
 """

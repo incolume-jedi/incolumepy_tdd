@@ -1,12 +1,6 @@
-import sys
-from http import HTTPStatus
-from pathlib import Path
+""" # TODO: Atividade: Arquivos.
 
-import pytest
-import requests
-
-""" # TODO: Atividade  : Proceder com as implementações necessárias
-para que passe nos testes
+Proceder com as implementações necessárias para que passe nos testes
 
 Instruções:
     Para Micro servidor web local:
@@ -25,6 +19,13 @@ Instruções:
     2. Descompacte-o em incolume/py/tdd/geckodrivers
     3. Altere suas permisões para somente leitura
 """
+import sys
+from http import HTTPStatus
+from pathlib import Path
+
+import pytest
+import requests
+
 
 
 class TestMicroWebServer:

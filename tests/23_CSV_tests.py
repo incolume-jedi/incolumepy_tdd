@@ -1,12 +1,14 @@
-#!/usr/bin/env python
-"""# TODO: Atividade  23: Proceder com as implementações necessárias para que passe nos testes.
+"""# TODO: Atividade  23: CSV.
+Proceder com as implementações necessárias para que passe nos testes.
 
 1 - Criar uma nova classe que herda de incolume.py.tdd.employers.Employee:
-EmployeeCorp[Employee](fullname, born, address, fone, estado, cidade, login, email, login)
+EmployeeCorp[Employee](fullname, born, address, fone, estado, cidade,
+login, email, login)
 
-2 - Construir um programa que carregue instancias de EmployeeCorp contendo, todas as informações de todos
- os funcionários a partir de um arquivo CSV, Defina o domínio como "tabajara.com.br" e
-  grave as informações produzidas em um arquivo XLSX.
+2 - Construir um programa que carregue instancias de EmployeeCorp contendo,
+todas as informações de todos  os funcionários a partir de um arquivo CSV,
+Defina o domínio como "tabajara.com.br" e grave as informações produzidas
+em um arquivo XLSX.
 """
 __author__ = '@britodfbr'
 import csv
@@ -52,7 +54,8 @@ class MyTestCase(unittest.TestCase):
         for e in range(1000):
             user.fullname = f'{cls.fake.first_name()} {cls.fake.last_name()} {cls.fake.last_name()}'
             user.born = cls.fake.date(
-                pattern='%d/%m/%Y', end_datetime=datetime(2003, 1, 1),
+                pattern='%d/%m/%Y',
+                end_datetime=datetime(2003, 1, 1),
             )
             user.salario = cls.fake.random_int(min=900, max=9999, step=1)
             user.domain = 'exemplo.incolume.com.br'
@@ -64,7 +67,8 @@ class MyTestCase(unittest.TestCase):
                 randint(11, 99),
             )
             user.address, user.bairro, value = re.split(
-                r'\n', cls.fake.address(),
+                r'\n',
+                cls.fake.address(),
             )
             # user.estado = re.split(r' |/', value)[-1]
             user.estado = 'Distrito Federal'
@@ -72,7 +76,8 @@ class MyTestCase(unittest.TestCase):
             user.cep = f'72.{randint(100, 999)}-{randint(100, 999)}'
             # user.cidade = ''.join(re.split(r' |/', value)[1:-1])
             user.cidade = 'Brasília'
-            d = dict(zip(
+            d = dict(
+                zip(
                     headers,
                     [
                         user.fullname,
@@ -85,7 +90,8 @@ class MyTestCase(unittest.TestCase):
                         user.cidade,
                         user.estado,
                     ],
-                ))
+                )
+            )
             print(d)
             writer.writerow(d)
         print(cls.fout.name)
@@ -116,17 +122,22 @@ class MyTestCase(unittest.TestCase):
             assert loadeds[0].fullname.lower() in record.lower()
 
     def test_dump_employers_xlsx_assing(self):
-        assert dump_employers_xlsx.__annotations__ == {'emps': list, 'xlsxfile': (str, Path)}
+        assert dump_employers_xlsx.__annotations__ == {
+            'emps': list,
+            'xlsxfile': (str, Path),
+        }
 
     def test_dump_employers_xlsx_created(self):
         dump_employers_xlsx(
-            load_employers(self.csvfile).values(), self.xlsxfile,
+            load_employers(self.csvfile).values(),
+            self.xlsxfile,
         )
         assert Path(self.xlsxfile).is_file()
 
     def test_dump_employers_xlsx_fields(self):
         dump_employers_xlsx(
-            load_employers(self.csvfile).values(), self.xlsxfile,
+            load_employers(self.csvfile).values(),
+            self.xlsxfile,
         )
         df0 = pd.read_csv(self.csvfile)
         df1 = pd.read_excel(self.xlsxfile, engine='openpyxl')
@@ -145,7 +156,8 @@ class MyTestCase(unittest.TestCase):
 
     def test_dump_employers_xlsx_content(self):
         dump_employers_xlsx(
-            load_employers(self.csvfile).values(), self.xlsxfile,
+            load_employers(self.csvfile).values(),
+            self.xlsxfile,
         )
         df0 = pd.read_csv(self.csvfile)
         df1 = pd.read_excel(self.xlsxfile, engine='openpyxl')

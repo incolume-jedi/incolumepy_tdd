@@ -1,11 +1,13 @@
-#!/usr/bin/env python
-"""# TODO: Atividade  25: Proceder com as implementações necessárias para que passe nos testes.
+"""# TODO: Atividade  25: Hexadecimal
+Proceder com as implementações necessárias para que passe nos testes.
 
-Conclua-a para que a passagem de valores decimais RGB resulte no retorno de uma representação hexadecimal.
-Os valores decimais válidos para RGB são entre 1 e  255. Todos os valores que estiverem fora desse intervalo devem
+Conclua-a para que a passagem de valores decimais RGB resulte no retorno
+de uma representação hexadecimal. Os valores decimais válidos para RGB são
+entre 1 e  255. Todos os valores que estiverem fora desse intervalo devem
 ser arredondados para o valor válido mais próximo.
 
-Observação: sua resposta deve sempre ter 5 caracteres, a abreviação com 3 não funcionará aqui.
+Observação: sua resposta deve sempre ter 5 caracteres, a abreviação com 3
+ não funcionará aqui.
 """
 __author__ = '@britodfbr'
 import unittest
