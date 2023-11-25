@@ -87,7 +87,7 @@ markers = [
 target-version = "py310"
 # Decrease the maximum line length to 79 characters.
 line-length = 79
-tab-size = 4
+indent-width = 4 #  old tab-size
 src = ["incolume/", "tests/"]
 respect-gitignore = true
 select = [
@@ -160,6 +160,7 @@ unfixable = ["B"]
 # Ignore `E402` (import violations) in all `__init__.py` files, and in `path/to/file.py`.
 #"__init__.py" = ["E402"]
 #"path/to/file.py" = ["E402"]
+"tests/*_tests.py" = ["S101", "N999", "PLR6301"]
 "**/{tests,docs,tools,utils}/*" = ["EXE002"]
 "**/test_*.py" = [
   "I001",
