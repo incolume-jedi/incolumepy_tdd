@@ -10,9 +10,12 @@ This file was automatically generated for [incolumepy.utils](https://gitlab.com/
 ---
 
 
-## [Unreleased]	 &#8212; 	2023-11-24:
+## [Unreleased]	 &#8212; 	2023-11-25:
 ### Added
+  - Pacote httpx;
   - TDD módulo 29 - permissão em arquivos via Python;
+  - TDD módulo 30 consumir dados da API httpbin.org com a biblioteca requests;
+  - TDD módulo 31 consumir dados da API httpbin.org com a biblioteca httpx;
 
 ## [2.8.0]	 &#8212; 	2023-11-24:
 ### Added
