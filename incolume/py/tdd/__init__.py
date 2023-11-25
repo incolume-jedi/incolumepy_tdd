@@ -1,12 +1,12 @@
 """Principal Module."""
+from pathlib import Path
 from tempfile import NamedTemporaryFile
 
 from tomli import load
-from pathlib import Path
 
 __author__ = '@britodfbr'
 
-configfile = Path(__file__).parents[2].joinpath('pyproject.toml')
+configfile = Path(__file__).parents[3].joinpath('pyproject.toml')
 versionfile = Path(__file__).parent.joinpath('version.txt')
 
 with configfile.open('rb') as stream:

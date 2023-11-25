@@ -3,12 +3,10 @@ from pathlib import Path
 from sys import version_info
 
 import pytest
-
-from incolumepy.tdd import genfile
-
+from incolume.py.tdd import genfile
 
 collect_ignore = [
-    'incolumepy/static_html',
+    'incolume/py/static_html',
 ]
 
 

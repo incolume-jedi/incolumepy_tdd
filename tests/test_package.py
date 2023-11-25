@@ -3,7 +3,7 @@
 
 import pytest
 
-from incolumepy.tdd import (
+from incolume.py.tdd import (
     __version__,
     configfile,
     load,
@@ -19,34 +19,34 @@ class TestCase:
 
     @pytest.mark.parametrize(
         'entrance',
-        (
+        [
             configfile,
             versionfile,
-        ),
+        ],
     )
-    def test_exists(self, entrance):
+    def test_exists(self, entrance) -> None:
         """Test if exists files."""
         assert entrance.exists(), f'{entrance=}'
 
     @pytest.mark.parametrize(
         'entrance',
-        (
+        [
             configfile,
             versionfile,
-        ),
+        ],
     )
-    def test_is_file(self, entrance):
+    def test_is_file(self, entrance) -> None:
         """Test if are files."""
         assert entrance.is_file(), f'{entrance=}'
 
     @pytest.mark.parametrize(
         'entrance',
-        (
+        [
             configfile,
             versionfile,
-        ),
+        ],
     )
-    def test_same_version(self, entrance):
+    def test_same_version(self, entrance) -> None:
         """Test same version."""
         try:
             with entrance.open('rb') as stream:
