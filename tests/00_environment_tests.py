@@ -1,4 +1,4 @@
-""" # TODO: Atividade: Preconfiguração de ambiente.
+"""# TODO: Atividade: Preconfiguração de ambiente.
 
 Proceder com as implementações necessárias para que passe nos testes
 
