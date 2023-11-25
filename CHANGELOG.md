@@ -12,6 +12,10 @@ This file was automatically generated for [incolumepy.utils](https://gitlab.com/
 
 ## [Unreleased]	 &#8212; 	2023-11-24:
 ### Added
+  - TDD módulo 29 - permissão em arquivos via Python;
+
+## [2.8.0]	 &#8212; 	2023-11-24:
+### Added
   - Prospecção Python 3.11;
   - Prospecção Python 3.12;
 ### Changed
@@ -197,4 +201,5 @@ This file was automatically generated for [incolumepy.utils](https://gitlab.com/
 [2.6.0]: https://github.com/incolume-jedi/incolumepy_tdd/compare/2.6.0rc1...2.6.0
 [2.6.1]: https://github.com/incolume-jedi/incolumepy_tdd/compare/2.6.0...2.6.1
 [2.7.0]: https://github.com/incolume-jedi/incolumepy_tdd/compare/2.6.1...2.7.0
-[Unreleased]: https://github.com/incolume-jedi/incolumepy_tdd/compare/2.7.0...Unreleased
+[2.8.0]: https://github.com/incolume-jedi/incolumepy_tdd/compare/2.7.0...2.8.0
+[Unreleased]: https://github.com/incolume-jedi/incolumepy_tdd/compare/2.8.0...Unreleased
