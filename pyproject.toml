@@ -57,6 +57,7 @@ selenium-wire = "^5.1.0"
 taskipy = "^1.12.0"
 tox = "^4.11.3"
 ruff = "^0.1.6"
+httpx = "^0.25.2"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
