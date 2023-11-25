@@ -1,106 +1,127 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-"""
-# TODO: Atividade 29: Proceder com as implementações necessárias para que passe nos testes
+""" # TODO: Atividade 29: Permissões em arquivos.
+Proceder com as implementações necessárias para que passe nos testes
 
-Criação de arquivos/diretórios no sistema operacional através do Python com permissões específicas,
- para leitura, escrita, execução.
+Criação de arquivos/diretórios no sistema operacional através
+do Python com permissões específicas, para leitura, escrita, execução.
 """
 __author__ = '@britodfbr'
-import unittest
+
 import os
+
+import pytest
 import platform
-from .BaseTests import BaseTestCase
 from pathlib import Path
-from incolumepy.tdd.permissions.genfile import create
+from incolume.py.tdd.permissions.genfile import create
+from tempfile import NamedTemporaryFile
 
 
-class MyTestCase(BaseTestCase):
-    def test_create_assign(self):
-        self.assertEqual(
-            create.__annotations__,
-            {'content': (str, bytes), 'filename': (str, Path), 'permissions': str, 'return': bool}
-        )
-
-    def test_create_permission_length(self):
-        with self.assertRaisesRegex(AttributeError, 'Bad permission length'):
-            create(self.content, self.filename, '')
-
-        create(self.content, self.filename, '---------')
-
-    def test_create_file_created(self):
-        self.assertFalse(self.filename.is_file())
-        self.assertTrue(create(self.content, self.filename, 'rwx------'))
-        self.assertTrue(self.filename.is_file())
-
-    def test_create_content_str(self):
-        self.assertTrue(create(self.content, self.filename, 'rwx------'))
-        self.assertTrue(self.filename.is_file())
-        self.assertIsInstance(self.filename.read_text(), str)
-
-    def test_create_content_bytes(self):
-        self.assertTrue(create(str.encode(self.content), self.filename, 'rwx------'))
-        self.assertTrue(self.filename.is_file())
-        self.assertIsInstance(self.filename.read_bytes(), bytes)
-
-    def test_create_content_raises(self):
-        with self.assertRaisesRegex(TypeError, 'data must be str, not int'):
-            create(1111, self.filename, 'rwx')
-
-        with self.assertRaisesRegex(TypeError, 'data must be str, not float'):
-            create(11.11, self.filename, 'rwx')
-
-        with self.assertRaisesRegex(TypeError, 'data must be str, not list'):
-            create([], self.filename, 'rwx')
-
-        with self.assertRaisesRegex(TypeError, 'data must be str, not tuple'):
-            create(('', ), self.filename, 'rwx')
-
-        with self.assertRaisesRegex(TypeError, 'data must be str, not dict'):
-            create({}, self.filename, 'rwx')
-
-    def test_nopermition(self):
-        create(str.encode(self.content), self.filename, '---------')
-        self.assertFalse(os.access(self.filename, os.R_OK))
-        self.assertFalse(os.access(self.filename, os.W_OK))
-        self.assertFalse(os.access(self.filename, os.X_OK))
-
-    def test_permition_read(self):
-        # Validação de permissões: Read
-        tests = [
-            self.t('r--r--r--', True),
-            self.t('r--------', True),
-            self.t('r--r-----', True),
-            self.t('r-----r--', True),
-            self.t('------r--', False),
-            self.t('---r--r--', False),
-        ]
-        for test in tests:
-            # print(test.entrance)
-            create(str.encode(self.content), self.filename, test.entrance)
-            # self.assertTrue(os.access(self.filename, os.R_OK))
-            result = os.access(self.filename, os.R_OK)
-            self.assertEqual(test.expected, result)
-            self.filename.unlink()
-
-        create(str.encode(self.content), self.filename, 'r--------')
-        self.assertTrue(os.access(self.filename, os.R_OK))
-        self.filename.unlink()
-
-    def test_permition_exec(self):
-        # Validação de permissões: Excution
-        create(str.encode(self.content), self.filename, 'x--------')
-        self.assertTrue(os.access(self.filename, os.X_OK))
-        self.assertFalse(os.access(self.filename, os.R_OK))
-        self.assertFalse(os.access(self.filename, os.W_OK))
-
-    def test_permition_write(self):
-        # Validação de permissões: Write
-        create(str.encode(self.content), self.filename, 'w--------')
-        self.assertTrue(os.access(self.filename, os.W_OK))
-        self.assertFalse(os.access(self.filename, os.R_OK))
-        self.assertFalse(os.access(self.filename, os.X_OK))
+class TestPermission:
+    """Test Permission dataclass."""
 
 
-if __name__ == '__main__':
-    unittest.main()
+class TestCase:
+    """TestCase."""
+
+    def test_create_annotation(self) -> None:
+        """Test create_assign."""
+        assert create.__annotations__ == {
+            'content': (str, bytes),
+            'filename': (str, Path),
+            'permissions': str, 'return': bool
+        }
+
+    @pytest.mark.parametrize(
+        'filename permission'.split(),
+        [
+            (NamedTemporaryFile().name, ''),
+            (Path(NamedTemporaryFile().name), ''),
+            (NamedTemporaryFile().name, '-------'),
+            (Path(NamedTemporaryFile().name), '--------'),
+        ],
+    )
+    def test_create_permission_length(
+        self, loremipsum, filename, permission,
+    ) -> None:
+        with pytest.raises(AttributeError, match='Bad permission length'):
+            create(loremipsum, filename, permission)
+
+    def test_create_file_created(self, loremipsum) -> None:
+        """Test it."""
+        assert create(
+            loremipsum, NamedTemporaryFile().name, 'rwx------')
+
+    def test_create_content_str(self, loremipsum) -> None:
+        """Test it."""
+        filename = Path(NamedTemporaryFile().name)
+        create(loremipsum, filename, 'rwx------')
+        assert isinstance(filename.read_text(), str)
+
+    def test_create_content_bytes(self, loremipsum) -> None:
+        """Test it."""
+        filename = Path(NamedTemporaryFile().name)
+        create(str.encode(loremipsum), filename, 'rwx------')
+        assert isinstance(filename.read_bytes(), bytes)
+
+    @pytest.mark.parametrize(
+        'entrance',
+        [
+            1111,
+            11.11,
+            [],
+            ('',),
+            {},
+        ],
+    )
+    def test_create_content_raises(self, entrance):
+        """Exceptions."""
+        filename = Path(NamedTemporaryFile().name)
+        with pytest.raises(
+            TypeError,
+            match=f'data must be str, not {type(entrance).__name__}'
+        ):
+            create(entrance, filename, 'rwx')
+
+    @pytest.mark.parametrize(
+        'permission',
+        [
+            os.R_OK,
+            os.W_OK,
+            os.X_OK,
+        ],
+    )
+    def test_nopermition(self, loremipsum, permission) -> None:
+        filename = Path(NamedTemporaryFile().name)
+        create(str.encode(loremipsum), filename, '---------')
+        assert not os.access(filename, permission)
+
+    @pytest.mark.parametrize(
+        'f_perm os_perm expected'.split(),
+        [
+            ('w--------', os.W_OK, True),
+            ('w--------', os.R_OK, False),
+            ('w--------', os.X_OK, False),
+            ('x--------', os.W_OK, False),
+            ('x--------', os.R_OK, False),
+            ('x--------', os.X_OK, True),
+            ('r--------', os.W_OK, False),
+            ('r--------', os.R_OK, True),
+            ('r--------', os.X_OK, False),
+            ('r--r--r--', os.R_OK, True),
+            ('r--------', os.R_OK, True),
+            ('r--r-----', os.R_OK, True),
+            ('r-----r--', os.R_OK, True),
+            ('------r--', os.R_OK, False),
+            ('---r--r--', os.R_OK, False),
+            ('w--w--w--', os.W_OK, True),
+            ('---w--w--', os.W_OK, False),
+            ('------w--', os.W_OK, False),
+            ('--x--x--x', os.X_OK, True),
+            ('-----x--x', os.X_OK, False),
+            ('--------x', os.X_OK, False),
+        ],
+    )
+    def test_permition(self, loremipsum, f_perm, os_perm, expected) -> None:
+        """Validação de permissões."""
+        filename = Path(NamedTemporaryFile().name)
+        create(str.encode(loremipsum), filename, f_perm)
+        assert os.access(filename, os_perm) == expected
