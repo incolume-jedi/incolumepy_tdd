@@ -19,7 +19,9 @@ file = path.joinpath('presidentes_com_fotos.json')
 
 @pytest.fixture
 def content_json():
-    with Path(__file__).parent.joinpath('presidentes_com_fotos.b64').open() as f:
+    with Path(__file__).parent.joinpath(
+        'presidentes_com_fotos.b64'
+    ).open() as f:
         s = f.read()
     c = base64.b64decode(s.encode('ascii', 'strict')).decode('ascii')
     return json.loads(c)
@@ -48,6 +50,13 @@ def test_json_file():
 def test_content_json(content_json, content_file):
     e = json.load(file.open())
     df = pd.DataFrame(content_file)
-    assert df.columns.all() in ['PRESIDENTE', 'PARTIDO', 'VICE-PRESIDENTE', 'INICIO_MANDATO',
-                                'FIM_MANDATO', 'URL_FOTOGRAFIA', 'FOTOGRAFIA'], "Campos insuficientes ou inválidos"
-    assert content_json == e, "Arquivo incorreto ou inconsistente"
+    assert df.columns.all() in [
+        'PRESIDENTE',
+        'PARTIDO',
+        'VICE-PRESIDENTE',
+        'INICIO_MANDATO',
+        'FIM_MANDATO',
+        'URL_FOTOGRAFIA',
+        'FOTOGRAFIA',
+    ], 'Campos insuficientes ou inválidos'
+    assert content_json == e, 'Arquivo incorreto ou inconsistente'

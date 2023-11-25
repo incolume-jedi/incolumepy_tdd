@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 """
 # TODO: Atividade 30: Proceder com as implementações necessárias para que passe nos testes
-
 """
 __author__ = '@britodfbr'
 
