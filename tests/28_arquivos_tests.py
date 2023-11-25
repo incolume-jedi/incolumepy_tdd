@@ -179,7 +179,7 @@ class MyXLSXFiles(unittest.TestCase):
         assert (
             mime.from_file(self.fout)
             == 'application/vnd.openxmlformats-officedocument'
-               '.spreadsheetml.sheet'
+            '.spreadsheetml.sheet'
         )
 
     def test_mimetype(self):

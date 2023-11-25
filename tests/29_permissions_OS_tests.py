@@ -1,4 +1,4 @@
-""" # TODO: Atividade 29: Permissões em arquivos.
+"""# TODO: Atividade 29: Permissões em arquivos.
 Proceder com as implementações necessárias para que passe nos testes
 
 Criação de arquivos/diretórios no sistema operacional através
@@ -27,7 +27,8 @@ class TestCase:
         assert create.__annotations__ == {
             'content': (str, bytes),
             'filename': (str, Path),
-            'permissions': str, 'return': bool
+            'permissions': str,
+            'return': bool,
         }
 
     @pytest.mark.parametrize(
@@ -40,15 +41,17 @@ class TestCase:
         ],
     )
     def test_create_permission_length(
-        self, loremipsum, filename, permission,
+        self,
+        loremipsum,
+        filename,
+        permission,
     ) -> None:
         with pytest.raises(AttributeError, match='Bad permission length'):
             create(loremipsum, filename, permission)
 
     def test_create_file_created(self, loremipsum) -> None:
         """Test it."""
-        assert create(
-            loremipsum, NamedTemporaryFile().name, 'rwx------')
+        assert create(loremipsum, NamedTemporaryFile().name, 'rwx------')
 
     def test_create_content_str(self, loremipsum) -> None:
         """Test it."""
@@ -76,8 +79,7 @@ class TestCase:
         """Exceptions."""
         filename = Path(NamedTemporaryFile().name)
         with pytest.raises(
-            TypeError,
-            match=f'data must be str, not {type(entrance).__name__}'
+            TypeError, match=f'data must be str, not {type(entrance).__name__}'
         ):
             create(entrance, filename, 'rwx')
 
