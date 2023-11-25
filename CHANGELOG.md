@@ -21,12 +21,13 @@ This file was automatically generated for [incolumepy.utils](https://gitlab.com/
   - Namespace atualizado para incolume.py.tdd;
 ### Deprecated
   - Python 3.8;
+  - Python 3.9;
 ### Fixed
   - Tornado permanente o diretório do plugin em incolume/py/geckodrivers e respectiva configuração gitignore;
 ### Removed
   - Pacote **bumpversion** e respectiva configuração;
   - Pacote **pipenv** e respectivas configurações;
-  - Removido **suporte a Python 3.7** tornado obsoleto em 27-06-2023;
+  - **Python 3.7** suporte removido, versão obsoleta desde 27-06-2023;
 
 ## [2.7.0]	 &#8212; 	2023-11-22:
 ### Added
@@ -90,18 +91,21 @@ This file was automatically generated for [incolumepy.utils](https://gitlab.com/
 ### Added
   - Módulos 22 e 23;
   - TDD para CSV;
-  - TDD para codigo morse;
-  - TDD para senhas;
-  - TDD 28;
+  - Python 3.9;
   - TDD regex;
   - TDD para hashes;
   - Massa dinâmica para testes com pacote Faker;
+  - TDD para codigo morse;
+  - TDD para senhas;
+  - TDD 28;
 ### Changed
   - Atualização do README;
   - Estrutura de módulos realocados em src;
   - Suite de gerenciamento de pacotes alterada para poetry;
   - Atualização de documentação;
   - Definido namespace;
+### Removed
+  - Python 3.6;
 
 ## [2.5.0-rc.2]	 &#8212; 	2023-11-17:
 ### Added
@@ -129,8 +133,11 @@ This file was automatically generated for [incolumepy.utils](https://gitlab.com/
 
 ## [2.4.0]	 &#8212; 	2023-11-17:
 ### Added
+  - Prospecção Python 3.9;
   - Exercicio sobre manipulação em HTML;
   - Exercício sobre navegação com selenium;
+### Deprecated
+  - Python 3.6;
 
 ## [2.3.0]	 &#8212; 	2023-11-16:
 ### Added
