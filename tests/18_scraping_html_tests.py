@@ -7,7 +7,9 @@ como descrito em 00_environment_tests.py; o http.server deve permanecer
 ativo para realizar este exercício.
 """
 __author__ = '@britodfbr'
+
 import os
+import sys
 import unittest
 from pathlib import Path
 
@@ -17,6 +19,88 @@ from incolume.py.tdd.scraping.google import (
     GoogleSearch,
     NavigableString,
 )
+
+
+@pytest.mark.skipif(
+    sys.version_info <= (3, 11, 0),
+    reason='Run only Python 3.11 or higher')
+class TestScrapingHTML:
+    """Test Scraping HTML."""
+    __test__ = False
+
+    @pytest.fixture()
+    def html_index(self) -> Path:
+        """Path file."""
+        index = Path(__file__).parents[1].joinpath(
+            'incolume',
+            'py',
+            'static_html',
+            'google.com',
+            'index.html',
+        )
+        return index
+
+    @pytest.fixture()
+    def google_search(self, html_index) -> GoogleSearch:
+        """Object."""
+        return GoogleSearch(html_index)
+
+    def test_instance_type(self, google_search) -> None:
+        """Test it."""
+        assert isinstance(google_search, GoogleSearch)
+
+    @pytest.mark.parametrize(
+        'entrance',
+        [
+            '__init__',
+            '__repr__',
+            '__dict__',
+            'content',
+            'soup',
+        ]
+    )
+    def test_instance(self, google_search, entrance) -> None:
+        assert getattr(google_search, entrance)
+
+    def test_filein(self, google_search) -> None:
+        assert 'filein' in google_search.__dict__
+
+    def test_filein_exists_0(self, html_index, google_search) -> None:
+        """Test it."""
+        assert Path(google_search.filein).exists()
+
+    def test_filein_exists_1(self, html_index, google_search) -> None:
+        """Test it."""
+        assert html_index == Path(google_search.filein)
+
+    @pytest.mark.parametrize(
+        'entrance place'.split(),
+        [
+            ('_content', '__dict__'),
+            ('Google treinamento Incólume', 'content'),
+            ('_soup', '__dict__'),
+            # ('Google treinamento Incólume', 'soup.title.text'),
+        ]
+    )
+    def test_content(self, entrance, place, google_search) -> None:
+        """Test it."""
+        assert entrance in getattr(google_search, place)
+
+    def test_content_raises(self, google_search) -> None:
+        """Test it."""
+        with pytest.raises(AttributeError,
+                           match="'method' object has no attribute 'content'"):
+            self.google_search.content = ''
+
+    def test_soup(self, google_search):
+        assert isinstance(google_search.soup, BeautifulSoup)
+        assert (google_search.soup.title.text == 'Google treinamento Incólume')
+
+        with pytest.raises(
+            AttributeError,
+            match="'method' object has no attribute 'soup'"
+        ):
+            self.google_search.soup = BeautifulSoup('', 'html.parser')
 
 
 class ScrapingHTMLTest(unittest.TestCase):
@@ -54,7 +138,19 @@ class ScrapingHTMLTest(unittest.TestCase):
         assert isinstance(self.google_search.content, str)
         assert 'Google treinamento Incólume' in self.google_search.content
 
+    @unittest.skipIf(sys.version_info >= (3, 11, 0),
+                     reason='Run only Python 3.10 or lower')
+    def test_content_raises_0(self):
         with pytest.raises(AttributeError, match="can't set attribute"):
+            self.google_search.content = ''
+
+    @unittest.skipIf(sys.version_info <= (3, 11, 0),
+                     reason='Run only Python 3.11 or higher')
+    def test_content_raises_1(self):
+        with pytest.raises(
+            AttributeError,
+            match="property 'content' of 'GoogleSearch' object has no setter"
+        ):
             self.google_search.content = ''
 
     def test_soup(self):
@@ -65,7 +161,21 @@ class ScrapingHTMLTest(unittest.TestCase):
             self.google_search.soup.title.text == 'Google treinamento Incólume'
         )
 
+    @unittest.skipIf(sys.version_info >= (3, 11, 0),
+                     reason='Run only Python 3.10 or lower')
+    def test_soup_raises_0(self) -> None:
+        """Test it."""
         with pytest.raises(AttributeError, match="can't set attribute"):
+            self.google_search.soup = BeautifulSoup('', 'html.parser')
+
+    @unittest.skipIf(sys.version_info <= (3, 11, 0),
+                     reason='Run only Python 3.11 or higher')
+    def test_soup_raises_1(self) -> None:
+        """Test it."""
+        with pytest.raises(
+            AttributeError,
+            match="property 'soup' of 'GoogleSearch' object has no setter"
+        ):
             self.google_search.soup = BeautifulSoup('', 'html.parser')
 
     def test_html_attrs(self):
