@@ -42,8 +42,7 @@ class TestRegex:
     @pytest.mark.parametrize(
         'entrance',
         chain(
-            [
-            ],
+            [],
             [
                 '+55 21 5555-5555',
                 '+55 22 5555 5555',
