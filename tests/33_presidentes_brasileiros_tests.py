@@ -1,6 +1,8 @@
 """
-# TODO:: Atividade 32: Do endereço https://pt.m.wikipedia.org/wiki/Lista_de_presidentes_do_Brasil, extraia as informações dos
-presidentes brasileiros e grave em um arquivo chamado presidentes.json, contendo Presidente, Vice-presidente,
+# TODO:: Atividade 32: Raspagem de dados do Wikipedia.
+No endereço https://pt.m.wikipedia.org/wiki/Lista_de_presidentes_do_Brasil,
+extraia as informações dos presidentes brasileiros e grave em um arquivo
+chamado presidentes.json, contendo Presidente, Vice-presidente,
  Periodo do mandato e  partido político.
 """
 
