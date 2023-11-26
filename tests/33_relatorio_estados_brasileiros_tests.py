@@ -1,17 +1,31 @@
 """
-# TODO: Atividade 31:  Com dados extraídos do sítio https://www.todamateria.com.br/estados-do-brasil/
-construa um arquivo .json, com registros em orientação "records" contendo: estado, sigla, capital e as informações do
-IBGE, exceto datas. Os campos/colunas devem ser em formato ASCII com "_" no lugar de espaços.
+# TODO: Atividade 33:  Raspagem de dados Web e construção de relatórios.
+Com dados extraídos do sítio https://www.todamateria.com.br/estados-do-brasil/
+no módulo anterior, construa um arquivo ibge.json,
+com registros em orientação "records" contendo:
+[estado, sigla, capital, gentilico, populacao,
+numero_de_municipios, economia, clima, principais_rios]
+e as demais informações serão extraídas do IBGE.
+Os nomes de campos/colunas devem ser em formato ASCII
+com "_" no lugar de espaços.
 """
 from pathlib import Path
-from incolumepy.tdd import __root__
+from incolume.py.tdd.json_files.estados import path
 import base64
 import json
 import pytest
 
 __author__ = '@britodfbr'
-path = Path(__root__) / 'src' / 'incolumepy' / 'tdd' / 'json_files'
-file = path.joinpath('ibge.json')
+
+
+def test_path():
+    """"""
+    expected = (
+        Path(__file__)
+        .parents[1]
+        .joinpath('incolume', 'py', 'tdd', 'json_files')
+    )
+    assert path == expected
 
 
 def test_exite_path():
@@ -23,6 +37,7 @@ def test_exite_dir():
 
 
 def test_json_file():
+    file = path.joinpath('ibge.json')
     assert file.exists(), f'Ops: {file}'
 
 
@@ -201,5 +216,5 @@ def test_content_json():
     c = base64.b64decode(s.encode('ascii', 'strict')).decode('ascii')
     d = json.loads(c)
 
-    e = json.load(file.open())
+    e = json.load(path.joinpath('ibge.json').open())
     assert d == e
