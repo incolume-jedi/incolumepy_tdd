@@ -10,7 +10,22 @@ This file was automatically generated for [incolumepy.utils](https://gitlab.com/
 ---
 
 
-## [Unreleased]	 &#8212; 	2023-11-24:
+## [Unreleased]	 &#8212; 	2023-11-26:
+### Added
+  - TDD módulo 33;
+  - TDD módulo 34;
+  - TDD módulo 35;
+
+## [2.9.0]	 &#8212; 	2023-11-26:
+### Added
+  - Pacote httpx;
+  - TDD módulo 29 - permissão em arquivos via Python;
+  - TDD módulo 30 consumir dados da API httpbin.org com a biblioteca requests;
+  - TDD módulo 31 consumir dados da API httpbin.org com a biblioteca httpx;
+  - TDD módulo 32 extração de dados web;
+  - Suporte a Python 3.11;
+
+## [2.8.0]	 &#8212; 	2023-11-24:
 ### Added
   - Prospecção Python 3.11;
   - Prospecção Python 3.12;
@@ -197,4 +212,6 @@ This file was automatically generated for [incolumepy.utils](https://gitlab.com/
 [2.6.0]: https://github.com/incolume-jedi/incolumepy_tdd/compare/2.6.0rc1...2.6.0
 [2.6.1]: https://github.com/incolume-jedi/incolumepy_tdd/compare/2.6.0...2.6.1
 [2.7.0]: https://github.com/incolume-jedi/incolumepy_tdd/compare/2.6.1...2.7.0
-[Unreleased]: https://github.com/incolume-jedi/incolumepy_tdd/compare/2.7.0...Unreleased
+[2.8.0]: https://github.com/incolume-jedi/incolumepy_tdd/compare/2.7.0...2.8.0
+[2.9.0]: https://github.com/incolume-jedi/incolumepy_tdd/compare/2.8.0...2.9.0
+[Unreleased]: https://github.com/incolume-jedi/incolumepy_tdd/compare/2.9.0...Unreleased

@@ -1,7 +1,5 @@
-#!/usr/bin/env python
+"""# TODO: Atividade  1: implementar fatorial para que passe nos testes."""
 import doctest
-
-# TODO: Atividade  1: implementar fatorial para que passe nos testes
 
 
 if __name__ == '__main__':

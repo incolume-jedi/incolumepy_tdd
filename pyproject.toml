@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "incolume.py.tdd"
-version = "2.8.0"
+version = "2.9.0"
 description = "Python Utilities for trainning"
 authors = ["britodfbr <contato@incolume.com.br>"]
 homepage="https://gitlab.com/development-incolume/treinamentos/incolumepy_tdd"
@@ -54,9 +54,11 @@ python-magic = "^0.4.27"
 requests = "^2.31.0"
 rstr = ">=2.2.6"
 selenium-wire = "^5.1.0"
-taskipy = "^1.12.0"
+taskipy = "^1.12.2"
 tox = "^4.11.3"
 ruff = "^0.1.6"
+httpx = "^0.25.2"
+unidecode = "^1.3.7"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
@@ -86,7 +88,7 @@ markers = [
 target-version = "py310"
 # Decrease the maximum line length to 79 characters.
 line-length = 79
-tab-size = 4
+indent-width = 4 #  old tab-size
 src = ["incolume/", "tests/"]
 respect-gitignore = true
 select = [
@@ -159,6 +161,7 @@ unfixable = ["B"]
 # Ignore `E402` (import violations) in all `__init__.py` files, and in `path/to/file.py`.
 #"__init__.py" = ["E402"]
 #"path/to/file.py" = ["E402"]
+"tests/*_tests.py" = ["S101", "N999", "PLR6301"]
 "**/{tests,docs,tools,utils}/*" = ["EXE002"]
 "**/test_*.py" = [
   "I001",

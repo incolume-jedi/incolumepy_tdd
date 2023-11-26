@@ -1,4 +1,4 @@
-""" # TODO: Atividade: Arquivos.
+"""# TODO: Atividade: Preconfiguração de ambiente.
 
 Proceder com as implementações necessárias para que passe nos testes
 
@@ -25,7 +25,6 @@ from pathlib import Path
 
 import pytest
 import requests
-
 
 
 class TestMicroWebServer:
