@@ -1,20 +1,37 @@
 """
-# TODO:: Atividade 32: Raspagem de dados do Wikipedia.
+# TODO:: Atividade 33: Raspagem de dados do Wikipedia.
 No endereço https://pt.m.wikipedia.org/wiki/Lista_de_presidentes_do_Brasil,
 extraia as informações dos presidentes brasileiros e grave em um arquivo
 chamado presidentes.json, contendo Presidente, Vice-presidente,
  Periodo do mandato e  partido político.
 """
 
-from incolumepy.tdd import __root__
 from pathlib import Path
 import base64
 import json
 import pandas as pd
 import pytest
+from incolume.py.tdd.json_files.presidentes import path, url
 
 __author__ = '@britodfbr'
-path = Path(__root__) / 'src' / 'incolumepy' / 'tdd' / 'json_files'
+
+
+def test_url():
+    """Test url."""
+    assert (
+        'pt.m.wikipedia.org/wiki/Lista_de_presidentes_do_Brasil'
+        in url
+    )
+
+
+def test_path():
+    """"""
+    expected = (
+        Path(__file__)
+        .parents[1]
+        .joinpath('incolume', 'py', 'tdd', 'json_files')
+    )
+    assert path == expected
 
 
 @pytest.fixture
