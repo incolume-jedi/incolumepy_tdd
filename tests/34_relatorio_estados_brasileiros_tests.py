@@ -5,7 +5,9 @@ no módulo anterior, construa um arquivo ibge.json,
 com registros em orientação "records" contendo:
 [estado, sigla, capital, gentilico, populacao,
 numero_de_municipios, economia, clima, principais_rios]
-e as demais informações serão extraídas do IBGE.
+e as demais informações serão extraídas do IBGE relatório disponível em 
+incolume/py/static/csv/4c9bc7b25ddcd5d0cb73e352f2c793f5.csv(atualizado em 27/11/2023T09:23).
+
 Os nomes de campos/colunas devem ser em formato ASCII
 com "_" no lugar de espaços.
 """
